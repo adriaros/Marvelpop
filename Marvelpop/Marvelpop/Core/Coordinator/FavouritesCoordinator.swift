@@ -12,12 +12,14 @@ class FavouritesCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
         
-    init() {
-        
+    let container: ViewControllerFactory
+    
+    init(container: ViewControllerFactory) {
+        self.container = container
     }
     
     func start() {
-        let favouritesViewController = FavouritesRouter.createModule() as! FavouritesViewController
+        let favouritesViewController = container.makeFavourites(coordinator: self)
         favouritesViewController.navigationItem.title = "navigation_title_favourites".localized
         navigationController = UINavigationController(rootViewController: favouritesViewController)
     }

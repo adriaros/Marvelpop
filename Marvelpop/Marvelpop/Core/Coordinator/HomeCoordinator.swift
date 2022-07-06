@@ -12,12 +12,14 @@ class HomeCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
         
-    init() {
-        
+    let container: ViewControllerFactory
+    
+    init(container: ViewControllerFactory) {
+        self.container = container
     }
     
     func start() {
-        let homeViewController = HomeRouter.createModule() as! HomeViewController
+        let homeViewController = container.makeHome(coordinator: self)
         homeViewController.navigationItem.title = "navigation_title_home".localized
         navigationController = UINavigationController(rootViewController: homeViewController)
     }

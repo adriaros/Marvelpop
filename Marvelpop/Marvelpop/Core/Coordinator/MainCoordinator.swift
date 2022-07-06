@@ -24,10 +24,10 @@ class MainCoordinator: Coordinator {
     
     func start() {
         
-        let homeCoordinator = HomeCoordinator()
+        let homeCoordinator = HomeCoordinator(container: container)
         startChild(homeCoordinator)
 
-        let favouritesCoordinator = FavouritesCoordinator()
+        let favouritesCoordinator = FavouritesCoordinator(container: container)
         startChild(favouritesCoordinator)
         
         guard let home = childCoordinators[0].navigationController else {
