@@ -19,5 +19,7 @@ class TabBarController: UITabBarController {
         tabBar.unselectedItemTintColor = UIColor { traitCollection in
             traitCollection.userInterfaceStyle == .dark ? .darkGray : .lightGray
         }
+        
+        UITabBarItem.setupAppearance()
     }
 }

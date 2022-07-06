@@ -5,4 +5,25 @@
 //  Created by Adrià Ros on 6/7/22.
 //
 
-import Foundation
+import UIKit
+
+enum ImageAssets {
+    
+    enum Home: String {
+        
+        var image: UIImage? {
+            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
+        }
+        
+        case logo = "marvel_logo"
+    }
+    
+    enum Favourites: String {
+        
+        var image: UIImage? {
+            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
+        }
+        
+        case logo = "marvel_logo"
+    }
+}

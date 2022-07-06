@@ -47,6 +47,8 @@
 		112843172875DBFD00725F9B /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843162875DBFD00725F9B /* DependencyContainer.swift */; };
 		1128431C2875DD0B00725F9B /* FakeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128431B2875DD0B00725F9B /* FakeDependencyContainer.swift */; };
 		1128431F2875DD1C00725F9B /* FakeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128431E2875DD1C00725F9B /* FakeViewControllerContainer.swift */; };
+		112843212875E15F00725F9B /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843202875E15F00725F9B /* UINavigationBar+Appearance.swift */; };
+		112843232875E52C00725F9B /* UITabBarItem+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +95,6 @@
 		112842EC2875D59100725F9B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		112842EE2875D59C00725F9B /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
 		112842F12875D74200725F9B /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
-		112842F82875D9B100725F9B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		112842FD2875D9F000725F9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		112842FF2875D9F900725F9B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		112843052875DA8400725F9B /* MainCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTest.swift; sourceTree = "<group>"; };
@@ -105,6 +106,8 @@
 		112843162875DBFD00725F9B /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		1128431B2875DD0B00725F9B /* FakeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDependencyContainer.swift; sourceTree = "<group>"; };
 		1128431E2875DD1C00725F9B /* FakeViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewControllerContainer.swift; sourceTree = "<group>"; };
+		112843202875E15F00725F9B /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
+		112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Appearance.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				112842F12875D74200725F9B /* String+Localization.swift */,
+				112843202875E15F00725F9B /* UINavigationBar+Appearance.swift */,
+				112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -510,6 +515,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112843232875E52C00725F9B /* UITabBarItem+Appearance.swift in Sources */,
+				112843212875E15F00725F9B /* UINavigationBar+Appearance.swift in Sources */,
 				1128428A2875CFD200725F9B /* AppDelegate.swift in Sources */,
 				112842EB2875D58200725F9B /* MainCoordinator.swift in Sources */,
 				1128428C2875CFD200725F9B /* SceneDelegate.swift in Sources */,
@@ -570,7 +577,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				112842952875CFD300725F9B /* Base */,
-				112842F82875D9B100725F9B /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
