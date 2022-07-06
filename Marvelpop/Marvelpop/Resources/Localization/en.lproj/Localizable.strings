@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Marvelpop
+
+  Created by Adrià Ros on 6/7/22.
+  
+*/
+
+"tabbar_home" = "Home";
+"tabbar_favourites" = "Favourites";
+"navigation_title_home" = "Characters";
+"navigation_title_favourites" = "Favourites";
