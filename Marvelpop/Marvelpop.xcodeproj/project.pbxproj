@@ -17,6 +17,21 @@
 		112842B22875D0B200725F9B /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842B12875D0B200725F9B /* TestingSceneDelegate.swift */; };
 		112842B62875D24700725F9B /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842B52875D24700725F9B /* ImageAssets.swift */; };
 		112842BA2875D27B00725F9B /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 112842BC2875D27B00725F9B /* Localization.strings */; };
+		112842C12875D32500725F9B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C02875D32500725F9B /* TabBarController.swift */; };
+		112842CA2875D35900725F9B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C42875D35900725F9B /* HomePresenter.swift */; };
+		112842CB2875D35900725F9B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C52875D35900725F9B /* HomeRouter.swift */; };
+		112842CC2875D35900725F9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C62875D35900725F9B /* HomeViewController.swift */; };
+		112842CD2875D35900725F9B /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C72875D35900725F9B /* HomeProtocols.swift */; };
+		112842CE2875D35900725F9B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C82875D35900725F9B /* HomeInteractor.swift */; };
+		112842CF2875D35900725F9B /* HomeEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C92875D35900725F9B /* HomeEntities.swift */; };
+		112842D12875D38F00725F9B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112842D02875D38F00725F9B /* HomeViewController.xib */; };
+		112842D82875D46700725F9B /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D22875D46700725F9B /* FavouritesPresenter.swift */; };
+		112842D92875D46700725F9B /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D32875D46700725F9B /* FavouritesRouter.swift */; };
+		112842DA2875D46700725F9B /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D42875D46700725F9B /* FavouritesViewController.swift */; };
+		112842DB2875D46700725F9B /* FavouritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D52875D46700725F9B /* FavouritesProtocols.swift */; };
+		112842DC2875D46700725F9B /* FavouritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D62875D46700725F9B /* FavouritesInteractor.swift */; };
+		112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D72875D46700725F9B /* FavouritesEntities.swift */; };
+		112842DF2875D47500725F9B /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112842DE2875D47500725F9B /* FavouritesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,21 @@
 		112842B52875D24700725F9B /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
 		112842BB2875D27B00725F9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		112842BD2875D29700725F9B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localization.strings; sourceTree = "<group>"; };
+		112842C02875D32500725F9B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		112842C42875D35900725F9B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		112842C52875D35900725F9B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		112842C62875D35900725F9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		112842C72875D35900725F9B /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		112842C82875D35900725F9B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		112842C92875D35900725F9B /* HomeEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntities.swift; sourceTree = "<group>"; };
+		112842D02875D38F00725F9B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		112842D22875D46700725F9B /* FavouritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenter.swift; sourceTree = "<group>"; };
+		112842D32875D46700725F9B /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
+		112842D42875D46700725F9B /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		112842D52875D46700725F9B /* FavouritesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesProtocols.swift; sourceTree = "<group>"; };
+		112842D62875D46700725F9B /* FavouritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractor.swift; sourceTree = "<group>"; };
+		112842D72875D46700725F9B /* FavouritesEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesEntities.swift; sourceTree = "<group>"; };
+		112842DE2875D47500725F9B /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1128429D2875D04600725F9B /* Main */,
+				112842BE2875D30300725F9B /* Presentation */,
 				112842B32875D21100725F9B /* Resources */,
 				112842972875CFD300725F9B /* Info.plist */,
 			);
@@ -145,6 +176,52 @@
 				112842BC2875D27B00725F9B /* Localization.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		112842BE2875D30300725F9B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				112842BF2875D31800725F9B /* TabBar */,
+				112842C22875D33B00725F9B /* Home */,
+				112842C32875D34000725F9B /* Favourites */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		112842BF2875D31800725F9B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				112842C02875D32500725F9B /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		112842C22875D33B00725F9B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				112842C62875D35900725F9B /* HomeViewController.swift */,
+				112842C42875D35900725F9B /* HomePresenter.swift */,
+				112842C52875D35900725F9B /* HomeRouter.swift */,
+				112842C72875D35900725F9B /* HomeProtocols.swift */,
+				112842C82875D35900725F9B /* HomeInteractor.swift */,
+				112842C92875D35900725F9B /* HomeEntities.swift */,
+				112842D02875D38F00725F9B /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		112842C32875D34000725F9B /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				112842D42875D46700725F9B /* FavouritesViewController.swift */,
+				112842D22875D46700725F9B /* FavouritesPresenter.swift */,
+				112842D62875D46700725F9B /* FavouritesInteractor.swift */,
+				112842D32875D46700725F9B /* FavouritesRouter.swift */,
+				112842D52875D46700725F9B /* FavouritesProtocols.swift */,
+				112842D72875D46700725F9B /* FavouritesEntities.swift */,
+				112842DE2875D47500725F9B /* FavouritesViewController.xib */,
+			);
+			path = Favourites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				112842962875CFD300725F9B /* LaunchScreen.storyboard in Resources */,
+				112842DF2875D47500725F9B /* FavouritesViewController.xib in Resources */,
 				112842BA2875D27B00725F9B /* Localization.strings in Resources */,
 				112842932875CFD300725F9B /* Assets.xcassets in Resources */,
+				112842D12875D38F00725F9B /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +330,20 @@
 			files = (
 				1128428A2875CFD200725F9B /* AppDelegate.swift in Sources */,
 				1128428C2875CFD200725F9B /* SceneDelegate.swift in Sources */,
+				112842D92875D46700725F9B /* FavouritesRouter.swift in Sources */,
+				112842CB2875D35900725F9B /* HomeRouter.swift in Sources */,
+				112842CE2875D35900725F9B /* HomeInteractor.swift in Sources */,
+				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
+				112842CC2875D35900725F9B /* HomeViewController.swift in Sources */,
+				112842CD2875D35900725F9B /* HomeProtocols.swift in Sources */,
+				112842DC2875D46700725F9B /* FavouritesInteractor.swift in Sources */,
+				112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */,
 				112842B62875D24700725F9B /* ImageAssets.swift in Sources */,
+				112842D82875D46700725F9B /* FavouritesPresenter.swift in Sources */,
+				112842CA2875D35900725F9B /* HomePresenter.swift in Sources */,
+				112842DB2875D46700725F9B /* FavouritesProtocols.swift in Sources */,
+				112842C12875D32500725F9B /* TabBarController.swift in Sources */,
+				112842DA2875D46700725F9B /* FavouritesViewController.swift in Sources */,
 				1128429F2875D06300725F9B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
