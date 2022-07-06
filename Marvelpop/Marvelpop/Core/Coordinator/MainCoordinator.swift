@@ -23,7 +23,6 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        
         let homeCoordinator = HomeCoordinator(container: container)
         startChild(homeCoordinator)
 
@@ -34,17 +33,21 @@ class MainCoordinator: Coordinator {
             fatalError("Fatal error. Home navigation controller does not exist. Tab Bar controller can not be constructed")
         }
         
-        home.tabBarItem = UITabBarItem(title: "tabbar_home".localized, image: UIImage(systemName: "heart.fill"), selectedImage: UIImage(systemName: "heart.fill"))
+        home.tabBarItem = UITabBarItem(title: "tabbar_home".localized,
+                                       image: ImageAssets.TabBar.home.image,
+                                       selectedImage: ImageAssets.TabBar.homeSelected.image)
         home.tabBarItem.tag = 0
         
         guard let favourites = childCoordinators[1].navigationController else {
             fatalError("Fatal error. Favourites navigation controller does not exist. Tab Bar controller can not be constructed")
         }
         
-        favourites.tabBarItem = UITabBarItem(title: "tabbar_favourites".localized, image: UIImage(systemName: "heart.fill"), selectedImage: UIImage(systemName: "heart.fill"))
+        favourites.tabBarItem = UITabBarItem(title: "tabbar_favourites".localized,
+                                             image: ImageAssets.TabBar.favourites.image,
+                                             selectedImage: ImageAssets.TabBar.favouritesSelected.image)
         favourites.tabBarItem.tag = 1
         
-        rootViewController = TabBarController()
+        rootViewController = container.makeTabBar()
         rootViewController.viewControllers = [home, favourites]
         rootViewController.modalPresentationStyle = .fullScreen
         

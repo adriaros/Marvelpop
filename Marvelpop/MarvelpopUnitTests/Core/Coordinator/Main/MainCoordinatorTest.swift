@@ -23,7 +23,7 @@ class MainCoordinatorTest: XCTestCase {
     }
 
     func test_start() throws {
-        // Given the view controllers
+        // Given the tab bar controller
         viewControllerContainer.fakeTabBar = TabBarController()
         viewControllerContainer.fakeHome = HomeViewController()
         viewControllerContainer.fakeFavourites = FavouritesViewController()
@@ -37,10 +37,10 @@ class MainCoordinatorTest: XCTestCase {
         // Then the tabBar controller contains two view controllers
         XCTAssertEqual(sut.rootViewController.viewControllers?[0].tabBarItem.title, "tabbar_home".localized)
         XCTAssertEqual(sut.rootViewController.viewControllers?[0].tabBarItem.tag, 0)
-        XCTAssertEqual(sut.rootViewController.viewControllers?[0].tabBarItem.image, UIImage(systemName: "heart.fill"))
+        XCTAssertEqual(sut.rootViewController.viewControllers?[0].tabBarItem.image, ImageAssets.TabBar.home.image)
         
         XCTAssertEqual(sut.rootViewController.viewControllers?[1].tabBarItem.title, "tabbar_favourites".localized)
         XCTAssertEqual(sut.rootViewController.viewControllers?[1].tabBarItem.tag, 1)
-        XCTAssertEqual(sut.rootViewController.viewControllers?[1].tabBarItem.image, UIImage(systemName: "heart.fill"))
+        XCTAssertEqual(sut.rootViewController.viewControllers?[1].tabBarItem.image, ImageAssets.TabBar.favourites.image)
     }
 }
