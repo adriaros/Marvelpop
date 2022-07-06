@@ -16,7 +16,6 @@
 		112842AF2875D0A500725F9B /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842AE2875D0A500725F9B /* TestingAppDelegate.swift */; };
 		112842B22875D0B200725F9B /* TestingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842B12875D0B200725F9B /* TestingSceneDelegate.swift */; };
 		112842B62875D24700725F9B /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842B52875D24700725F9B /* ImageAssets.swift */; };
-		112842BA2875D27B00725F9B /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 112842BC2875D27B00725F9B /* Localization.strings */; };
 		112842C12875D32500725F9B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C02875D32500725F9B /* TabBarController.swift */; };
 		112842CA2875D35900725F9B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C42875D35900725F9B /* HomePresenter.swift */; };
 		112842CB2875D35900725F9B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842C52875D35900725F9B /* HomeRouter.swift */; };
@@ -32,6 +31,13 @@
 		112842DC2875D46700725F9B /* FavouritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D62875D46700725F9B /* FavouritesInteractor.swift */; };
 		112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842D72875D46700725F9B /* FavouritesEntities.swift */; };
 		112842DF2875D47500725F9B /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112842DE2875D47500725F9B /* FavouritesViewController.xib */; };
+		112842E42875D54D00725F9B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842E32875D54D00725F9B /* Coordinator.swift */; };
+		112842E62875D55400725F9B /* HomeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842E52875D55400725F9B /* HomeRouting.swift */; };
+		112842E82875D55C00725F9B /* FavouritesRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842E72875D55C00725F9B /* FavouritesRouting.swift */; };
+		112842EB2875D58200725F9B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842EA2875D58200725F9B /* MainCoordinator.swift */; };
+		112842ED2875D59100725F9B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842EC2875D59100725F9B /* HomeCoordinator.swift */; };
+		112842EF2875D59C00725F9B /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842EE2875D59C00725F9B /* FavouritesCoordinator.swift */; };
+		112842F22875D74200725F9B /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112842F12875D74200725F9B /* String+Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +63,6 @@
 		112842AE2875D0A500725F9B /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		112842B12875D0B200725F9B /* TestingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSceneDelegate.swift; sourceTree = "<group>"; };
 		112842B52875D24700725F9B /* ImageAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
-		112842BB2875D27B00725F9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
-		112842BD2875D29700725F9B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localization.strings; sourceTree = "<group>"; };
 		112842C02875D32500725F9B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		112842C42875D35900725F9B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		112842C52875D35900725F9B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -74,6 +78,13 @@
 		112842D62875D46700725F9B /* FavouritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractor.swift; sourceTree = "<group>"; };
 		112842D72875D46700725F9B /* FavouritesEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesEntities.swift; sourceTree = "<group>"; };
 		112842DE2875D47500725F9B /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
+		112842E32875D54D00725F9B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		112842E52875D55400725F9B /* HomeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouting.swift; sourceTree = "<group>"; };
+		112842E72875D55C00725F9B /* FavouritesRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouting.swift; sourceTree = "<group>"; };
+		112842EA2875D58200725F9B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		112842EC2875D59100725F9B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		112842EE2875D59C00725F9B /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
+		112842F12875D74200725F9B /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				1128429D2875D04600725F9B /* Main */,
+				112842E02875D52800725F9B /* Core */,
 				112842BE2875D30300725F9B /* Presentation */,
 				112842B32875D21100725F9B /* Resources */,
 				112842972875CFD300725F9B /* Info.plist */,
@@ -155,7 +167,6 @@
 		112842B32875D21100725F9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				112842B72875D24F00725F9B /* Localization */,
 				112842B42875D21900725F9B /* Assets */,
 			);
 			path = Resources;
@@ -168,14 +179,6 @@
 				112842922875CFD300725F9B /* Assets.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		112842B72875D24F00725F9B /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				112842BC2875D27B00725F9B /* Localization.strings */,
-			);
-			path = Localization;
 			sourceTree = "<group>";
 		};
 		112842BE2875D30300725F9B /* Presentation */ = {
@@ -222,6 +225,44 @@
 				112842DE2875D47500725F9B /* FavouritesViewController.xib */,
 			);
 			path = Favourites;
+			sourceTree = "<group>";
+		};
+		112842E02875D52800725F9B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				112842F02875D73100725F9B /* Extensions */,
+				112842E12875D53900725F9B /* Coordinator */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		112842E12875D53900725F9B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				112842E22875D54500725F9B /* Protocol */,
+				112842EA2875D58200725F9B /* MainCoordinator.swift */,
+				112842EC2875D59100725F9B /* HomeCoordinator.swift */,
+				112842EE2875D59C00725F9B /* FavouritesCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		112842E22875D54500725F9B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				112842E32875D54D00725F9B /* Coordinator.swift */,
+				112842E52875D55400725F9B /* HomeRouting.swift */,
+				112842E72875D55C00725F9B /* FavouritesRouting.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		112842F02875D73100725F9B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				112842F12875D74200725F9B /* String+Localization.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +349,6 @@
 			files = (
 				112842962875CFD300725F9B /* LaunchScreen.storyboard in Resources */,
 				112842DF2875D47500725F9B /* FavouritesViewController.xib in Resources */,
-				112842BA2875D27B00725F9B /* Localization.strings in Resources */,
 				112842932875CFD300725F9B /* Assets.xcassets in Resources */,
 				112842D12875D38F00725F9B /* HomeViewController.xib in Resources */,
 			);
@@ -329,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1128428A2875CFD200725F9B /* AppDelegate.swift in Sources */,
+				112842EB2875D58200725F9B /* MainCoordinator.swift in Sources */,
 				1128428C2875CFD200725F9B /* SceneDelegate.swift in Sources */,
 				112842D92875D46700725F9B /* FavouritesRouter.swift in Sources */,
 				112842CB2875D35900725F9B /* HomeRouter.swift in Sources */,
@@ -336,15 +377,21 @@
 				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
 				112842CC2875D35900725F9B /* HomeViewController.swift in Sources */,
 				112842CD2875D35900725F9B /* HomeProtocols.swift in Sources */,
+				112842E42875D54D00725F9B /* Coordinator.swift in Sources */,
 				112842DC2875D46700725F9B /* FavouritesInteractor.swift in Sources */,
+				112842E82875D55C00725F9B /* FavouritesRouting.swift in Sources */,
+				112842EF2875D59C00725F9B /* FavouritesCoordinator.swift in Sources */,
 				112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */,
 				112842B62875D24700725F9B /* ImageAssets.swift in Sources */,
+				112842F22875D74200725F9B /* String+Localization.swift in Sources */,
 				112842D82875D46700725F9B /* FavouritesPresenter.swift in Sources */,
 				112842CA2875D35900725F9B /* HomePresenter.swift in Sources */,
 				112842DB2875D46700725F9B /* FavouritesProtocols.swift in Sources */,
 				112842C12875D32500725F9B /* TabBarController.swift in Sources */,
 				112842DA2875D46700725F9B /* FavouritesViewController.swift in Sources */,
+				112842E62875D55400725F9B /* HomeRouting.swift in Sources */,
 				1128429F2875D06300725F9B /* main.swift in Sources */,
+				112842ED2875D59100725F9B /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,15 +422,6 @@
 				112842952875CFD300725F9B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		112842BC2875D27B00725F9B /* Localization.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				112842BB2875D27B00725F9B /* en */,
-				112842BD2875D29700725F9B /* es */,
-			);
-			name = Localization.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
