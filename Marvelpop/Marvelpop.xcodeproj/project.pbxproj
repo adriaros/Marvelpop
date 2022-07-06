@@ -61,6 +61,8 @@
 		112843432875EE9400725F9B /* APIKeys+Marvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843422875EE9400725F9B /* APIKeys+Marvel.swift */; };
 		112843452875EEB000725F9B /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843442875EEB000725F9B /* String+MD5.swift */; };
 		1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128434A2875EF6400725F9B /* FakeMarvelAPI.swift */; };
+		112843502875F28D00725F9B /* MarvelAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128434F2875F28D00725F9B /* MarvelAPITest.swift */; };
+		112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843522875F2C100725F9B /* SpyMarvelURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,8 @@
 		112843442875EEB000725F9B /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		1128434A2875EF6400725F9B /* FakeMarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMarvelAPI.swift; sourceTree = "<group>"; };
 		1128434C2875EFC100725F9B /* MarvelpopConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MarvelpopConfig.xcconfig; sourceTree = "<group>"; };
+		1128434F2875F28D00725F9B /* MarvelAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPITest.swift; sourceTree = "<group>"; };
+		112843522875F2C100725F9B /* SpyMarvelURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyMarvelURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,6 +536,7 @@
 		112843482875EF3A00725F9B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				112843562875F7F300725F9B /* Spies */,
 				112843492875EF3F00725F9B /* Marvel */,
 			);
 			path = API;
@@ -541,8 +546,17 @@
 			isa = PBXGroup;
 			children = (
 				1128434A2875EF6400725F9B /* FakeMarvelAPI.swift */,
+				1128434F2875F28D00725F9B /* MarvelAPITest.swift */,
 			);
 			path = Marvel;
+			sourceTree = "<group>";
+		};
+		112843562875F7F300725F9B /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				112843522875F2C100725F9B /* SpyMarvelURLProtocol.swift */,
+			);
+			path = Spies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -704,6 +718,8 @@
 				112842AF2875D0A500725F9B /* TestingAppDelegate.swift in Sources */,
 				1128431C2875DD0B00725F9B /* FakeDependencyContainer.swift in Sources */,
 				1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */,
+				112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */,
+				112843502875F28D00725F9B /* MarvelAPITest.swift in Sources */,
 				1128431F2875DD1C00725F9B /* FakeViewControllerContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
