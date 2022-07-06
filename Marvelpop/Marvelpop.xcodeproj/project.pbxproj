@@ -41,6 +41,12 @@
 		112843062875DA8400725F9B /* MainCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843052875DA8400725F9B /* MainCoordinatorTest.swift */; };
 		112843082875DAF100725F9B /* HomeCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843072875DAF100725F9B /* HomeCoordinatorTest.swift */; };
 		1128430A2875DAFC00725F9B /* FavouritesCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843092875DAFC00725F9B /* FavouritesCoordinatorTest.swift */; };
+		112843112875DBDB00725F9B /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843102875DBDB00725F9B /* DependencyFactory.swift */; };
+		112843132875DBE400725F9B /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843122875DBE400725F9B /* ViewControllerFactory.swift */; };
+		112843152875DBEF00725F9B /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843142875DBEF00725F9B /* ViewControllerContainer.swift */; };
+		112843172875DBFD00725F9B /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843162875DBFD00725F9B /* DependencyContainer.swift */; };
+		1128431C2875DD0B00725F9B /* FakeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128431B2875DD0B00725F9B /* FakeDependencyContainer.swift */; };
+		1128431F2875DD1C00725F9B /* FakeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128431E2875DD1C00725F9B /* FakeViewControllerContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +99,12 @@
 		112843052875DA8400725F9B /* MainCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTest.swift; sourceTree = "<group>"; };
 		112843072875DAF100725F9B /* HomeCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTest.swift; sourceTree = "<group>"; };
 		112843092875DAFC00725F9B /* FavouritesCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinatorTest.swift; sourceTree = "<group>"; };
+		112843102875DBDB00725F9B /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
+		112843122875DBE400725F9B /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		112843142875DBEF00725F9B /* ViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
+		112843162875DBFD00725F9B /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		1128431B2875DD0B00725F9B /* FakeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDependencyContainer.swift; sourceTree = "<group>"; };
+		1128431E2875DD1C00725F9B /* FakeViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewControllerContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +251,7 @@
 		112842E02875D52800725F9B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1128430B2875DB9600725F9B /* Factory */,
 				112842F02875D73100725F9B /* Extensions */,
 				112842E12875D53900725F9B /* Coordinator */,
 			);
@@ -285,6 +298,7 @@
 		112843002875DA4C00725F9B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				112843182875DCE600725F9B /* Factory */,
 				112843012875DA6200725F9B /* Coordinator */,
 			);
 			path = Core;
@@ -322,6 +336,74 @@
 				112843092875DAFC00725F9B /* FavouritesCoordinatorTest.swift */,
 			);
 			path = Favourites;
+			sourceTree = "<group>";
+		};
+		1128430B2875DB9600725F9B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				1128430C2875DBA800725F9B /* DI */,
+				1128430D2875DBB500725F9B /* ViewController */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		1128430C2875DBA800725F9B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				1128430E2875DBCB00725F9B /* Protocol */,
+				112843162875DBFD00725F9B /* DependencyContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		1128430D2875DBB500725F9B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1128430F2875DBCF00725F9B /* Protocol */,
+				112843142875DBEF00725F9B /* ViewControllerContainer.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1128430E2875DBCB00725F9B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				112843102875DBDB00725F9B /* DependencyFactory.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1128430F2875DBCF00725F9B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				112843122875DBE400725F9B /* ViewControllerFactory.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		112843182875DCE600725F9B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				112843192875DCEC00725F9B /* DI */,
+				1128431A2875DCF000725F9B /* ViewController */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		112843192875DCEC00725F9B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				1128431B2875DD0B00725F9B /* FakeDependencyContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		1128431A2875DCF000725F9B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1128431E2875DD1C00725F9B /* FakeViewControllerContainer.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,8 +513,10 @@
 				1128428A2875CFD200725F9B /* AppDelegate.swift in Sources */,
 				112842EB2875D58200725F9B /* MainCoordinator.swift in Sources */,
 				1128428C2875CFD200725F9B /* SceneDelegate.swift in Sources */,
+				112843152875DBEF00725F9B /* ViewControllerContainer.swift in Sources */,
 				112842D92875D46700725F9B /* FavouritesRouter.swift in Sources */,
 				112842CB2875D35900725F9B /* HomeRouter.swift in Sources */,
+				112843132875DBE400725F9B /* ViewControllerFactory.swift in Sources */,
 				112842CE2875D35900725F9B /* HomeInteractor.swift in Sources */,
 				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
 				112842CC2875D35900725F9B /* HomeViewController.swift in Sources */,
@@ -440,6 +524,7 @@
 				112842E42875D54D00725F9B /* Coordinator.swift in Sources */,
 				112842DC2875D46700725F9B /* FavouritesInteractor.swift in Sources */,
 				112842E82875D55C00725F9B /* FavouritesRouting.swift in Sources */,
+				112843172875DBFD00725F9B /* DependencyContainer.swift in Sources */,
 				112842EF2875D59C00725F9B /* FavouritesCoordinator.swift in Sources */,
 				112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */,
 				112842B62875D24700725F9B /* ImageAssets.swift in Sources */,
@@ -452,6 +537,7 @@
 				112842E62875D55400725F9B /* HomeRouting.swift in Sources */,
 				1128429F2875D06300725F9B /* main.swift in Sources */,
 				112842ED2875D59100725F9B /* HomeCoordinator.swift in Sources */,
+				112843112875DBDB00725F9B /* DependencyFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +550,8 @@
 				112842B22875D0B200725F9B /* TestingSceneDelegate.swift in Sources */,
 				1128430A2875DAFC00725F9B /* FavouritesCoordinatorTest.swift in Sources */,
 				112842AF2875D0A500725F9B /* TestingAppDelegate.swift in Sources */,
+				1128431C2875DD0B00725F9B /* FakeDependencyContainer.swift in Sources */,
+				1128431F2875DD1C00725F9B /* FakeViewControllerContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

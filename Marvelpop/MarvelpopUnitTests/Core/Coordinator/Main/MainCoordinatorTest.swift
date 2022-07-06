@@ -10,18 +10,26 @@ import XCTest
 
 class MainCoordinatorTest: XCTestCase {
     
+    var viewControllerContainer: FakeViewControllerContainer!
     var sut: MainCoordinator!
 
     override func setUpWithError() throws {
+        viewControllerContainer = FakeViewControllerContainer()
     }
 
     override func tearDownWithError() throws {
+        viewControllerContainer = nil
         sut = nil
     }
 
     func test_start() throws {
+        // Given the view controllers
+        viewControllerContainer.fakeTabBar = TabBarController()
+        viewControllerContainer.fakeHome = HomeViewController()
+        viewControllerContainer.fakeFavourites = FavouritesViewController()
+        
         // Given the coordinator
-        sut = MainCoordinator(window: nil)
+        sut = MainCoordinator(window: nil, container: viewControllerContainer)
         
         // When the coordinator is started
         sut.start()

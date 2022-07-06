@@ -11,12 +11,15 @@ class MainCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
+    
     let window: UIWindow?
+    let container: ViewControllerFactory
     
     var rootViewController: TabBarController!
     
-    init(window: UIWindow?) {
+    init(window: UIWindow?, container: ViewControllerFactory) {
         self.window = window
+        self.container = container
     }
     
     func start() {
