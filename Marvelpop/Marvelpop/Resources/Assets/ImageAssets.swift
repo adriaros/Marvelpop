@@ -49,6 +49,7 @@ enum ImageAssets {
         }
         
         case logo = "marvel_logo"
+        case trash = "trash"
     }
     
     enum CharacterDetail: String {

@@ -12,6 +12,8 @@ protocol FavouritesPresenterToViewProtocol: AnyObject {
     var tableView: UITableView! { get set }
     var backgroundImageView: UIImageView! { get set }
     var emptyLabel: DSLabel! { get set }
+    func enableTrashButton()
+    func disableTrashButton()
 }
 
 protocol FavouritesInteractorToPresenterProtocol: AnyObject {

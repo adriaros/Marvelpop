@@ -62,6 +62,9 @@ class FavouritesTest: XCTestCase {
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Favourites.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
         XCTAssertEqual(view.emptyLabel.style, .title("favourites_empty".localized, .black, .white, .center, true, 0))
+        
+        // Then the trash button is not shown
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem, nil)
     }
     
     func test_viewDidLoad() throws {
@@ -83,6 +86,9 @@ class FavouritesTest: XCTestCase {
         let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeItemTableViewCell
         XCTAssertEqual(cell?.titleLabel.text, character.displayName)
         XCTAssertEqual(cell?.descriptionLabel.text, character.displayDescription)
+        
+        // Then the trash button is shown
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, ImageAssets.Favourites.trash.image)
     }
     
     func test_didSelectRowAt() throws {

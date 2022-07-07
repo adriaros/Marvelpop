@@ -14,3 +14,4 @@
 "generic_alert_error_description" = "Algo va mal. Vuelve a intentarlo";
 "generic_alert_error_ok" = "Entendido";
 "home_textfield_placeholder" = "Nombre de tu personaje favorito";
+"favourites_empty" = "Tu lista de favoritos está vacía";

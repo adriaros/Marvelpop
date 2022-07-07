@@ -33,8 +33,20 @@ class FavouritesViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = 120
     }
+    
+    @objc func onDeleteButton() {
+        
+    }
 }
 
 extension FavouritesViewController: FavouritesPresenterToViewProtocol {
+    
+    func enableTrashButton() {
+        guard navigationItem.rightBarButtonItem == nil else { return }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: ImageAssets.Favourites.trash.image, style: .plain, target: self, action: #selector(onDeleteButton))
+    }
 
+    func disableTrashButton() {
+        navigationItem.rightBarButtonItem = nil
+    }
 }

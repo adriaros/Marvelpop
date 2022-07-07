@@ -14,3 +14,4 @@
 "generic_alert_error_description" = "Something is wrong. Try again please";
 "generic_alert_error_ok" = "Ok";
 "home_textfield_placeholder" = "Name of your favorite character";
+"favourites_empty" = "Your favourites list is empty";
