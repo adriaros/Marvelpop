@@ -9,6 +9,10 @@ import UIKit
 
 class FavouritesCoordinator: Coordinator {
     
+    var backButtonItem: UIBarButtonItem {
+        UIBarButtonItem(image: ImageAssets.Navigation.back.image, style: .plain, target: self, action: #selector(back(_:)))
+    }
+    
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
         
@@ -32,6 +36,10 @@ class FavouritesCoordinator: Coordinator {
 extension FavouritesCoordinator: FavouritesRouting {
     
     func pushToCharacterDetailWith(id: Int) {
-        
+        let characterDetailViewController = container.makeCharacterDetail(characterID: id)
+        characterDetailViewController.navigationItem.leftBarButtonItem = backButtonItem
+        characterDetailViewController.navigationItem.title = "ID: \(id)"
+        characterDetailViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(characterDetailViewController, animated: true)
     }
 }
