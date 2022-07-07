@@ -9,22 +9,31 @@ import UIKit
 
 protocol FavouritesPresenterToViewProtocol: AnyObject {
     var presenter: FavouritesViewToPresenterProtocol? { get set }
+    var tableView: UITableView! { get set }
+    var backgroundImageView: UIImageView! { get set }
+    var emptyLabel: DSLabel! { get set }
 }
 
 protocol FavouritesInteractorToPresenterProtocol: AnyObject {
+    func didLoad(_ data: [Favourite])
 }
 
 protocol FavouritesPresenterToInteractorProtocol: AnyObject {
     var presenter: FavouritesInteractorToPresenterProtocol? { get set }
+    func loadData()
 }
 
 protocol FavouritesViewToPresenterProtocol: AnyObject {
     var view: FavouritesPresenterToViewProtocol? { get set }
     var interactor: FavouritesPresenterToInteractorProtocol? { get set }
     var router: FavouritesPresenterToRouterProtocol? { get set }
+    var items: [Favourite]? { get set }
     func setupView()
+    func updateView()
+    func favouriteSelected(at row: Int)
 }
 
 protocol FavouritesPresenterToRouterProtocol: AnyObject {
-    static func createModule() -> UIViewController
+    static func createModule(coordinator: FavouritesRouting, dataProvider: FavouritesRepositoryProtocol?, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController
+    func pushToCharacterDetailWith(id: Int)
 }

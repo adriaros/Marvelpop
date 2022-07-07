@@ -60,5 +60,17 @@ class ViewControllerContainerTest: XCTestCase {
         // Then the view controller is created
         XCTAssertTrue(favouritesViewController.view != nil)
     }
+    
+    func test_makeCharacterDetail() throws {
+        // Given the data providers
+        container.mockCharactersRepository = MockCharactersRepository()
+        container.mockFavouritesRepository = MockFavouritesRepository()
+        container.mockImageLoaderUseCase = MockImageLoaderUseCase()
+        
+        // When the make home method is executed
+        let characterDetailViewController = sut.makeCharacterDetail(characterID: 1)
+        
+        // Then the view controller is created
+        XCTAssertTrue(characterDetailViewController.view != nil)
+    }
 }
-

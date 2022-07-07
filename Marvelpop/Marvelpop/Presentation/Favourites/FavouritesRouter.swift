@@ -9,7 +9,9 @@ import UIKit
 
 class FavouritesRouter: FavouritesPresenterToRouterProtocol {
         
-    class func createModule() -> UIViewController {
+    var coordinator: FavouritesRouting?
+    
+    class func createModule(coordinator: FavouritesRouting, dataProvider: FavouritesRepositoryProtocol?, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController {
         
         let view = FavouritesViewController()
         let presenter = FavouritesPresenter()
@@ -22,6 +24,14 @@ class FavouritesRouter: FavouritesPresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        view.imageLoader = imageLoader
+        interactor.dataProvider = dataProvider
+        router.coordinator = coordinator
+        
         return view
+    }
+    
+    func pushToCharacterDetailWith(id: Int) {
+        coordinator?.pushToCharacterDetailWith(id: id)
     }
 }

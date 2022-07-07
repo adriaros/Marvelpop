@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavouritesViewController" customModule="Marvelpop" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="6uV-TB-XH7" id="Dnf-7o-iod"/>
+                <outlet property="emptyLabel" destination="5AI-lh-JIH" id="DHK-2Q-9Fx"/>
+                <outlet property="tableView" destination="NC7-Yr-O4I" id="5ef-SB-y5P"/>
                 <outlet property="view" destination="iN0-l3-epB" id="5UW-23-kqd"/>
             </connections>
         </placeholder>
@@ -17,8 +20,36 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6uV-TB-XH7">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NC7-Yr-O4I">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AI-lh-JIH" customClass="DSLabel" customModule="Marvelpop" customModuleProvider="target">
+                    <rect key="frame" x="20" y="782" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5AI-lh-JIH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1Gp-NK-kTC"/>
+                <constraint firstItem="6uV-TB-XH7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PGA-8b-cjY"/>
+                <constraint firstItem="6uV-TB-XH7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="V8n-Fy-VtP"/>
+                <constraint firstItem="NC7-Yr-O4I" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cs1-k7-CmY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5AI-lh-JIH" secondAttribute="trailing" constant="20" id="d68-7V-Bom"/>
+                <constraint firstItem="NC7-Yr-O4I" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="f6O-fu-QIg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5AI-lh-JIH" secondAttribute="bottom" constant="80" id="hVI-9c-8yf"/>
+                <constraint firstItem="NC7-Yr-O4I" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jbI-GF-apS"/>
+                <constraint firstItem="6uV-TB-XH7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rA4-3V-Jw4"/>
+                <constraint firstItem="NC7-Yr-O4I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tGL-x4-Oz9"/>
+                <constraint firstItem="6uV-TB-XH7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="udz-76-czS"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="104"/>
         </view>
     </objects>

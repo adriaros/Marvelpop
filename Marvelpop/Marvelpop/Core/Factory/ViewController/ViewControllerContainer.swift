@@ -24,7 +24,7 @@ class ViewControllerContainer: ViewControllerFactory {
     }
     
     func makeFavourites(coordinator: FavouritesRouting) -> FavouritesViewController {
-        FavouritesRouter.createModule() as! FavouritesViewController
+        FavouritesRouter.createModule(coordinator: coordinator, dataProvider: container.favouritesRepository, imageLoader: container.imageLoaderUseCase) as! FavouritesViewController
     }
     
     func makeCharacterDetail(characterID: Int) -> CharacterDetailViewController {

@@ -136,6 +136,9 @@
 		1128443B2876DAE500725F9B /* CharacterDetailDataTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128443A2876DAE500725F9B /* CharacterDetailDataTableViewCellTest.swift */; };
 		1128443E2876DD1E00725F9B /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128443D2876DD1E00725F9B /* SpyNavigationController.swift */; };
 		112844402876DD5E00725F9B /* ViewControllerContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128443F2876DD5E00725F9B /* ViewControllerContainerTest.swift */; };
+		112844432876E09300725F9B /* FavouritesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844422876E09300725F9B /* FavouritesTableViewDataSource.swift */; };
+		112844452876E0AB00725F9B /* FavouritesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844442876E0AB00725F9B /* FavouritesTableViewDelegate.swift */; };
+		112844482876E1B300725F9B /* FavouritesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844472876E1B300725F9B /* FavouritesTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +286,9 @@
 		1128443A2876DAE500725F9B /* CharacterDetailDataTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataTableViewCellTest.swift; sourceTree = "<group>"; };
 		1128443D2876DD1E00725F9B /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
 		1128443F2876DD5E00725F9B /* ViewControllerContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerTest.swift; sourceTree = "<group>"; };
+		112844422876E09300725F9B /* FavouritesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewDataSource.swift; sourceTree = "<group>"; };
+		112844442876E0AB00725F9B /* FavouritesTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewDelegate.swift; sourceTree = "<group>"; };
+		112844472876E1B300725F9B /* FavouritesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +432,7 @@
 		112842C32875D34000725F9B /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				112844412876E08400725F9B /* TableView */,
 				112842D42875D46700725F9B /* FavouritesViewController.swift */,
 				112842D22875D46700725F9B /* FavouritesPresenter.swift */,
 				112842D62875D46700725F9B /* FavouritesInteractor.swift */,
@@ -1214,6 +1221,7 @@
 				112844352876DA9200725F9B /* CharacterDetail */,
 				112844002876D56F00725F9B /* Common */,
 				112843FF2876D56200725F9B /* Home */,
+				112844462876E19500725F9B /* Favourites */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -1338,6 +1346,23 @@
 			path = Spies;
 			sourceTree = "<group>";
 		};
+		112844412876E08400725F9B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				112844422876E09300725F9B /* FavouritesTableViewDataSource.swift */,
+				112844442876E0AB00725F9B /* FavouritesTableViewDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		112844462876E19500725F9B /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				112844472876E1B300725F9B /* FavouritesTest.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1449,10 +1474,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112844452876E0AB00725F9B /* FavouritesTableViewDelegate.swift in Sources */,
 				112843F52876D37800725F9B /* DSShape.swift in Sources */,
 				112843232875E52C00725F9B /* UITabBarItem+Appearance.swift in Sources */,
 				1128435B2876B8F500725F9B /* MarvelpopCoreData.xcdatamodeld in Sources */,
 				1128436E2876BA1400725F9B /* Favourite.swift in Sources */,
+				112844432876E09300725F9B /* FavouritesTableViewDataSource.swift in Sources */,
 				1128433A2875EE1F00725F9B /* APIEndPoint.swift in Sources */,
 				112843212875E15F00725F9B /* UINavigationBar+Appearance.swift in Sources */,
 				112843B02876CBD200725F9B /* CharacterListRequest.swift in Sources */,
@@ -1547,6 +1574,7 @@
 				112844132876D6C000725F9B /* DSLabelTest.swift in Sources */,
 				1128440F2876D66A00725F9B /* FakeFavouritesCoordinator.swift in Sources */,
 				112843082875DAF100725F9B /* HomeCoordinatorTest.swift in Sources */,
+				112844482876E1B300725F9B /* FavouritesTest.swift in Sources */,
 				112843C32876CD5800725F9B /* MockCharactersRepository.swift in Sources */,
 				1128440D2876D65300725F9B /* FakeHomeCoordinator.swift in Sources */,
 				112842B22875D0B200725F9B /* TestingSceneDelegate.swift in Sources */,
