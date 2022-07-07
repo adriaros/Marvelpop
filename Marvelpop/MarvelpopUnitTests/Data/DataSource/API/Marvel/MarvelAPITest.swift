@@ -26,7 +26,7 @@ class MarvelAPITest: XCTestCase {
         sut = nil
     }
 
-    func testExample() throws {
+    func test_process() throws {
         // Given the expectations
         weak var expectation = self.expectation(description: #function)
         var expectedCode: HTTPStatusCode?
