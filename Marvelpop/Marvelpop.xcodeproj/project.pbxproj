@@ -99,6 +99,9 @@
 		112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */; };
 		112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */; };
 		112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */; };
+		112843E12876D1A300725F9B /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E02876D1A300725F9B /* ActivityIndicatorView.swift */; };
+		112843E32876D1B500725F9B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E22876D1B500725F9B /* AlertController.swift */; };
+		112843E62876D1C300725F9B /* AlertControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E52876D1C300725F9B /* AlertControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +212,9 @@
 		112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread-GuaranteeMainThread.swift"; sourceTree = "<group>"; };
 		112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageLoaderUseCase.swift; sourceTree = "<group>"; };
 		112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseTest.swift; sourceTree = "<group>"; };
+		112843E02876D1A300725F9B /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		112843E22876D1B500725F9B /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		112843E52876D1C300725F9B /* AlertControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +320,7 @@
 		112842BE2875D30300725F9B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				112843DD2876D17F00725F9B /* Common */,
 				112842BF2875D31800725F9B /* TabBar */,
 				112842C22875D33B00725F9B /* Home */,
 				112842C32875D34000725F9B /* Favourites */,
@@ -1043,6 +1050,40 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		112843DD2876D17F00725F9B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				112843DF2876D19500725F9B /* Views */,
+				112843DE2876D18A00725F9B /* Controllers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		112843DE2876D18A00725F9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				112843E42876D1B900725F9B /* Protocol */,
+				112843E22876D1B500725F9B /* AlertController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		112843DF2876D19500725F9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				112843E02876D1A300725F9B /* ActivityIndicatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		112843E42876D1B900725F9B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				112843E52876D1C300725F9B /* AlertControllerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1160,6 +1201,7 @@
 				1128428C2875CFD200725F9B /* SceneDelegate.swift in Sources */,
 				112843A32876CB4700725F9B /* MediaRepositoryProtocol.swift in Sources */,
 				112843812876C00000725F9B /* APICharactersResponseModel.swift in Sources */,
+				112843E12876D1A300725F9B /* ActivityIndicatorView.swift in Sources */,
 				1128433C2875EE3100725F9B /* APIEndPoint+Marvel.swift in Sources */,
 				112843652876B9A300725F9B /* CoreDataManagerProtocol.swift in Sources */,
 				112843672876B9CB00725F9B /* CoreDataFavouriteWrapperProtocol.swift in Sources */,
@@ -1195,11 +1237,13 @@
 				112843B42876CC2400725F9B /* MediaRepository.swift in Sources */,
 				112842D82875D46700725F9B /* FavouritesPresenter.swift in Sources */,
 				112843882876C1CF00725F9B /* ImageCache.swift in Sources */,
+				112843E62876D1C300725F9B /* AlertControllerProtocol.swift in Sources */,
 				112842CA2875D35900725F9B /* HomePresenter.swift in Sources */,
 				112843A72876CB8500725F9B /* FavouritesRepositoryProtocol.swift in Sources */,
 				1128439B2876CA6100725F9B /* JSONDecoder-Decodable.swift in Sources */,
 				112843432875EE9400725F9B /* APIKeys+Marvel.swift in Sources */,
 				112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */,
+				112843E32876D1B500725F9B /* AlertController.swift in Sources */,
 				112842DB2875D46700725F9B /* FavouritesProtocols.swift in Sources */,
 				112842C12875D32500725F9B /* TabBarController.swift in Sources */,
 				112843712876BA6200725F9B /* Character.swift in Sources */,
