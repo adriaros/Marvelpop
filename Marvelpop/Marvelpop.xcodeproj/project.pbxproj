@@ -94,6 +94,11 @@
 		112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843C42876CD6600725F9B /* CharactersRepositoryTest.swift */; };
 		112843C72876CDA000725F9B /* MockFavouritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843C62876CDA000725F9B /* MockFavouritesRepository.swift */; };
 		112843C92876CDC000725F9B /* FavouritesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843C82876CDC000725F9B /* FavouritesRepositoryTest.swift */; };
+		112843CE2876CEED00725F9B /* ImageLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843CD2876CEED00725F9B /* ImageLoaderUseCase.swift */; };
+		112843D12876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D02876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift */; };
+		112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */; };
+		112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */; };
+		112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +204,11 @@
 		112843C42876CD6600725F9B /* CharactersRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepositoryTest.swift; sourceTree = "<group>"; };
 		112843C62876CDA000725F9B /* MockFavouritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouritesRepository.swift; sourceTree = "<group>"; };
 		112843C82876CDC000725F9B /* FavouritesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRepositoryTest.swift; sourceTree = "<group>"; };
+		112843CD2876CEED00725F9B /* ImageLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCase.swift; sourceTree = "<group>"; };
+		112843D02876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseProtocol.swift; sourceTree = "<group>"; };
+		112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread-GuaranteeMainThread.swift"; sourceTree = "<group>"; };
+		112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageLoaderUseCase.swift; sourceTree = "<group>"; };
+		112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +279,7 @@
 				112842AD2875D09A00725F9B /* Main */,
 				112843002875DA4C00725F9B /* Core */,
 				112843462875EF2500725F9B /* Data */,
+				112843D52876CF6600725F9B /* Domain */,
 			);
 			path = MarvelpopUnitTests;
 			sourceTree = "<group>";
@@ -349,6 +360,7 @@
 		112842E02875D52800725F9B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				112843D22876CF2000725F9B /* Utilities */,
 				1128430B2875DB9600725F9B /* Factory */,
 				112842F02875D73100725F9B /* Extensions */,
 				112842E12875D53900725F9B /* Coordinator */,
@@ -684,6 +696,7 @@
 		1128436A2876B9EE00725F9B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				112843CA2876CE2200725F9B /* UseCases */,
 				1128439E2876CB0300725F9B /* Repository */,
 				1128436B2876B9FD00725F9B /* Model */,
 			);
@@ -964,6 +977,72 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		112843CA2876CE2200725F9B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				112843CB2876CE2B00725F9B /* ImageLoader */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		112843CB2876CE2B00725F9B /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				112843CC2876CEE500725F9B /* Protocol */,
+				112843CD2876CEED00725F9B /* ImageLoaderUseCase.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		112843CC2876CEE500725F9B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				112843D02876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		112843D22876CF2000725F9B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		112843D52876CF6600725F9B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				112843D62876CF6B00725F9B /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		112843D62876CF6B00725F9B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				112843D72876CF7000725F9B /* ImageLoader */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		112843D72876CF7000725F9B /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				112843D82876CF7900725F9B /* Mock */,
+				112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		112843D82876CF7900725F9B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1088,6 +1167,7 @@
 				112842D92875D46700725F9B /* FavouritesRouter.swift in Sources */,
 				112842CB2875D35900725F9B /* HomeRouter.swift in Sources */,
 				112843B22876CC0800725F9B /* CharactersRepository.swift in Sources */,
+				112843D12876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift in Sources */,
 				112843132875DBE400725F9B /* ViewControllerFactory.swift in Sources */,
 				112842CE2875D35900725F9B /* HomeInteractor.swift in Sources */,
 				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
@@ -1110,6 +1190,7 @@
 				112842EF2875D59C00725F9B /* FavouritesCoordinator.swift in Sources */,
 				112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */,
 				112842B62875D24700725F9B /* ImageAssets.swift in Sources */,
+				112843CE2876CEED00725F9B /* ImageLoaderUseCase.swift in Sources */,
 				112842F22875D74200725F9B /* String+Localization.swift in Sources */,
 				112843B42876CC2400725F9B /* MediaRepository.swift in Sources */,
 				112842D82875D46700725F9B /* FavouritesPresenter.swift in Sources */,
@@ -1118,6 +1199,7 @@
 				112843A72876CB8500725F9B /* FavouritesRepositoryProtocol.swift in Sources */,
 				1128439B2876CA6100725F9B /* JSONDecoder-Decodable.swift in Sources */,
 				112843432875EE9400725F9B /* APIKeys+Marvel.swift in Sources */,
+				112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */,
 				112842DB2875D46700725F9B /* FavouritesProtocols.swift in Sources */,
 				112842C12875D32500725F9B /* TabBarController.swift in Sources */,
 				112843712876BA6200725F9B /* Character.swift in Sources */,
@@ -1150,10 +1232,12 @@
 				112843BE2876CCF400725F9B /* MediaRepositoryTest.swift in Sources */,
 				1128437E2876BB7200725F9B /* CoreDataFavouriteWrapperTest.swift in Sources */,
 				1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */,
+				112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */,
 				112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */,
 				112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */,
 				112843BC2876CCD400725F9B /* MockMediaRepository.swift in Sources */,
 				112843502875F28D00725F9B /* MarvelAPITest.swift in Sources */,
+				112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */,
 				1128437C2876BB5E00725F9B /* MockCoreDataFavouriteWrapper.swift in Sources */,
 				1128431F2875DD1C00725F9B /* FakeViewControllerContainer.swift in Sources */,
 				112843C92876CDC000725F9B /* FavouritesRepositoryTest.swift in Sources */,
