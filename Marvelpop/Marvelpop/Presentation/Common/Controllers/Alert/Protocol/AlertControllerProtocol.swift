@@ -9,5 +9,7 @@ import UIKit
 
 protocol AlertControllerProtocol {
     var root: UIViewController? { get set }
+    var delegate: AlertControllerDelegate? { get set }
     func show(title: String, description: String, button: String)
+    func show(title: String, description: String, action: String, cancel: String)
 }

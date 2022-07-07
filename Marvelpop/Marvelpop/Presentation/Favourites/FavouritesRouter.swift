@@ -24,6 +24,8 @@ class FavouritesRouter: FavouritesPresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        view.alerts = AlertController()
+        view.alerts?.delegate = view
         view.imageLoader = imageLoader
         interactor.dataProvider = dataProvider
         router.coordinator = coordinator

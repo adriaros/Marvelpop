@@ -145,6 +145,7 @@
 		1128445228772BC600725F9B /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445128772BC600725F9B /* DSTextField.swift */; };
 		1128445428772CE900725F9B /* UIFont+Noteworthy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445328772CE900725F9B /* UIFont+Noteworthy.swift */; };
 		11284456287736C200725F9B /* DSTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11284455287736C200725F9B /* DSTextFieldTest.swift */; };
+		1128445B28774C3B00725F9B /* AlertControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445A28774C3B00725F9B /* AlertControllerDelegate.swift */; };
 		EEAFD09CF877998D1CE5FC3A /* Pods_Marvelpop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0047678D8E7CD0DBFA65FF /* Pods_Marvelpop.framework */; };
 		F0290AB9D109F85E7B769A20 /* Pods_MarvelpopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -303,6 +304,7 @@
 		1128445128772BC600725F9B /* DSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextField.swift; sourceTree = "<group>"; };
 		1128445328772CE900725F9B /* UIFont+Noteworthy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Noteworthy.swift"; sourceTree = "<group>"; };
 		11284455287736C200725F9B /* DSTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextFieldTest.swift; sourceTree = "<group>"; };
+		1128445A28774C3B00725F9B /* AlertControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerDelegate.swift; sourceTree = "<group>"; };
 		5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelpopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6099A93FAD882DE3D448FCAC /* Pods-Marvelpop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.debug.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.debug.xcconfig"; sourceTree = "<group>"; };
 		6F141BE783A8F93E992979F3 /* Pods-Marvelpop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.release.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.release.xcconfig"; sourceTree = "<group>"; };
@@ -1174,8 +1176,7 @@
 		112843DE2876D18A00725F9B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				112843E42876D1B900725F9B /* Protocol */,
-				112843E22876D1B500725F9B /* AlertController.swift */,
+				1128445C28774C3E00725F9B /* Alert */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1391,6 +1392,24 @@
 				112844472876E1B300725F9B /* FavouritesTest.swift */,
 			);
 			path = Favourites;
+			sourceTree = "<group>";
+		};
+		1128445C28774C3E00725F9B /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				112843E42876D1B900725F9B /* Protocol */,
+				1128445D28774C4900725F9B /* Delegate */,
+				112843E22876D1B500725F9B /* AlertController.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		1128445D28774C4900725F9B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1128445A28774C3B00725F9B /* AlertControllerDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		1428A1BF14C544DBA23E9BD6 /* Pods */ = {
@@ -1637,6 +1656,7 @@
 				112842DC2875D46700725F9B /* FavouritesInteractor.swift in Sources */,
 				112843622876B98E00725F9B /* CoreDataManager.swift in Sources */,
 				112843302875EC2700725F9B /* QueryItem.swift in Sources */,
+				1128445B28774C3B00725F9B /* AlertControllerDelegate.swift in Sources */,
 				112843B62876CC4F00725F9B /* FavouritesRepository.swift in Sources */,
 				112843AE2876CBC000725F9B /* Pagination.swift in Sources */,
 				112842E82875D55C00725F9B /* FavouritesRouting.swift in Sources */,

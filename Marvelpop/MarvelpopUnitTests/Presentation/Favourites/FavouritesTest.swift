@@ -14,6 +14,7 @@ class FavouritesTest: XCTestCase {
     var favouriteRepository: MockFavouritesRepository!
     var imageLoaderUseCase: MockImageLoaderUseCase!
     var coordinator: FakeFavouritesCoordinator!
+    var alerts: SpyAlertController!
     
     var view: FavouritesViewController!
     var presenter: FavouritesPresenter!
@@ -25,6 +26,7 @@ class FavouritesTest: XCTestCase {
         favouriteRepository = MockFavouritesRepository()
         imageLoaderUseCase = MockImageLoaderUseCase()
         coordinator = FakeFavouritesCoordinator()
+        alerts = SpyAlertController()
     }
 
     override func tearDownWithError() throws {
@@ -36,6 +38,7 @@ class FavouritesTest: XCTestCase {
         presenter = nil
         interactor = nil
         router = nil
+        alerts = nil
     }
     
     private func buildTestingScenario() {
@@ -43,7 +46,7 @@ class FavouritesTest: XCTestCase {
         presenter = view.presenter as? FavouritesPresenter
         interactor = presenter.interactor as? FavouritesInteractor
         router = presenter.router as? FavouritesRouter
-        
+        view.alerts = alerts
         window.addSubview(view.view)
         window.makeKeyAndVisible()
     }
@@ -120,6 +123,16 @@ class FavouritesTest: XCTestCase {
         
         // When the user taps on delete button
         view.onDeleteButton()
+        
+        // Then the warning alert is shown
+        XCTAssertTrue(alerts.root is FavouritesViewController)
+        XCTAssertEqual(alerts.alertTitle, "favourites_alert_delete_title".localized)
+        XCTAssertEqual(alerts.alertDescription, "favourites_alert_delete_description".localized)
+        XCTAssertEqual(alerts.alertActionButton, "favourites_alert_delete_action".localized)
+        XCTAssertEqual(alerts.alertCancelButton, "favourites_alert_delete_cancel".localized)
+        
+        // When the user taps on "delete" button
+        view.onDestructiveAction()
         
         // Then the trash button is hidden, the favourites are deleted and the empty label is shown
         XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, nil)
