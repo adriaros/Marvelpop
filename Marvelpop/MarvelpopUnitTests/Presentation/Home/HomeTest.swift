@@ -90,6 +90,7 @@ class HomeTest: XCTestCase {
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
         XCTAssertEqual(view.keywordContainerView.style, .rounded)
+        XCTAssertEqual(view.keywordTextField.style, .basic("home_textfield_placeholder".localized))
         XCTAssertEqual(view.keywordTextField.returnKeyType, .search)
         XCTAssertEqual(view.keywordEraserButton.image(for: .normal), ImageAssets.Home.eraser.image)
         XCTAssertEqual(view.separatorView.backgroundColor, .lightGray)
