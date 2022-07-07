@@ -34,4 +34,24 @@ class HomeCoordinatorTest: XCTestCase {
         // Then the coordinator is started correctly
         XCTAssertEqual(sut.navigationController?.viewControllers.first, homeViewController)
     }
+    
+    func test_pushToCharacterDetail() throws {
+        // Given a home view controller
+        let homeViewController = HomeViewController()
+        viewControllerContainer.fakeHome = homeViewController
+        
+        // Given a character detail view controller
+        let characterDetailViewController = CharacterDetailViewController()
+        viewControllerContainer.fakeCharacterDetail = characterDetailViewController
+        
+        // Given a spy navigation controller
+        let spy = SpyNavigationController(rootViewController: homeViewController)
+        sut.navigationController = spy
+        
+        // When the push to character detail is executed
+        sut.pushToCharacterDetailWith(id: 0)
+        
+        // Then the pushed view controller is the character detail
+        XCTAssertTrue((spy.pushedViewController as? CharacterDetailViewController) != nil)
+    }
 }

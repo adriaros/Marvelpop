@@ -13,6 +13,7 @@ class FakeViewControllerContainer: ViewControllerFactory {
     var fakeTabBar: TabBarController!
     var fakeHome: HomeViewController!
     var fakeFavourites: FavouritesViewController!
+    var fakeCharacterDetail: CharacterDetailViewController!
     
     func makeTabBar() -> TabBarController {
         fakeTabBar
@@ -24,5 +25,9 @@ class FakeViewControllerContainer: ViewControllerFactory {
     
     func makeFavourites(coordinator: FavouritesRouting) -> FavouritesViewController {
         fakeFavourites
+    }
+    
+    func makeCharacterDetail(characterID: Int) -> CharacterDetailViewController {
+        fakeCharacterDetail
     }
 }
