@@ -33,6 +33,7 @@ class MockFavouritesRepository: FavouritesRepositoryProtocol {
     }
     
     func deleteAll() {
+        mockFavourites?.removeAll()
         deletedAllCalled = true
     }
 }

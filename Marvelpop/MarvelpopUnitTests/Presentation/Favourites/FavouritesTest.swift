@@ -62,6 +62,7 @@ class FavouritesTest: XCTestCase {
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Favourites.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
         XCTAssertEqual(view.emptyLabel.style, .title("favourites_empty".localized, .black, .white, .center, true, 0))
+        XCTAssertFalse(view.emptyLabel.isHidden)
         
         // Then the trash button is not shown
         XCTAssertEqual(view.navigationItem.rightBarButtonItem, nil)
@@ -81,6 +82,7 @@ class FavouritesTest: XCTestCase {
         // Then the view is configured
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Favourites.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
+        XCTAssertTrue(view.emptyLabel.isHidden)
         
         // Then the list is shown with the favourite character
         let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeItemTableViewCell
@@ -105,5 +107,23 @@ class FavouritesTest: XCTestCase {
         
         // Then the user navigates to the character detail
         XCTAssertEqual(coordinator.pushedToCharacterDetailWithID, 1234)
+    }
+    
+    func test_onDeleteButton() throws {
+        // Given a favourite character
+        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        favouriteRepository.mockFavourites = [Favourite(character)]
+        
+        // Given a testing scenario
+        buildTestingScenario()
+        view.loadViewIfNeeded()
+        
+        // When the user taps on delete button
+        view.onDeleteButton()
+        
+        // Then the trash button is hidden, the favourites are deleted and the empty label is shown
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, nil)
+        XCTAssertTrue(favouriteRepository.deletedAllCalled)
+        XCTAssertFalse(view.emptyLabel.isHidden)
     }
 }
