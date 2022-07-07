@@ -39,6 +39,7 @@ enum ImageAssets {
         }
         
         case logo = "marvel_logo"
+        case eraser = "eraser"
     }
     
     enum Favourites: String {

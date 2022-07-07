@@ -89,6 +89,11 @@ class HomeTest: XCTestCase {
         // Then the view is configured
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
+        XCTAssertEqual(view.keywordContainerView.style, .rounded)
+        XCTAssertEqual(view.keywordContainerView.backgroundColor, .white)
+        XCTAssertEqual(view.keywordTextField.returnKeyType, .search)
+        XCTAssertEqual(view.keywordEraserButton.image(for: .normal), ImageAssets.Home.eraser.image)
+        XCTAssertEqual(view.separatorView.backgroundColor, .lightGray)
         
         // Then the list is shown with the character
         let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeItemTableViewCell

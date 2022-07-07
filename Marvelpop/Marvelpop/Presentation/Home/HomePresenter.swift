@@ -22,8 +22,21 @@ class HomePresenter: HomeViewToPresenterProtocol {
     }
     
     func setupView() {
+        configureBackgroundView()
+        configureKeywordView()
+    }
+    
+    func configureBackgroundView() {
         view?.backgroundImageView.image = ImageAssets.Home.logo.image
         view?.backgroundImageView.alpha = 0.25
+    }
+    
+    func configureKeywordView() {
+        view?.keywordContainerView.style = .rounded
+        view?.keywordContainerView.backgroundColor = .white
+        view?.keywordTextField.returnKeyType = .search
+        view?.keywordEraserButton.setImage(ImageAssets.Home.eraser.image, for: .normal)
+        view?.separatorView.backgroundColor = .lightGray
     }
     
     func updateView(loader: Bool) {

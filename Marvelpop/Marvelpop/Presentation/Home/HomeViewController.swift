@@ -15,6 +15,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var separatorView: DSShape!
+    @IBOutlet weak var keywordContainerView: DSShape!
+    @IBOutlet weak var keywordTextField: UITextField!
+    @IBOutlet weak var keywordEraserButton: UIButton!
+    
     var activityIndicator: ActivityIndicatorView?
     var alerts: AlertControllerProtocol?
     

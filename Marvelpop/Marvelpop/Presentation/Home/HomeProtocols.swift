@@ -12,6 +12,10 @@ protocol HomePresenterToViewProtocol: AnyObject {
     var tableView: UITableView! { get set }
     var backgroundImageView: UIImageView! { get set }
     var activityIndicator: ActivityIndicatorView? { get set }
+    var separatorView: DSShape! { get set }
+    var keywordContainerView: DSShape! { get set }
+    var keywordTextField: UITextField! { get set }
+    var keywordEraserButton: UIButton! { get set }
     func showActivityIndicator()
     func hideActivityIndicator()
     func showErrorAlert()
