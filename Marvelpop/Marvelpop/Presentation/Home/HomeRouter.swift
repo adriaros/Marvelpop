@@ -8,8 +8,10 @@
 import UIKit
 
 class HomeRouter: HomePresenterToRouterProtocol {
+    
+    var coordinator: HomeRouting?
         
-    class func createModule() -> UIViewController {
+    class func createModule(coordinator: HomeRouting, dataProvider: CharactersRepositoryProtocol, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController {
         
         let view = HomeViewController()
         let presenter = HomePresenter()
@@ -22,6 +24,16 @@ class HomeRouter: HomePresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        view.activityIndicator = ActivityIndicatorView(style: .large)
+        view.alerts = AlertController()
+        view.imageLoader = imageLoader
+        interactor.dataProvider = dataProvider
+        router.coordinator = coordinator
+        
         return view
+    }
+    
+    func pushToCharacterDetailWith(id: Int) {
+        coordinator?.pushToCharacterDetailWith(id: id)
     }
 }

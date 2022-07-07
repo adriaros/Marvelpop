@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Marvelpop" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="fac-T1-Y3n" id="TcD-gJ-h1R"/>
+                <outlet property="tableView" destination="mmt-ao-kdx" id="meL-S3-xaU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mXj-Mw-6WO"/>
             </connections>
         </placeholder>
@@ -17,8 +19,27 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fac-T1-Y3n">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-ao-kdx">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fac-T1-Y3n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GVw-Sj-GfG"/>
+                <constraint firstItem="mmt-ao-kdx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NZJ-d9-pty"/>
+                <constraint firstItem="mmt-ao-kdx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Nea-Xu-z9T"/>
+                <constraint firstItem="mmt-ao-kdx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Pg2-4d-zhA"/>
+                <constraint firstItem="fac-T1-Y3n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RPD-Be-LSO"/>
+                <constraint firstItem="fac-T1-Y3n" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="nZi-V2-snn"/>
+                <constraint firstItem="fac-T1-Y3n" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="svS-aj-96K"/>
+                <constraint firstItem="mmt-ao-kdx" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="uRd-rv-HVm"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="104"/>
         </view>
     </objects>
