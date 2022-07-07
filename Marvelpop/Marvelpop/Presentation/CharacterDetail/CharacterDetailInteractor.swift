@@ -30,10 +30,7 @@ class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProtocol {
     }
     
     func handleFavourite() {
-        if favourites?.fetch(favourite: character) != nil {
-            favourites?.delete(favourite: character)
-        } else {
-            favourites?.save(favourite: character)
-        }
+        favourites?.fetch(favourite: character) != nil ? favourites?.delete(favourite: character) : favourites?.save(favourite: character)
+        presenter?.isFavourite = favourites?.fetch(favourite: character) != nil
     }
 }

@@ -13,7 +13,11 @@ class CharacterDetailPresenter: CharacterDetailViewToPresenterProtocol {
     var interactor: CharacterDetailPresenterToInteractorProtocol?
     var router: CharacterDetailPresenterToRouterProtocol?
     
-    var isFavourite = false
+    var isFavourite: Bool = false {
+        didSet {
+            isFavourite ? view?.showFavouriteButton() : view?.showNotFavouriteButton()
+        }
+    }
     
     var character: Character? {
         didSet {

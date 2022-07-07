@@ -62,7 +62,7 @@ enum ImageAssets {
         }
         
         case logo = "marvel_logo"
-        case favourite = "favourite_fill"
-        case noFavourite = "favourite"
+        case favourite = "heart_fill"
+        case noFavourite = "heart"
     }
 }

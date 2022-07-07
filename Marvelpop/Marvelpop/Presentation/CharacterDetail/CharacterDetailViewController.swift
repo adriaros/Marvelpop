@@ -27,15 +27,19 @@ class CharacterDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
     }
+    
+    @objc func onFavouriteButton() {
+        presenter?.handleFavourite()
+    }
 }
 
 extension CharacterDetailViewController: CharacterDetailPresenterToViewProtocol {
 
-}
+    func showFavouriteButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: ImageAssets.CharacterDetail.favourite.image, style: .plain, target: self, action: #selector(onFavouriteButton))
+    }
 
-extension CharacterDetailViewController: CharacterDetailHeaderTableViewCellDelegate {
-    
-    func onFavourite() {
-        presenter?.handleFavourite()
+    func showNotFavouriteButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: ImageAssets.CharacterDetail.noFavourite.image, style: .plain, target: self, action: #selector(onFavouriteButton))
     }
 }

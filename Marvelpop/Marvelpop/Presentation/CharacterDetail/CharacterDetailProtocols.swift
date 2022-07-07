@@ -10,9 +10,12 @@ import UIKit
 protocol CharacterDetailPresenterToViewProtocol: AnyObject {
     var presenter: CharacterDetailViewToPresenterProtocol? { get set }
     var tableView: UITableView! { get set }
+    func showFavouriteButton()
+    func showNotFavouriteButton()
 }
 
 protocol CharacterDetailInteractorToPresenterProtocol: AnyObject {
+    var isFavourite: Bool { get set }
     func didLoad(_ data: Character?, favourite: Bool)
 }
 
@@ -27,7 +30,6 @@ protocol CharacterDetailViewToPresenterProtocol: AnyObject {
     var interactor: CharacterDetailPresenterToInteractorProtocol? { get set }
     var router: CharacterDetailPresenterToRouterProtocol? { get set }
     var character: Character? { get set }
-    var isFavourite: Bool { get }
     func setupView()
     func handleFavourite()
 }
