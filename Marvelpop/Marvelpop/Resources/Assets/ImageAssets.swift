@@ -23,6 +23,8 @@ enum ImageAssets {
     
     enum Home: String {
         
+        static var imageSize = "/landscape_small."
+        
         var image: UIImage? {
             return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
         }
@@ -31,6 +33,17 @@ enum ImageAssets {
     }
     
     enum Favourites: String {
+        
+        var image: UIImage? {
+            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
+        }
+        
+        case logo = "marvel_logo"
+    }
+    
+    enum CharacterDetail: String {
+        
+        static var imageSize = "/landscape_xlarge."
         
         var image: UIImage? {
             return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
