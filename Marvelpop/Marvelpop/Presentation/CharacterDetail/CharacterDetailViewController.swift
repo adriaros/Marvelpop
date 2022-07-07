@@ -24,6 +24,7 @@ class CharacterDetailViewController: UIViewController {
         tableView.register(UINib(nibName: CharacterDetailImageTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailImageTableViewCell.cellType)
         tableView.register(UINib(nibName: CharacterDetailDataTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailDataTableViewCell.cellType)
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.estimatedRowHeight = 100
     }
 }

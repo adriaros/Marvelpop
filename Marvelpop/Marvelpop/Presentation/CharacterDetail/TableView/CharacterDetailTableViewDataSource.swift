@@ -23,7 +23,8 @@ extension CharacterDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailImageTableViewCell.cellType, for: indexPath) as! CharacterDetailImageTableViewCell
             cell.delegate = self
             cell.imageLoader = imageLoader
-            cell.configure(image: character.detailImageURL, favourite: presenter?.isFavourite ?? false)
+            cell.configure(image: character.portraitImageURL, favourite: presenter?.isFavourite ?? false)
+            cell.configure(background: character.landscapeImageURL)
             return cell
             
         case .data:

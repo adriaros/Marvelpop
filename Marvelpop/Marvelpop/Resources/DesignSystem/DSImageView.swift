@@ -18,7 +18,7 @@ class DSImageView: UIImageView {
         didSet {
             switch style {
             case .rounded:
-                configure(cornerRadius: 12, shadowColor: UIColor.gray.cgColor, shadowOpacity: 0.4, shadowRadius: 4.0)
+                configure(cornerRadius: 12, shadowColor: UIColor.gray.cgColor, shadowOpacity: 0.6, shadowRadius: 6.0)
                 
             case .none:
                 break

@@ -37,10 +37,15 @@ class CharacterDetailImageTableViewCellTest: XCTestCase {
         
         // When the cell is configured
         sut.configure(image: url, favourite: false)
+        sut.configure(background: url)
         
         // Then the cell is configured
         XCTAssertEqual(sut.selectionStyle, .none)
+        XCTAssertEqual(sut.backgroundImageView.contentMode, .scaleAspectFill)
+        XCTAssertEqual(sut.characterImageView.contentMode, .scaleAspectFit)
+        XCTAssertEqual(sut.lineView.backgroundColor, .separator)
         XCTAssertEqual(sut.characterImageView.image, ImageAssets.CharacterDetail.logo.image)
+        XCTAssertEqual(sut.backgroundImageView.image, ImageAssets.CharacterDetail.logo.image)
         XCTAssertEqual(sut.favouriteButton.image(for: .normal), UIImage(systemName: "suit.heart"))
     }
     

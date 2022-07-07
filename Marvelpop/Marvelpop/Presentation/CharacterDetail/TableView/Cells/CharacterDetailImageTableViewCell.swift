@@ -15,8 +15,10 @@ class CharacterDetailImageTableViewCell: UITableViewCell {
 
     var imageLoader: ImageLoaderUseCaseProtocol?
     
-    @IBOutlet weak var characterImageView: UIImageView!
+    @IBOutlet weak var characterImageView: DSImageView!
     @IBOutlet weak var favouriteButton: UIButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var lineView: UIView!
     
     weak var delegate: CharacterDetailImageTableViewCellDelegate?
     
@@ -33,7 +35,15 @@ class CharacterDetailImageTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        characterImageView.contentMode = .scaleAspectFill
+        backgroundImageView.alpha = 0.1
+        backgroundImageView.contentMode = .scaleAspectFill
+        characterImageView.contentMode = .scaleAspectFit
+        lineView.backgroundColor = .separator
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        characterImageView.style = .rounded
     }
     
     func configure(image url: URL?, favourite: Bool) {
@@ -41,6 +51,12 @@ class CharacterDetailImageTableViewCell: UITableViewCell {
         favouriteButton.setImage(favouriteButtonImage, for: .normal)
         imageLoader?.load(imageFrom: url, completion: { data in
             self.characterImageView.image = data ?? ImageAssets.CharacterDetail.logo.image
+        })
+    }
+    
+    func configure(background imageURL: URL?) {
+        imageLoader?.load(imageFrom: imageURL, completion: { data in
+            self.backgroundImageView.image = data ?? ImageAssets.CharacterDetail.logo.image
         })
     }
     

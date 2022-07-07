@@ -27,10 +27,6 @@ struct Favourite: Equatable {
         URL(string: thumbnailPath + ImageAssets.Home.imageSize + thumbnailExtension)
     }
     
-    var detailImageURL: URL? {
-        URL(string: thumbnailPath + ImageAssets.CharacterDetail.imageSize + thumbnailExtension)
-    }
-    
     init(_ entity: FavouriteEntity) {
         id = Int(entity.id)
         name = entity.name ?? ""
