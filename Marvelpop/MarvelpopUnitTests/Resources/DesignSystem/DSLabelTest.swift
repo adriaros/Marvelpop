@@ -80,4 +80,3 @@ class DSLabelTest: XCTestCase {
         XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
     }
 }
-

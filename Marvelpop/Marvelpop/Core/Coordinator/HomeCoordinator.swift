@@ -43,4 +43,3 @@ extension HomeCoordinator: HomeRouting {
         navigationController?.pushViewController(characterDetailViewController, animated: true)
     }
 }
-

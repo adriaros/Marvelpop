@@ -37,6 +37,11 @@ class MarvelAPI: MarvelAPIProtocol {
         urlRequest.httpMethod = request.method.rawValue
         
         session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                completion(.serverError, nil)
+                return
+            }
+            
             guard let response = response as? HTTPURLResponse else {
                 completion(.unknown, nil)
                 return
@@ -54,13 +59,12 @@ class MarvelAPI: MarvelAPIProtocol {
     }
     
     func download(imageFrom url: URL?, completion: @escaping (_ data: UIImage?) -> Void) {
-        
         guard let url = url else {
             completion(nil)
             return
         }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else {
                 completion(nil)
                 return
