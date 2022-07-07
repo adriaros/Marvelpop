@@ -33,7 +33,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
     
     func configureKeywordView() {
         view?.keywordContainerView.style = .rounded
-        view?.keywordContainerView.backgroundColor = .white
+        view?.keywordTextField.style = .basic("home_textfield_placeholder".localized)
         view?.keywordTextField.returnKeyType = .search
         view?.keywordEraserButton.setImage(ImageAssets.Home.eraser.image, for: .normal)
         view?.separatorView.backgroundColor = .lightGray

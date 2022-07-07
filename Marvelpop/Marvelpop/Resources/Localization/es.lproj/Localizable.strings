@@ -13,3 +13,4 @@
 "generic_alert_error_title" = "Oops!";
 "generic_alert_error_description" = "Algo va mal. Vuelve a intentarlo";
 "generic_alert_error_ok" = "Entendido";
+"home_textfield_placeholder" = "Nombre de tu personaje favorito";

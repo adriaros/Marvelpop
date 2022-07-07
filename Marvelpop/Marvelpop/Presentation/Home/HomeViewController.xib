@@ -30,7 +30,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-bX-N6J" userLabel="KeywordContainerView" customClass="DSShape" customModule="Marvelpop" customModuleProvider="target">
                     <rect key="frame" x="20" y="56" width="374" height="58"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7q-2Q-3Bz" userLabel="keywordTextField">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7q-2Q-3Bz" userLabel="keywordTextField" customClass="DSTextField" customModule="Marvelpop" customModuleProvider="target">
                             <rect key="frame" x="14" y="2" width="306" height="54"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>

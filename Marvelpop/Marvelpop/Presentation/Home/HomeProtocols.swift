@@ -14,7 +14,7 @@ protocol HomePresenterToViewProtocol: AnyObject {
     var activityIndicator: ActivityIndicatorView? { get set }
     var separatorView: DSShape! { get set }
     var keywordContainerView: DSShape! { get set }
-    var keywordTextField: UITextField! { get set }
+    var keywordTextField: DSTextField! { get set }
     var keywordEraserButton: UIButton! { get set }
     func showActivityIndicator()
     func hideActivityIndicator()

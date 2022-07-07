@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var separatorView: DSShape!
     @IBOutlet weak var keywordContainerView: DSShape!
-    @IBOutlet weak var keywordTextField: UITextField!
+    @IBOutlet weak var keywordTextField: DSTextField!
     @IBOutlet weak var keywordEraserButton: UIButton!
     
     var activityIndicator: ActivityIndicatorView?
@@ -50,7 +50,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onKeywordEraserButton(_ sender: Any) {
+        guard let text = keywordTextField.text, !text.isEmpty else { return }
         keywordTextField.text?.removeAll()
+        presenter?.updateView(loader: true)
     }
 }
 
