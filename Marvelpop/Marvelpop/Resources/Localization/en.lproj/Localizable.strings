@@ -10,3 +10,6 @@
 "tabbar_favourites" = "Favourites";
 "navigation_title_home" = "Characters";
 "navigation_title_favourites" = "Favourites";
+"generic_alert_error_title" = "Oops!";
+"generic_alert_error_description" = "Something is wrong. Try again please";
+"generic_alert_error_ok" = "Ok";

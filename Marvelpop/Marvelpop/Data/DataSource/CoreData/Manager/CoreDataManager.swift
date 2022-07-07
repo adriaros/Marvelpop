@@ -15,7 +15,7 @@ enum CoreDatabasePersistenceType {
 
 class CoreDataManager: CoreDataManagerProtocol {
     
-    let container : NSPersistentContainer
+    let container: NSPersistentContainer
     
     var context: NSManagedObjectContext {
         container.viewContext

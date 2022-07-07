@@ -46,7 +46,7 @@ class CoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
     
     func fetchAll() -> [Favourite] {
         let entities: [FavouriteEntity] = manager.fetchAll()
-        return entities.compactMap{ Favourite($0) }
+        return entities.compactMap { Favourite($0) }
     }
     
     func delete(favourite: Favourite) {

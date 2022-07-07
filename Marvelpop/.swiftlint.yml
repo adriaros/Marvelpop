@@ -1,0 +1,21 @@
+disabled_rules:
+  - force_cast
+  - type_name
+  - identifier_name
+  - nesting
+  - line_length
+  - trailing_whitespace
+  
+excluded:
+  - Pods
+  - SwiftLint/Common/3rdPartyLib
+  
+function_body_length:
+    warning: 100
+    error: 300
+
+function_parameter_count:
+    warning: 8
+    error: 10
+
+reporter: "xcode"
