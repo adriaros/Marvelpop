@@ -99,6 +99,26 @@
 		112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */; };
 		112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */; };
 		112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */; };
+		112843E12876D1A300725F9B /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E02876D1A300725F9B /* ActivityIndicatorView.swift */; };
+		112843E32876D1B500725F9B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E22876D1B500725F9B /* AlertController.swift */; };
+		112843E62876D1C300725F9B /* AlertControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E52876D1C300725F9B /* AlertControllerProtocol.swift */; };
+		112843E92876D27200725F9B /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E82876D27200725F9B /* HomeTableViewDataSource.swift */; };
+		112843EC2876D28B00725F9B /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */; };
+		112843EF2876D32F00725F9B /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843ED2876D32F00725F9B /* HomeItemTableViewCell.swift */; };
+		112843F02876D32F00725F9B /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112843EE2876D32F00725F9B /* HomeItemTableViewCell.xib */; };
+		112843F32876D36100725F9B /* DSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843F22876D36100725F9B /* DSLabel.swift */; };
+		112843F52876D37800725F9B /* DSShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843F42876D37800725F9B /* DSShape.swift */; };
+		112843F72876D38A00725F9B /* DSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843F62876D38A00725F9B /* DSImageView.swift */; };
+		112843FC2876D42900725F9B /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843FA2876D42900725F9B /* LoadingTableViewCell.swift */; };
+		112843FD2876D42900725F9B /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112843FB2876D42900725F9B /* LoadingTableViewCell.xib */; };
+		112844042876D58C00725F9B /* SpyAllertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844032876D58C00725F9B /* SpyAllertController.swift */; };
+		112844062876D5A800725F9B /* HomeItemTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844052876D5A800725F9B /* HomeItemTableViewCellTest.swift */; };
+		112844082876D5B200725F9B /* HomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844072876D5B200725F9B /* HomeTest.swift */; };
+		1128440D2876D65300725F9B /* FakeHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128440C2876D65300725F9B /* FakeHomeCoordinator.swift */; };
+		1128440F2876D66A00725F9B /* FakeFavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128440E2876D66A00725F9B /* FakeFavouritesCoordinator.swift */; };
+		112844132876D6C000725F9B /* DSLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844122876D6C000725F9B /* DSLabelTest.swift */; };
+		112844152876D6C900725F9B /* DSShapeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844142876D6C900725F9B /* DSShapeTest.swift */; };
+		112844172876D6D600725F9B /* DSImageViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844162876D6D600725F9B /* DSImageViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +229,26 @@
 		112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread-GuaranteeMainThread.swift"; sourceTree = "<group>"; };
 		112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageLoaderUseCase.swift; sourceTree = "<group>"; };
 		112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseTest.swift; sourceTree = "<group>"; };
+		112843E02876D1A300725F9B /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		112843E22876D1B500725F9B /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		112843E52876D1C300725F9B /* AlertControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProtocol.swift; sourceTree = "<group>"; };
+		112843E82876D27200725F9B /* HomeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDataSource.swift; sourceTree = "<group>"; };
+		112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
+		112843ED2876D32F00725F9B /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
+		112843EE2876D32F00725F9B /* HomeItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemTableViewCell.xib; sourceTree = "<group>"; };
+		112843F22876D36100725F9B /* DSLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabel.swift; sourceTree = "<group>"; };
+		112843F42876D37800725F9B /* DSShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSShape.swift; sourceTree = "<group>"; };
+		112843F62876D38A00725F9B /* DSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImageView.swift; sourceTree = "<group>"; };
+		112843FA2876D42900725F9B /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		112843FB2876D42900725F9B /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
+		112844032876D58C00725F9B /* SpyAllertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAllertController.swift; sourceTree = "<group>"; };
+		112844052876D5A800725F9B /* HomeItemTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCellTest.swift; sourceTree = "<group>"; };
+		112844072876D5B200725F9B /* HomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTest.swift; sourceTree = "<group>"; };
+		1128440C2876D65300725F9B /* FakeHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHomeCoordinator.swift; sourceTree = "<group>"; };
+		1128440E2876D66A00725F9B /* FakeFavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFavouritesCoordinator.swift; sourceTree = "<group>"; };
+		112844122876D6C000725F9B /* DSLabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabelTest.swift; sourceTree = "<group>"; };
+		112844142876D6C900725F9B /* DSShapeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSShapeTest.swift; sourceTree = "<group>"; };
+		112844162876D6D600725F9B /* DSImageViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImageViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +320,8 @@
 				112843002875DA4C00725F9B /* Core */,
 				112843462875EF2500725F9B /* Data */,
 				112843D52876CF6600725F9B /* Domain */,
+				112843FE2876D55A00725F9B /* Presentation */,
+				112844102876D6AB00725F9B /* Resources */,
 			);
 			path = MarvelpopUnitTests;
 			sourceTree = "<group>";
@@ -296,6 +338,7 @@
 		112842B32875D21100725F9B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				112843F12876D34A00725F9B /* DesignSystem */,
 				112842F92875D9D100725F9B /* Localization */,
 				112842B42875D21900725F9B /* Assets */,
 			);
@@ -314,6 +357,7 @@
 		112842BE2875D30300725F9B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				112843DD2876D17F00725F9B /* Common */,
 				112842BF2875D31800725F9B /* TabBar */,
 				112842C22875D33B00725F9B /* Home */,
 				112842C32875D34000725F9B /* Favourites */,
@@ -332,11 +376,12 @@
 		112842C22875D33B00725F9B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				112843E72876D24700725F9B /* TableView */,
 				112842C62875D35900725F9B /* HomeViewController.swift */,
 				112842C42875D35900725F9B /* HomePresenter.swift */,
+				112842C82875D35900725F9B /* HomeInteractor.swift */,
 				112842C52875D35900725F9B /* HomeRouter.swift */,
 				112842C72875D35900725F9B /* HomeProtocols.swift */,
-				112842C82875D35900725F9B /* HomeInteractor.swift */,
 				112842C92875D35900725F9B /* HomeEntities.swift */,
 				112842D02875D38F00725F9B /* HomeViewController.xib */,
 			);
@@ -438,6 +483,7 @@
 		112843032875DA6F00725F9B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1128440A2876D63600725F9B /* Mock */,
 				112843072875DAF100725F9B /* HomeCoordinatorTest.swift */,
 			);
 			path = Home;
@@ -446,6 +492,7 @@
 		112843042875DA7200725F9B /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				1128440B2876D63900725F9B /* Mock */,
 				112843092875DAFC00725F9B /* FavouritesCoordinatorTest.swift */,
 			);
 			path = Favourites;
@@ -1043,6 +1090,163 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		112843DD2876D17F00725F9B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				112843F82876D40C00725F9B /* TableView */,
+				112843DF2876D19500725F9B /* Views */,
+				112843DE2876D18A00725F9B /* Controllers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		112843DE2876D18A00725F9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				112843E42876D1B900725F9B /* Protocol */,
+				112843E22876D1B500725F9B /* AlertController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		112843DF2876D19500725F9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				112843E02876D1A300725F9B /* ActivityIndicatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		112843E42876D1B900725F9B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				112843E52876D1C300725F9B /* AlertControllerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		112843E72876D24700725F9B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				112843EA2876D27F00725F9B /* Cells */,
+				112843E82876D27200725F9B /* HomeTableViewDataSource.swift */,
+				112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		112843EA2876D27F00725F9B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				112843ED2876D32F00725F9B /* HomeItemTableViewCell.swift */,
+				112843EE2876D32F00725F9B /* HomeItemTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		112843F12876D34A00725F9B /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				112843F22876D36100725F9B /* DSLabel.swift */,
+				112843F42876D37800725F9B /* DSShape.swift */,
+				112843F62876D38A00725F9B /* DSImageView.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		112843F82876D40C00725F9B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				112843F92876D41800725F9B /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		112843F92876D41800725F9B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				112843FA2876D42900725F9B /* LoadingTableViewCell.swift */,
+				112843FB2876D42900725F9B /* LoadingTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		112843FE2876D55A00725F9B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				112844002876D56F00725F9B /* Common */,
+				112843FF2876D56200725F9B /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		112843FF2876D56200725F9B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				112844072876D5B200725F9B /* HomeTest.swift */,
+				112844052876D5A800725F9B /* HomeItemTableViewCellTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		112844002876D56F00725F9B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				112844012876D57800725F9B /* Controllers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		112844012876D57800725F9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				112844022876D57F00725F9B /* AllertController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		112844022876D57F00725F9B /* AllertController */ = {
+			isa = PBXGroup;
+			children = (
+				112844032876D58C00725F9B /* SpyAllertController.swift */,
+			);
+			path = AllertController;
+			sourceTree = "<group>";
+		};
+		1128440A2876D63600725F9B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1128440C2876D65300725F9B /* FakeHomeCoordinator.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		1128440B2876D63900725F9B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1128440E2876D66A00725F9B /* FakeFavouritesCoordinator.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		112844102876D6AB00725F9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				112844112876D6B600725F9B /* DesignSystem */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		112844112876D6B600725F9B /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				112844122876D6C000725F9B /* DSLabelTest.swift */,
+				112844142876D6C900725F9B /* DSShapeTest.swift */,
+				112844162876D6D600725F9B /* DSImageViewTest.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1128,8 +1332,10 @@
 				112842FC2875D9F000725F9B /* Localizable.strings in Resources */,
 				112842962875CFD300725F9B /* LaunchScreen.storyboard in Resources */,
 				112842DF2875D47500725F9B /* FavouritesViewController.xib in Resources */,
+				112843F02876D32F00725F9B /* HomeItemTableViewCell.xib in Resources */,
 				112842932875CFD300725F9B /* Assets.xcassets in Resources */,
 				112842D12875D38F00725F9B /* HomeViewController.xib in Resources */,
+				112843FD2876D42900725F9B /* LoadingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,6 +1355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112843F52876D37800725F9B /* DSShape.swift in Sources */,
 				112843232875E52C00725F9B /* UITabBarItem+Appearance.swift in Sources */,
 				1128435B2876B8F500725F9B /* MarvelpopCoreData.xcdatamodeld in Sources */,
 				1128436E2876BA1400725F9B /* Favourite.swift in Sources */,
@@ -1160,6 +1367,7 @@
 				1128428C2875CFD200725F9B /* SceneDelegate.swift in Sources */,
 				112843A32876CB4700725F9B /* MediaRepositoryProtocol.swift in Sources */,
 				112843812876C00000725F9B /* APICharactersResponseModel.swift in Sources */,
+				112843E12876D1A300725F9B /* ActivityIndicatorView.swift in Sources */,
 				1128433C2875EE3100725F9B /* APIEndPoint+Marvel.swift in Sources */,
 				112843652876B9A300725F9B /* CoreDataManagerProtocol.swift in Sources */,
 				112843672876B9CB00725F9B /* CoreDataFavouriteWrapperProtocol.swift in Sources */,
@@ -1171,6 +1379,7 @@
 				112843132875DBE400725F9B /* ViewControllerFactory.swift in Sources */,
 				112842CE2875D35900725F9B /* HomeInteractor.swift in Sources */,
 				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
+				112843F72876D38A00725F9B /* DSImageView.swift in Sources */,
 				112842CC2875D35900725F9B /* HomeViewController.swift in Sources */,
 				112842CD2875D35900725F9B /* HomeProtocols.swift in Sources */,
 				112843412875EE8500725F9B /* APIKeys.swift in Sources */,
@@ -1186,6 +1395,8 @@
 				112843AE2876CBC000725F9B /* Pagination.swift in Sources */,
 				112842E82875D55C00725F9B /* FavouritesRouting.swift in Sources */,
 				112843342875EC4A00725F9B /* HTTPStatusCode.swift in Sources */,
+				112843FC2876D42900725F9B /* LoadingTableViewCell.swift in Sources */,
+				112843EC2876D28B00725F9B /* HomeTableViewDelegate.swift in Sources */,
 				112843172875DBFD00725F9B /* DependencyContainer.swift in Sources */,
 				112842EF2875D59C00725F9B /* FavouritesCoordinator.swift in Sources */,
 				112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */,
@@ -1195,16 +1406,20 @@
 				112843B42876CC2400725F9B /* MediaRepository.swift in Sources */,
 				112842D82875D46700725F9B /* FavouritesPresenter.swift in Sources */,
 				112843882876C1CF00725F9B /* ImageCache.swift in Sources */,
+				112843E62876D1C300725F9B /* AlertControllerProtocol.swift in Sources */,
 				112842CA2875D35900725F9B /* HomePresenter.swift in Sources */,
 				112843A72876CB8500725F9B /* FavouritesRepositoryProtocol.swift in Sources */,
 				1128439B2876CA6100725F9B /* JSONDecoder-Decodable.swift in Sources */,
 				112843432875EE9400725F9B /* APIKeys+Marvel.swift in Sources */,
 				112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */,
+				112843E32876D1B500725F9B /* AlertController.swift in Sources */,
+				112843EF2876D32F00725F9B /* HomeItemTableViewCell.swift in Sources */,
 				112842DB2875D46700725F9B /* FavouritesProtocols.swift in Sources */,
 				112842C12875D32500725F9B /* TabBarController.swift in Sources */,
 				112843712876BA6200725F9B /* Character.swift in Sources */,
 				112842DA2875D46700725F9B /* FavouritesViewController.swift in Sources */,
 				112842E62875D55400725F9B /* HomeRouting.swift in Sources */,
+				112843E92876D27200725F9B /* HomeTableViewDataSource.swift in Sources */,
 				1128429F2875D06300725F9B /* main.swift in Sources */,
 				112843862876C1BD00725F9B /* ImageCacheProtocol.swift in Sources */,
 				112842ED2875D59100725F9B /* HomeCoordinator.swift in Sources */,
@@ -1213,6 +1428,7 @@
 				112843692876B9D500725F9B /* CoreDataFavouriteWrapper.swift in Sources */,
 				1128432E2875EC1300725F9B /* MarvelAPIProtocol.swift in Sources */,
 				112843A52876CB7A00725F9B /* CharactersRepositoryProtocol.swift in Sources */,
+				112843F32876D36100725F9B /* DSLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1220,22 +1436,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112844152876D6C900725F9B /* DSShapeTest.swift in Sources */,
 				1128438C2876C20D00725F9B /* MockImageCache.swift in Sources */,
 				112843C72876CDA000725F9B /* MockFavouritesRepository.swift in Sources */,
 				112843062875DA8400725F9B /* MainCoordinatorTest.swift in Sources */,
+				112844132876D6C000725F9B /* DSLabelTest.swift in Sources */,
+				1128440F2876D66A00725F9B /* FakeFavouritesCoordinator.swift in Sources */,
 				112843082875DAF100725F9B /* HomeCoordinatorTest.swift in Sources */,
 				112843C32876CD5800725F9B /* MockCharactersRepository.swift in Sources */,
+				1128440D2876D65300725F9B /* FakeHomeCoordinator.swift in Sources */,
 				112842B22875D0B200725F9B /* TestingSceneDelegate.swift in Sources */,
 				1128430A2875DAFC00725F9B /* FavouritesCoordinatorTest.swift in Sources */,
 				112842AF2875D0A500725F9B /* TestingAppDelegate.swift in Sources */,
 				1128431C2875DD0B00725F9B /* FakeDependencyContainer.swift in Sources */,
 				112843BE2876CCF400725F9B /* MediaRepositoryTest.swift in Sources */,
+				112844042876D58C00725F9B /* SpyAllertController.swift in Sources */,
 				1128437E2876BB7200725F9B /* CoreDataFavouriteWrapperTest.swift in Sources */,
 				1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */,
 				112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */,
+				112844062876D5A800725F9B /* HomeItemTableViewCellTest.swift in Sources */,
+				112844172876D6D600725F9B /* DSImageViewTest.swift in Sources */,
 				112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */,
 				112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */,
 				112843BC2876CCD400725F9B /* MockMediaRepository.swift in Sources */,
+				112844082876D5B200725F9B /* HomeTest.swift in Sources */,
 				112843502875F28D00725F9B /* MarvelAPITest.swift in Sources */,
 				112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */,
 				1128437C2876BB5E00725F9B /* MockCoreDataFavouriteWrapper.swift in Sources */,

@@ -20,7 +20,7 @@ class ViewControllerContainer: ViewControllerFactory {
     }
     
     func makeHome(coordinator: HomeRouting) -> HomeViewController {
-        HomeRouter.createModule() as! HomeViewController
+        HomeRouter.createModule(coordinator: coordinator, dataProvider: container.charactersRepository, imageLoader: container.imageLoaderUseCase) as! HomeViewController
     }
     
     func makeFavourites(coordinator: FavouritesRouting) -> FavouritesViewController {
