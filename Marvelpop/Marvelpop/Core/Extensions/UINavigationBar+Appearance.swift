@@ -11,10 +11,8 @@ extension UINavigationBar {
     
     static func setupAppearance() {
         UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor { traitCollection in
-                traitCollection.userInterfaceStyle == .dark ? .white : .black
-            },
-            NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 16.0) ?? .systemFont(ofSize: 16.0)
+            NSAttributedString.Key.foregroundColor: UIColor { $0.userInterfaceStyle == .dark ? .white : .black },
+            NSAttributedString.Key.font: UIFont.noteworthyNavigation
         ]
     }
 }

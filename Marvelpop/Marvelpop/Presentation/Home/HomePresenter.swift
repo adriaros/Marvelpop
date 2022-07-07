@@ -22,13 +22,30 @@ class HomePresenter: HomeViewToPresenterProtocol {
     }
     
     func setupView() {
+        configureBackgroundView()
+        configureKeywordView()
+    }
+    
+    func configureBackgroundView() {
         view?.backgroundImageView.image = ImageAssets.Home.logo.image
         view?.backgroundImageView.alpha = 0.25
     }
     
+    func configureKeywordView() {
+        view?.keywordContainerView.style = .rounded
+        view?.keywordTextField.style = .basic("home_textfield_placeholder".localized)
+        view?.keywordTextField.returnKeyType = .search
+        view?.keywordEraserButton.setImage(ImageAssets.Home.eraser.image, for: .normal)
+        view?.separatorView.backgroundColor = .lightGray
+    }
+    
     func updateView(loader: Bool) {
-        if loader { view?.showActivityIndicator() }
-        interactor?.loadData()
+        if loader {
+            view?.showActivityIndicator()
+            items?.removeAll()
+        }
+        
+        interactor?.loadData(keyword: view?.keywordTextField.text, reset: loader)
     }
     
     func characterSelected(at row: Int) {

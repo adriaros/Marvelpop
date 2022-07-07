@@ -89,6 +89,11 @@ class HomeTest: XCTestCase {
         // Then the view is configured
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
+        XCTAssertEqual(view.keywordContainerView.style, .rounded)
+        XCTAssertEqual(view.keywordTextField.style, .basic("home_textfield_placeholder".localized))
+        XCTAssertEqual(view.keywordTextField.returnKeyType, .search)
+        XCTAssertEqual(view.keywordEraserButton.image(for: .normal), ImageAssets.Home.eraser.image)
+        XCTAssertEqual(view.separatorView.backgroundColor, .lightGray)
         
         // Then the list is shown with the character
         let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeItemTableViewCell
@@ -111,5 +116,25 @@ class HomeTest: XCTestCase {
         
         // Then the user navigates to the character detail
         XCTAssertEqual(coordinator.pushedToCharacterDetailWithID, 1234)
+    }
+    
+    func test_eraseTextFieldText() throws {
+        // Given a repository response
+        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        characterRepository.characterList = [character]
+        characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
+        
+        // Given a testing scenario
+        buildTestingScenario()
+        view.loadViewIfNeeded()
+        
+        // Given a text in the TextField
+        view.keywordTextField.text = "Searching something"
+        
+        // When the taps on the eraser button
+        view.onKeywordEraserButton(view.keywordEraserButton!)
+        
+        // Then the TextField text is removed
+        XCTAssertEqual(view.keywordTextField.text, "")
     }
 }

@@ -16,7 +16,7 @@ class CharactersRepository: CharactersRepositoryProtocol {
     }
 
     func getCharacterList(request: CharacterListRequest, completion: @escaping (_ data: [Character], _ pagination: Pagination?, _ error: ErrorType?) -> Void) {
-        let networkRequest = NetworkRequest(path: APIEndPoint.Marvel.Get.characters, method: .get, queryItems: [request.limitQuery, request.offsetQuery])
+        let networkRequest = NetworkRequest(path: APIEndPoint.Marvel.Get.characters, method: .get, queryItems: request.queryItems)
         api.process(request: networkRequest) { code, data in
             guard code == .success else {
                 completion([], nil, .api(code))

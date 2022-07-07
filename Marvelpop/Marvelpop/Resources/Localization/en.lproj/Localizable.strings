@@ -13,3 +13,4 @@
 "generic_alert_error_title" = "Oops!";
 "generic_alert_error_description" = "Something is wrong. Try again please";
 "generic_alert_error_ok" = "Ok";
+"home_textfield_placeholder" = "Name of your favorite character";

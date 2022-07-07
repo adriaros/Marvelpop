@@ -15,6 +15,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var separatorView: DSShape!
+    @IBOutlet weak var keywordContainerView: DSShape!
+    @IBOutlet weak var keywordTextField: DSTextField!
+    @IBOutlet weak var keywordEraserButton: UIButton!
+    
     var activityIndicator: ActivityIndicatorView?
     var alerts: AlertControllerProtocol?
     
@@ -22,6 +27,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         configureLoader()
+        configureKeywordTextField()
         presenter?.setupView()
         presenter?.updateView(loader: true)
     }
@@ -36,6 +42,17 @@ class HomeViewController: UIViewController {
     
     func configureLoader() {
         activityIndicator?.parent = view
+    }
+    
+    func configureKeywordTextField() {
+        hideKeyboardWhenTappedAround()
+        keywordTextField.delegate = self
+    }
+    
+    @IBAction func onKeywordEraserButton(_ sender: Any) {
+        guard let text = keywordTextField.text, !text.isEmpty else { return }
+        keywordTextField.text?.removeAll()
+        presenter?.updateView(loader: true)
     }
 }
 
@@ -52,5 +69,15 @@ extension HomeViewController: HomePresenterToViewProtocol {
     func showErrorAlert() {
         alerts?.root = self
         alerts?.show(title: "generic_alert_error_title".localized, description: "generic_alert_error_description".localized, button: "generic_alert_error_ok".localized)
+    }
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        presenter?.updateView(loader: true)
+        textField.resignFirstResponder()
+        view.endEditing(true)
+        return true
     }
 }

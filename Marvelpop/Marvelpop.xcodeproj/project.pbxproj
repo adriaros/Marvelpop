@@ -141,6 +141,10 @@
 		112844482876E1B300725F9B /* FavouritesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844472876E1B300725F9B /* FavouritesTest.swift */; };
 		1128444B2876EFB500725F9B /* UIDevice+UserInterfaceIdiom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128444A2876EFB500725F9B /* UIDevice+UserInterfaceIdiom.swift */; };
 		1128444D28770AEC00725F9B /* CharacterDetailTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128444C28770AEC00725F9B /* CharacterDetailTableViewDelegate.swift */; };
+		112844502877221B00725F9B /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128444F2877221B00725F9B /* UIViewController+Keyboard.swift */; };
+		1128445228772BC600725F9B /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445128772BC600725F9B /* DSTextField.swift */; };
+		1128445428772CE900725F9B /* UIFont+Noteworthy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445328772CE900725F9B /* UIFont+Noteworthy.swift */; };
+		11284456287736C200725F9B /* DSTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11284455287736C200725F9B /* DSTextFieldTest.swift */; };
 		EEAFD09CF877998D1CE5FC3A /* Pods_Marvelpop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0047678D8E7CD0DBFA65FF /* Pods_Marvelpop.framework */; };
 		F0290AB9D109F85E7B769A20 /* Pods_MarvelpopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -295,6 +299,10 @@
 		112844472876E1B300725F9B /* FavouritesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTest.swift; sourceTree = "<group>"; };
 		1128444A2876EFB500725F9B /* UIDevice+UserInterfaceIdiom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+UserInterfaceIdiom.swift"; sourceTree = "<group>"; };
 		1128444C28770AEC00725F9B /* CharacterDetailTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewDelegate.swift; sourceTree = "<group>"; };
+		1128444F2877221B00725F9B /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		1128445128772BC600725F9B /* DSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextField.swift; sourceTree = "<group>"; };
+		1128445328772CE900725F9B /* UIFont+Noteworthy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Noteworthy.swift"; sourceTree = "<group>"; };
+		11284455287736C200725F9B /* DSTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextFieldTest.swift; sourceTree = "<group>"; };
 		5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelpopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6099A93FAD882DE3D448FCAC /* Pods-Marvelpop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.debug.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.debug.xcconfig"; sourceTree = "<group>"; };
 		6F141BE783A8F93E992979F3 /* Pods-Marvelpop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.release.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.release.xcconfig"; sourceTree = "<group>"; };
@@ -500,6 +508,8 @@
 				112843202875E15F00725F9B /* UINavigationBar+Appearance.swift */,
 				112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */,
 				1128444A2876EFB500725F9B /* UIDevice+UserInterfaceIdiom.swift */,
+				1128444F2877221B00725F9B /* UIViewController+Keyboard.swift */,
+				1128445328772CE900725F9B /* UIFont+Noteworthy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1211,6 +1221,7 @@
 				112843F22876D36100725F9B /* DSLabel.swift */,
 				112843F42876D37800725F9B /* DSShape.swift */,
 				112843F62876D38A00725F9B /* DSImageView.swift */,
+				1128445128772BC600725F9B /* DSTextField.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -1306,6 +1317,7 @@
 				112844122876D6C000725F9B /* DSLabelTest.swift */,
 				112844142876D6C900725F9B /* DSShapeTest.swift */,
 				112844162876D6D600725F9B /* DSImageViewTest.swift */,
+				11284455287736C200725F9B /* DSTextFieldTest.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -1606,6 +1618,7 @@
 				112842CB2875D35900725F9B /* HomeRouter.swift in Sources */,
 				112843B22876CC0800725F9B /* CharactersRepository.swift in Sources */,
 				112843D12876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift in Sources */,
+				1128445228772BC600725F9B /* DSTextField.swift in Sources */,
 				112843132875DBE400725F9B /* ViewControllerFactory.swift in Sources */,
 				112842CE2875D35900725F9B /* HomeInteractor.swift in Sources */,
 				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
@@ -1615,6 +1628,7 @@
 				112842CC2875D35900725F9B /* HomeViewController.swift in Sources */,
 				112842CD2875D35900725F9B /* HomeProtocols.swift in Sources */,
 				112843412875EE8500725F9B /* APIKeys.swift in Sources */,
+				112844502877221B00725F9B /* UIViewController+Keyboard.swift in Sources */,
 				112843AA2876CBA900725F9B /* ErrorType.swift in Sources */,
 				112842E42875D54D00725F9B /* Coordinator.swift in Sources */,
 				112843362875EC5700725F9B /* NetworkRequest.swift in Sources */,
@@ -1659,6 +1673,7 @@
 				112843E92876D27200725F9B /* HomeTableViewDataSource.swift in Sources */,
 				1128429F2875D06300725F9B /* main.swift in Sources */,
 				112843862876C1BD00725F9B /* ImageCacheProtocol.swift in Sources */,
+				1128445428772CE900725F9B /* UIFont+Noteworthy.swift in Sources */,
 				112842ED2875D59100725F9B /* HomeCoordinator.swift in Sources */,
 				112843112875DBDB00725F9B /* DependencyFactory.swift in Sources */,
 				112843452875EEB000725F9B /* String+MD5.swift in Sources */,
@@ -1694,6 +1709,7 @@
 				112844042876D58C00725F9B /* SpyAllertController.swift in Sources */,
 				1128437E2876BB7200725F9B /* CoreDataFavouriteWrapperTest.swift in Sources */,
 				112844402876DD5E00725F9B /* ViewControllerContainerTest.swift in Sources */,
+				11284456287736C200725F9B /* DSTextFieldTest.swift in Sources */,
 				1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */,
 				112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */,
 				112844062876D5A800725F9B /* HomeItemTableViewCellTest.swift in Sources */,

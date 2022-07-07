@@ -32,5 +32,6 @@ class DSShape: UIView {
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = shadowRadius
         layer.shadowOffset = .zero
+        backgroundColor = UIColor { $0.userInterfaceStyle == .dark ? .darkGray : .white }
     }
 }
