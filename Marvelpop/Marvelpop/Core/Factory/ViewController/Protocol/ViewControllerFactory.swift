@@ -11,4 +11,5 @@ protocol ViewControllerFactory {
     func makeTabBar() -> TabBarController
     func makeHome(coordinator: HomeRouting) -> HomeViewController
     func makeFavourites(coordinator: FavouritesRouting) -> FavouritesViewController
+    func makeCharacterDetail(characterID: Int) -> CharacterDetailViewController
 }

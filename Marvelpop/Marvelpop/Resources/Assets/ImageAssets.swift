@@ -9,6 +9,15 @@ import UIKit
 
 enum ImageAssets {
     
+    enum Navigation: String {
+        
+        var image: UIImage? {
+            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)
+        }
+        
+        case back = "back_button"
+    }
+    
     enum TabBar: String {
         
         var image: UIImage? {
