@@ -116,6 +116,9 @@
 		112844082876D5B200725F9B /* HomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844072876D5B200725F9B /* HomeTest.swift */; };
 		1128440D2876D65300725F9B /* FakeHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128440C2876D65300725F9B /* FakeHomeCoordinator.swift */; };
 		1128440F2876D66A00725F9B /* FakeFavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128440E2876D66A00725F9B /* FakeFavouritesCoordinator.swift */; };
+		112844132876D6C000725F9B /* DSLabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844122876D6C000725F9B /* DSLabelTest.swift */; };
+		112844152876D6C900725F9B /* DSShapeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844142876D6C900725F9B /* DSShapeTest.swift */; };
+		112844172876D6D600725F9B /* DSImageViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844162876D6D600725F9B /* DSImageViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +246,9 @@
 		112844072876D5B200725F9B /* HomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTest.swift; sourceTree = "<group>"; };
 		1128440C2876D65300725F9B /* FakeHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHomeCoordinator.swift; sourceTree = "<group>"; };
 		1128440E2876D66A00725F9B /* FakeFavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFavouritesCoordinator.swift; sourceTree = "<group>"; };
+		112844122876D6C000725F9B /* DSLabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabelTest.swift; sourceTree = "<group>"; };
+		112844142876D6C900725F9B /* DSShapeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSShapeTest.swift; sourceTree = "<group>"; };
+		112844162876D6D600725F9B /* DSImageViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImageViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +321,7 @@
 				112843462875EF2500725F9B /* Data */,
 				112843D52876CF6600725F9B /* Domain */,
 				112843FE2876D55A00725F9B /* Presentation */,
+				112844102876D6AB00725F9B /* Resources */,
 			);
 			path = MarvelpopUnitTests;
 			sourceTree = "<group>";
@@ -1222,6 +1229,24 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		112844102876D6AB00725F9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				112844112876D6B600725F9B /* DesignSystem */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		112844112876D6B600725F9B /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				112844122876D6C000725F9B /* DSLabelTest.swift */,
+				112844142876D6C900725F9B /* DSShapeTest.swift */,
+				112844162876D6D600725F9B /* DSImageViewTest.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1411,9 +1436,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112844152876D6C900725F9B /* DSShapeTest.swift in Sources */,
 				1128438C2876C20D00725F9B /* MockImageCache.swift in Sources */,
 				112843C72876CDA000725F9B /* MockFavouritesRepository.swift in Sources */,
 				112843062875DA8400725F9B /* MainCoordinatorTest.swift in Sources */,
+				112844132876D6C000725F9B /* DSLabelTest.swift in Sources */,
 				1128440F2876D66A00725F9B /* FakeFavouritesCoordinator.swift in Sources */,
 				112843082875DAF100725F9B /* HomeCoordinatorTest.swift in Sources */,
 				112843C32876CD5800725F9B /* MockCharactersRepository.swift in Sources */,
@@ -1428,6 +1455,7 @@
 				1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */,
 				112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */,
 				112844062876D5A800725F9B /* HomeItemTableViewCellTest.swift in Sources */,
+				112844172876D6D600725F9B /* DSImageViewTest.swift in Sources */,
 				112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */,
 				112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */,
 				112843BC2876CCD400725F9B /* MockMediaRepository.swift in Sources */,

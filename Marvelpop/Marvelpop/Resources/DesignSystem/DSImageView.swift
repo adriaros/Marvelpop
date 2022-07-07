@@ -7,14 +7,14 @@
 
 import UIKit
 
-enum DSImageStyle: Equatable {
+enum DSImageViewStyle: Equatable {
     case rounded
     case none
 }
 
 class DSImageView: UIImageView {
     
-    var style: DSImageStyle = .none {
+    var style: DSImageViewStyle = .none {
         didSet {
             switch style {
             case .rounded:
