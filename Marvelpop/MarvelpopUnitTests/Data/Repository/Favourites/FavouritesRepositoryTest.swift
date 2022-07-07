@@ -68,4 +68,12 @@ class FavouritesRepositoryTest: XCTestCase {
         // Then the DB wrapper has deleted the favourite
         XCTAssertEqual(dbWrapper.favouriteDeleted, Favourite(character))
     }
+    
+    func test_deleteAll() throws {
+        // When the favourites are deleted
+        sut.deleteAll()
+        
+        // Then the DB wrapper has deleted the favourites
+        XCTAssertTrue(dbWrapper.deletedAllCalled)
+    }
 }

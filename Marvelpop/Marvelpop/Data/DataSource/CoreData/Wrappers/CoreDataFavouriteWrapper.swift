@@ -38,10 +38,8 @@ class CoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
             
             return Favourite(entity)
         } catch {
-            print("Error fetching Core Data Entity \(error)")
+            fatalError("Error fetching Core Data Entity \(error)")
         }
-        
-        return nil
     }
     
     func fetchAll() -> [Favourite] {
@@ -61,7 +59,19 @@ class CoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
             
             manager.delete(entity: result)
         } catch {
-            print("Error fetching Core Data Entity \(error)")
+            fatalError("Error fetching Core Data Entity \(error)")
+        }
+    }
+    
+    func deleteAll() {
+        let request: NSFetchRequest<FavouriteEntity> = FavouriteEntity.fetchRequest()
+        
+        do {
+            let results = try manager.context.fetch(request)
+            results.forEach { manager.delete(entity: $0) }
+            
+        } catch {
+            fatalError("Error fetching Core Data Entity \(error)")
         }
     }
 }

@@ -22,7 +22,7 @@ extension UIFont {
     }
     
     class var noteworthyParagraph: UIFont {
-        return UIFont(name: "Noteworthy Light", size: 16.0) ?? .systemFont(ofSize: 16.0)
+        return UIFont(name: "Noteworthy Light", size: 18.0) ?? .systemFont(ofSize: 18.0)
     }
     
     class var noteworthyTabBar: UIFont {

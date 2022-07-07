@@ -12,4 +12,5 @@ protocol CoreDataFavouriteWrapperProtocol {
     func fetch(favourite: Favourite) -> Favourite?
     func fetchAll() -> [Favourite]
     func delete(favourite: Favourite)
+    func deleteAll()
 }

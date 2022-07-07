@@ -14,6 +14,7 @@ class MockCoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
     var mockFavourite: Favourite?
     var mockFavourites: [Favourite]?
     var favouriteDeleted: Favourite?
+    var deletedAllCalled = false
     
     func save(favourite: Favourite) {
         favouriteSaved = favourite
@@ -29,5 +30,9 @@ class MockCoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
     
     func delete(favourite: Favourite) {
         favouriteDeleted = favourite
+    }
+    
+    func deleteAll() {
+        deletedAllCalled = true
     }
 }

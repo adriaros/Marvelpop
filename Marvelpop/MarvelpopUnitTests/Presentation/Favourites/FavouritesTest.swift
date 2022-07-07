@@ -14,6 +14,7 @@ class FavouritesTest: XCTestCase {
     var favouriteRepository: MockFavouritesRepository!
     var imageLoaderUseCase: MockImageLoaderUseCase!
     var coordinator: FakeFavouritesCoordinator!
+    var alerts: SpyAlertController!
     
     var view: FavouritesViewController!
     var presenter: FavouritesPresenter!
@@ -25,6 +26,7 @@ class FavouritesTest: XCTestCase {
         favouriteRepository = MockFavouritesRepository()
         imageLoaderUseCase = MockImageLoaderUseCase()
         coordinator = FakeFavouritesCoordinator()
+        alerts = SpyAlertController()
     }
 
     override func tearDownWithError() throws {
@@ -36,6 +38,7 @@ class FavouritesTest: XCTestCase {
         presenter = nil
         interactor = nil
         router = nil
+        alerts = nil
     }
     
     private func buildTestingScenario() {
@@ -43,7 +46,7 @@ class FavouritesTest: XCTestCase {
         presenter = view.presenter as? FavouritesPresenter
         interactor = presenter.interactor as? FavouritesInteractor
         router = presenter.router as? FavouritesRouter
-        
+        view.alerts = alerts
         window.addSubview(view.view)
         window.makeKeyAndVisible()
     }
@@ -62,6 +65,10 @@ class FavouritesTest: XCTestCase {
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Favourites.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
         XCTAssertEqual(view.emptyLabel.style, .title("favourites_empty".localized, .black, .white, .center, true, 0))
+        XCTAssertFalse(view.emptyLabel.isHidden)
+        
+        // Then the trash button is not shown
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem, nil)
     }
     
     func test_viewDidLoad() throws {
@@ -78,11 +85,15 @@ class FavouritesTest: XCTestCase {
         // Then the view is configured
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Favourites.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
+        XCTAssertTrue(view.emptyLabel.isHidden)
         
         // Then the list is shown with the favourite character
         let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeItemTableViewCell
         XCTAssertEqual(cell?.titleLabel.text, character.displayName)
         XCTAssertEqual(cell?.descriptionLabel.text, character.displayDescription)
+        
+        // Then the trash button is shown
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, ImageAssets.Favourites.trash.image)
     }
     
     func test_didSelectRowAt() throws {
@@ -99,5 +110,33 @@ class FavouritesTest: XCTestCase {
         
         // Then the user navigates to the character detail
         XCTAssertEqual(coordinator.pushedToCharacterDetailWithID, 1234)
+    }
+    
+    func test_onDeleteButton() throws {
+        // Given a favourite character
+        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        favouriteRepository.mockFavourites = [Favourite(character)]
+        
+        // Given a testing scenario
+        buildTestingScenario()
+        view.loadViewIfNeeded()
+        
+        // When the user taps on delete button
+        view.onDeleteButton()
+        
+        // Then the warning alert is shown
+        XCTAssertTrue(alerts.root is FavouritesViewController)
+        XCTAssertEqual(alerts.alertTitle, "favourites_alert_delete_title".localized)
+        XCTAssertEqual(alerts.alertDescription, "favourites_alert_delete_description".localized)
+        XCTAssertEqual(alerts.alertActionButton, "favourites_alert_delete_action".localized)
+        XCTAssertEqual(alerts.alertCancelButton, "favourites_alert_delete_cancel".localized)
+        
+        // When the user taps on "delete" button
+        view.onDestructiveAction()
+        
+        // Then the trash button is hidden, the favourites are deleted and the empty label is shown
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, nil)
+        XCTAssertTrue(favouriteRepository.deletedAllCalled)
+        XCTAssertFalse(view.emptyLabel.isHidden)
     }
 }

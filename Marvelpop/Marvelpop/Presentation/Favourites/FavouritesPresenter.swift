@@ -15,6 +15,7 @@ class FavouritesPresenter: FavouritesViewToPresenterProtocol {
     
     var items: [Favourite]? {
         didSet {
+            (items?.count ?? 0) > 0 ? view?.enableTrashButton() : view?.disableTrashButton()
             view?.emptyLabel.isHidden = (items?.count ?? 0) > 0
             view?.tableView.reloadData()
         }
@@ -36,6 +37,10 @@ class FavouritesPresenter: FavouritesViewToPresenterProtocol {
         }
         
         router?.pushToCharacterDetailWith(id: favouriteID)
+    }
+    
+    func requestDelete() {
+        interactor?.deleteAll()
     }
 }
 

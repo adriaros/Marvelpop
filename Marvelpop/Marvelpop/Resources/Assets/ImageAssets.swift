@@ -49,6 +49,7 @@ enum ImageAssets {
         }
         
         case logo = "marvel_logo"
+        case trash = "trash"
     }
     
     enum CharacterDetail: String {
@@ -61,5 +62,7 @@ enum ImageAssets {
         }
         
         case logo = "marvel_logo"
+        case favourite = "favourite_fill"
+        case noFavourite = "favourite"
     }
 }

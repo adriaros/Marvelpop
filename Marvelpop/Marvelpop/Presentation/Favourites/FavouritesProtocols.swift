@@ -12,6 +12,8 @@ protocol FavouritesPresenterToViewProtocol: AnyObject {
     var tableView: UITableView! { get set }
     var backgroundImageView: UIImageView! { get set }
     var emptyLabel: DSLabel! { get set }
+    func enableTrashButton()
+    func disableTrashButton()
 }
 
 protocol FavouritesInteractorToPresenterProtocol: AnyObject {
@@ -21,6 +23,7 @@ protocol FavouritesInteractorToPresenterProtocol: AnyObject {
 protocol FavouritesPresenterToInteractorProtocol: AnyObject {
     var presenter: FavouritesInteractorToPresenterProtocol? { get set }
     func loadData()
+    func deleteAll()
 }
 
 protocol FavouritesViewToPresenterProtocol: AnyObject {
@@ -31,6 +34,7 @@ protocol FavouritesViewToPresenterProtocol: AnyObject {
     func setupView()
     func updateView()
     func favouriteSelected(at row: Int)
+    func requestDelete()
 }
 
 protocol FavouritesPresenterToRouterProtocol: AnyObject {

@@ -12,4 +12,5 @@ protocol FavouritesRepositoryProtocol {
     func fetch(favourite: Character) -> Favourite?
     func fetchAll() -> [Favourite]
     func delete(favourite: Character)
+    func deleteAll()
 }

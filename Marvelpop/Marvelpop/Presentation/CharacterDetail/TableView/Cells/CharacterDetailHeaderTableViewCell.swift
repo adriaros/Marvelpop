@@ -26,7 +26,7 @@ class CharacterDetailHeaderTableViewCell: UITableViewCell {
     private var isFavourite = false
     
     private var favouriteButtonImage: UIImage? {
-        UIImage(systemName: isFavourite ? "suit.heart.fill" : "suit.heart")
+        isFavourite ? ImageAssets.CharacterDetail.favourite.image : ImageAssets.CharacterDetail.noFavourite.image
     }
     
     static var cellType: String {
@@ -36,7 +36,7 @@ class CharacterDetailHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        backgroundImageView.alpha = 0.1
+        backgroundImageView.alpha = 0.25
         backgroundImageView.contentMode = .scaleAspectFill
         characterImageView.contentMode = .scaleAspectFit
         lineView.backgroundColor = .separator
