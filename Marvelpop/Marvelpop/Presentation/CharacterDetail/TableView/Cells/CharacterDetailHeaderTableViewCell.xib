@@ -25,18 +25,6 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pCz-Ff-mMM">
                         <rect key="frame" x="0.0" y="0.0" width="467" height="294"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K72-ns-7Yy">
-                        <rect key="frame" x="419" y="8" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="40" id="clZ-lH-lSz"/>
-                            <constraint firstAttribute="height" constant="40" id="wAc-p7-6vi"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title=""/>
-                        <connections>
-                            <action selector="onFavourite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vuq-yM-MU3"/>
-                        </connections>
-                    </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="08w-gP-1A5" customClass="DSImageView" customModule="Marvelpop" customModuleProvider="target">
                         <rect key="frame" x="40" y="79" width="157" height="235"/>
                         <constraints>
@@ -54,7 +42,6 @@
                     <constraint firstItem="08w-gP-1A5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="FQQ-1y-Gjq"/>
                     <constraint firstItem="QeV-be-LqR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jjj-Qu-iT0"/>
                     <constraint firstItem="pCz-Ff-mMM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Nav-QS-p1s"/>
-                    <constraint firstItem="K72-ns-7Yy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Nvl-r4-F45"/>
                     <constraint firstAttribute="bottom" secondItem="pCz-Ff-mMM" secondAttribute="bottom" constant="20" id="Qz5-Vl-kZP"/>
                     <constraint firstItem="22N-Sy-PEC" firstAttribute="leading" secondItem="08w-gP-1A5" secondAttribute="trailing" constant="12" id="R7S-gn-bV9"/>
                     <constraint firstAttribute="trailing" secondItem="pCz-Ff-mMM" secondAttribute="trailing" id="Ra1-CN-P2v"/>
@@ -65,14 +52,12 @@
                     <constraint firstAttribute="bottom" secondItem="QeV-be-LqR" secondAttribute="bottom" constant="20" id="lNG-ws-PoG"/>
                     <constraint firstItem="QeV-be-LqR" firstAttribute="top" secondItem="22N-Sy-PEC" secondAttribute="bottom" constant="6" id="pUA-Wf-cCd"/>
                     <constraint firstItem="pCz-Ff-mMM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pqJ-AQ-noq"/>
-                    <constraint firstAttribute="trailing" secondItem="K72-ns-7Yy" secondAttribute="trailing" constant="8" id="vDA-MT-psu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundImageView" destination="pCz-Ff-mMM" id="vvL-In-UcV"/>
                 <outlet property="characterImageView" destination="08w-gP-1A5" id="1cS-Po-OYA"/>
-                <outlet property="favouriteButton" destination="K72-ns-7Yy" id="wTC-1V-DsB"/>
                 <outlet property="lineView" destination="QeV-be-LqR" id="U0G-FR-Zcw"/>
                 <outlet property="nameLabel" destination="22N-Sy-PEC" id="FsF-95-fov"/>
             </connections>

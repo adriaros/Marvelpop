@@ -8,14 +8,12 @@
 import XCTest
 @testable import Marvelpop
 
-class CharacterDetailHeaderableViewCellTest: XCTestCase {
+class CharacterDetailHeaderTableViewCellTest: XCTestCase {
 
     var sut: CharacterDetailHeaderTableViewCell!
     var imageLoader: MockImageLoaderUseCase!
-    var delegate: CharacterDetailHeaderTableViewCellDelegateTestableDelegate!
     
     override func setUpWithError() throws {
-        delegate = CharacterDetailHeaderTableViewCellDelegateTestableDelegate()
         sut = Bundle(for: CharacterDetailHeaderTableViewCell.self).loadNibNamed(CharacterDetailHeaderTableViewCell.cellType, owner: nil)?.first as? CharacterDetailHeaderTableViewCell
         imageLoader = MockImageLoaderUseCase()
         sut.imageLoader = imageLoader
@@ -23,7 +21,6 @@ class CharacterDetailHeaderableViewCellTest: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        delegate = nil
         imageLoader = nil
         sut = nil
     }
@@ -36,7 +33,7 @@ class CharacterDetailHeaderableViewCellTest: XCTestCase {
         imageLoader.image = ImageAssets.CharacterDetail.logo.image
         
         // When the cell is configured
-        sut.configure(character: "Hulk", imageUrl: url, favourite: false)
+        sut.configure(character: "Hulk", imageUrl: url)
         sut.configure(background: url)
         
         // Then the cell is configured
@@ -47,36 +44,5 @@ class CharacterDetailHeaderableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.nameLabel.style, .title("Hulk", .black, .white, .left, true, 0))
         XCTAssertEqual(sut.characterImageView.image, ImageAssets.CharacterDetail.logo.image)
         XCTAssertEqual(sut.backgroundImageView.image, ImageAssets.CharacterDetail.logo.image)
-        XCTAssertEqual(sut.favouriteButton.image(for: .normal), ImageAssets.CharacterDetail.noFavourite.image)
-    }
-    
-    func test_onFavourite() throws {
-        // Given a fake URL
-        let url = URL(string: "/image/download/path")
-        
-        // Given a mock image
-        imageLoader.image = ImageAssets.CharacterDetail.logo.image
-        
-        // Give a configured cell
-        sut.delegate = delegate
-        sut.configure(character: "Hulk", imageUrl: url, favourite: false)
-        
-        // When the favourite button is tapped
-        sut.onFavourite(sut.favouriteButton!)
-        
-        // Then the button has changed to filled shape
-        XCTAssertEqual(sut.favouriteButton.image(for: .normal), ImageAssets.CharacterDetail.favourite.image)
-        
-        // Then the delegate is called
-        XCTAssertTrue(delegate.onFavouriteCalled)
-    }
-}
-
-class CharacterDetailHeaderTableViewCellDelegateTestableDelegate: CharacterDetailHeaderTableViewCellDelegate {
-    
-    var onFavouriteCalled = false
-    
-    func onFavourite() {
-        onFavouriteCalled = true
     }
 }

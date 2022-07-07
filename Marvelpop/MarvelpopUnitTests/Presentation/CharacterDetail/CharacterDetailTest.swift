@@ -79,10 +79,11 @@ class CharacterDetailTest: XCTestCase {
         view.loadViewIfNeeded()
         
         // When the user taps on favourite button
-        view.onFavourite()
+        view.onFavouriteButton()
         
-        // Then the character is saved as favourite
+        // Then the character is saved as favourite and the navigation bar is updated
         XCTAssertEqual(favouriteRepository.favouriteCharacterSaved, character)
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, ImageAssets.CharacterDetail.noFavourite.image)
     }
     
     func test_onFavourite_delete() throws {
@@ -99,9 +100,10 @@ class CharacterDetailTest: XCTestCase {
         view.loadViewIfNeeded()
         
         // When the user taps on favourite button
-        view.onFavourite()
+        view.onFavouriteButton()
         
-        // Then the character is deleted as favourite
+        // Then the character is deleted as favourite and the navigation bar is updated
         XCTAssertEqual(favouriteRepository.favouriteCharacterDeleted, character)
+        XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, ImageAssets.CharacterDetail.favourite.image)
     }
 }
