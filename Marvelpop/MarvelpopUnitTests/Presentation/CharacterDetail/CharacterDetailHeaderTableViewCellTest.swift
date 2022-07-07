@@ -47,7 +47,7 @@ class CharacterDetailHeaderableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.nameLabel.style, .title("Hulk", .black, .white, .left, true, 0))
         XCTAssertEqual(sut.characterImageView.image, ImageAssets.CharacterDetail.logo.image)
         XCTAssertEqual(sut.backgroundImageView.image, ImageAssets.CharacterDetail.logo.image)
-        XCTAssertEqual(sut.favouriteButton.image(for: .normal), UIImage(systemName: "suit.heart"))
+        XCTAssertEqual(sut.favouriteButton.image(for: .normal), ImageAssets.CharacterDetail.noFavourite.image)
     }
     
     func test_onFavourite() throws {
@@ -65,7 +65,7 @@ class CharacterDetailHeaderableViewCellTest: XCTestCase {
         sut.onFavourite(sut.favouriteButton!)
         
         // Then the button has changed to filled shape
-        XCTAssertEqual(sut.favouriteButton.image(for: .normal), UIImage(systemName: "suit.heart.fill"))
+        XCTAssertEqual(sut.favouriteButton.image(for: .normal), ImageAssets.CharacterDetail.favourite.image)
         
         // Then the delegate is called
         XCTAssertTrue(delegate.onFavouriteCalled)

@@ -26,7 +26,7 @@ class CharacterDetailHeaderTableViewCell: UITableViewCell {
     private var isFavourite = false
     
     private var favouriteButtonImage: UIImage? {
-        UIImage(systemName: isFavourite ? "suit.heart.fill" : "suit.heart")
+        isFavourite ? ImageAssets.CharacterDetail.favourite.image : ImageAssets.CharacterDetail.noFavourite.image
     }
     
     static var cellType: String {
