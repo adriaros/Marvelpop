@@ -29,7 +29,7 @@ protocol HomeInteractorToPresenterProtocol: AnyObject {
 
 protocol HomePresenterToInteractorProtocol: AnyObject {
     var presenter: HomeInteractorToPresenterProtocol? { get set }
-    func loadData()
+    func loadData(keyword: String?, reset: Bool)
 }
 
 protocol HomeViewToPresenterProtocol: AnyObject {

@@ -10,12 +10,15 @@ import Foundation
 struct CharacterListRequest {
     var limit: Int = 20
     var offset: Int = 0
+    var nameStartsWith: String?
     
-    var limitQuery: QueryItem {
-        QueryItem(name: "limit", value: "\(limit)")
-    }
-    
-    var offsetQuery: QueryItem {
-        QueryItem(name: "offset", value: "\(offset)")
+    var queryItems: [QueryItem] {
+        var items = [QueryItem(name: "limit", value: "\(limit)"), QueryItem(name: "offset", value: "\(offset)")]
+        
+        if let nameStartsWith = nameStartsWith, !nameStartsWith.isEmpty {
+            items.append(QueryItem(name: "nameStartsWith", value: nameStartsWith))
+        }
+        
+        return items
     }
 }

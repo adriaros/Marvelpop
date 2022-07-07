@@ -73,6 +73,7 @@ extension HomeViewController: HomePresenterToViewProtocol {
 extension HomeViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        presenter?.updateView(loader: true)
         textField.resignFirstResponder()
         view.endEditing(true)
         return true

@@ -40,8 +40,12 @@ class HomePresenter: HomeViewToPresenterProtocol {
     }
     
     func updateView(loader: Bool) {
-        if loader { view?.showActivityIndicator() }
-        interactor?.loadData()
+        if loader {
+            view?.showActivityIndicator()
+            items?.removeAll()
+        }
+        
+        interactor?.loadData(keyword: view?.keywordTextField.text, reset: loader)
     }
     
     func characterSelected(at row: Int) {

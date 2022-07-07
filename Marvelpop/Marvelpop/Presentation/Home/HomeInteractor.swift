@@ -15,12 +15,19 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
     
     var results: [Character] = []
     
-    func loadData() {
+    func loadData(keyword: String?, reset: Bool) {
+        
+        if reset {
+            pagination.reset()
+            results.removeAll()
+        }
+        
         guard pagination.isPaginationAvailable else {
             return
         }
         
-        dataProvider?.getCharacterList(request: CharacterListRequest(limit: pagination.limit, offset: pagination.nextOffset)) { [weak self] data, pagination, err in
+        let request = CharacterListRequest(limit: pagination.limit, offset: pagination.nextOffset, nameStartsWith: keyword)
+        dataProvider?.getCharacterList(request: request) { [weak self] data, pagination, err in
             guard err == nil else {
                 guaranteeMainThread {
                     self?.presenter?.throwError()
