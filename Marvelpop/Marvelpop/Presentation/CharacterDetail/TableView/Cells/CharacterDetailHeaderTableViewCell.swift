@@ -36,7 +36,7 @@ class CharacterDetailHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        backgroundImageView.alpha = 0.1
+        backgroundImageView.alpha = 0.25
         backgroundImageView.contentMode = .scaleAspectFill
         characterImageView.contentMode = .scaleAspectFit
         lineView.backgroundColor = .separator

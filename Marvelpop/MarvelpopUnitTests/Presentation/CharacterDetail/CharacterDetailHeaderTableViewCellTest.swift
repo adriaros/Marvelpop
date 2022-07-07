@@ -1,5 +1,5 @@
 //
-//  CharacterDetailImageTableViewCellTest.swift
+//  CharacterDetailHeaderTableViewCellTest.swift
 //  MarvelpopUnitTests
 //
 //  Created by Adrià Ros on 7/7/22.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class CharacterDetailImageTableViewCellTest: XCTestCase {
+class CharacterDetailHeaderableViewCellTest: XCTestCase {
 
     var sut: CharacterDetailHeaderTableViewCell!
     var imageLoader: MockImageLoaderUseCase!

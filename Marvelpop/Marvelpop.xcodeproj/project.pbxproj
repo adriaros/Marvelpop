@@ -132,7 +132,7 @@
 		112844322876D97100725F9B /* CharacterDetailDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112844302876D97100725F9B /* CharacterDetailDataTableViewCell.xib */; };
 		112844342876DA6700725F9B /* CharacterDetailTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844332876DA6700725F9B /* CharacterDetailTableViewDataSource.swift */; };
 		112844372876DA9C00725F9B /* CharacterDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844362876DA9B00725F9B /* CharacterDetailTest.swift */; };
-		112844392876DACB00725F9B /* CharacterDetailImageTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844382876DACB00725F9B /* CharacterDetailImageTableViewCellTest.swift */; };
+		112844392876DACB00725F9B /* CharacterDetailHeaderTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844382876DACB00725F9B /* CharacterDetailHeaderTableViewCellTest.swift */; };
 		1128443B2876DAE500725F9B /* CharacterDetailDataTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128443A2876DAE500725F9B /* CharacterDetailDataTableViewCellTest.swift */; };
 		1128443E2876DD1E00725F9B /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128443D2876DD1E00725F9B /* SpyNavigationController.swift */; };
 		112844402876DD5E00725F9B /* ViewControllerContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128443F2876DD5E00725F9B /* ViewControllerContainerTest.swift */; };
@@ -291,7 +291,7 @@
 		112844302876D97100725F9B /* CharacterDetailDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailDataTableViewCell.xib; sourceTree = "<group>"; };
 		112844332876DA6700725F9B /* CharacterDetailTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewDataSource.swift; sourceTree = "<group>"; };
 		112844362876DA9B00725F9B /* CharacterDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTest.swift; sourceTree = "<group>"; };
-		112844382876DACB00725F9B /* CharacterDetailImageTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailImageTableViewCellTest.swift; sourceTree = "<group>"; };
+		112844382876DACB00725F9B /* CharacterDetailHeaderTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailHeaderTableViewCellTest.swift; sourceTree = "<group>"; };
 		1128443A2876DAE500725F9B /* CharacterDetailDataTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataTableViewCellTest.swift; sourceTree = "<group>"; };
 		1128443D2876DD1E00725F9B /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
 		1128443F2876DD5E00725F9B /* ViewControllerContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainerTest.swift; sourceTree = "<group>"; };
@@ -1363,7 +1363,7 @@
 			isa = PBXGroup;
 			children = (
 				112844362876DA9B00725F9B /* CharacterDetailTest.swift */,
-				112844382876DACB00725F9B /* CharacterDetailImageTableViewCellTest.swift */,
+				112844382876DACB00725F9B /* CharacterDetailHeaderTableViewCellTest.swift */,
 				1128443A2876DAE500725F9B /* CharacterDetailDataTableViewCellTest.swift */,
 			);
 			path = CharacterDetail;
@@ -1736,7 +1736,7 @@
 				112844172876D6D600725F9B /* DSImageViewTest.swift in Sources */,
 				112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */,
 				112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */,
-				112844392876DACB00725F9B /* CharacterDetailImageTableViewCellTest.swift in Sources */,
+				112844392876DACB00725F9B /* CharacterDetailHeaderTableViewCellTest.swift in Sources */,
 				112844372876DA9C00725F9B /* CharacterDetailTest.swift in Sources */,
 				112843BC2876CCD400725F9B /* MockMediaRepository.swift in Sources */,
 				112844082876D5B200725F9B /* HomeTest.swift in Sources */,
