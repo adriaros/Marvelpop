@@ -7,20 +7,21 @@
 
 import UIKit
 
-protocol CharacterDetailImageTableViewCellDelegate: AnyObject {
+protocol CharacterDetailHeaderTableViewCellDelegate: AnyObject {
     func onFavourite()
 }
 
-class CharacterDetailImageTableViewCell: UITableViewCell {
+class CharacterDetailHeaderTableViewCell: UITableViewCell {
 
     var imageLoader: ImageLoaderUseCaseProtocol?
     
+    @IBOutlet weak var nameLabel: DSLabel!
     @IBOutlet weak var characterImageView: DSImageView!
     @IBOutlet weak var favouriteButton: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var lineView: UIView!
     
-    weak var delegate: CharacterDetailImageTableViewCellDelegate?
+    weak var delegate: CharacterDetailHeaderTableViewCellDelegate?
     
     private var isFavourite = false
     
@@ -46,10 +47,11 @@ class CharacterDetailImageTableViewCell: UITableViewCell {
         characterImageView.style = .rounded
     }
     
-    func configure(image url: URL?, favourite: Bool) {
+    func configure(character name: String?, imageUrl: URL?, favourite: Bool) {
         isFavourite = favourite
         favouriteButton.setImage(favouriteButtonImage, for: .normal)
-        imageLoader?.load(imageFrom: url, completion: { data in
+        nameLabel.style = .title(name, .black, .white, .left, true, 0)
+        imageLoader?.load(imageFrom: imageUrl, completion: { data in
             self.characterImageView.image = data ?? ImageAssets.CharacterDetail.logo.image
         })
     }

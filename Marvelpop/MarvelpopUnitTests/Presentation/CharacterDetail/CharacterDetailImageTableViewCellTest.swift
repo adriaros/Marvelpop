@@ -10,13 +10,13 @@ import XCTest
 
 class CharacterDetailImageTableViewCellTest: XCTestCase {
 
-    var sut: CharacterDetailImageTableViewCell!
+    var sut: CharacterDetailHeaderTableViewCell!
     var imageLoader: MockImageLoaderUseCase!
-    var delegate: CharacterDetailImageTableViewCellDelegateTestableDelegate!
+    var delegate: CharacterDetailHeaderTableViewCellDelegateTestableDelegate!
     
     override func setUpWithError() throws {
-        delegate = CharacterDetailImageTableViewCellDelegateTestableDelegate()
-        sut = Bundle(for: CharacterDetailImageTableViewCell.self).loadNibNamed(CharacterDetailImageTableViewCell.cellType, owner: nil)?.first as? CharacterDetailImageTableViewCell
+        delegate = CharacterDetailHeaderTableViewCellDelegateTestableDelegate()
+        sut = Bundle(for: CharacterDetailHeaderTableViewCell.self).loadNibNamed(CharacterDetailHeaderTableViewCell.cellType, owner: nil)?.first as? CharacterDetailHeaderTableViewCell
         imageLoader = MockImageLoaderUseCase()
         sut.imageLoader = imageLoader
         sut.layoutSubviews()
@@ -36,7 +36,7 @@ class CharacterDetailImageTableViewCellTest: XCTestCase {
         imageLoader.image = ImageAssets.CharacterDetail.logo.image
         
         // When the cell is configured
-        sut.configure(image: url, favourite: false)
+        sut.configure(character: "Hulk", imageUrl: url, favourite: false)
         sut.configure(background: url)
         
         // Then the cell is configured
@@ -44,6 +44,7 @@ class CharacterDetailImageTableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.backgroundImageView.contentMode, .scaleAspectFill)
         XCTAssertEqual(sut.characterImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(sut.lineView.backgroundColor, .separator)
+        XCTAssertEqual(sut.nameLabel.style, .title("Hulk", .black, .white, .left, true, 0))
         XCTAssertEqual(sut.characterImageView.image, ImageAssets.CharacterDetail.logo.image)
         XCTAssertEqual(sut.backgroundImageView.image, ImageAssets.CharacterDetail.logo.image)
         XCTAssertEqual(sut.favouriteButton.image(for: .normal), UIImage(systemName: "suit.heart"))
@@ -58,7 +59,7 @@ class CharacterDetailImageTableViewCellTest: XCTestCase {
         
         // Give a configured cell
         sut.delegate = delegate
-        sut.configure(image: url, favourite: false)
+        sut.configure(character: "Hulk", imageUrl: url, favourite: false)
         
         // When the favourite button is tapped
         sut.onFavourite(sut.favouriteButton!)
@@ -71,7 +72,7 @@ class CharacterDetailImageTableViewCellTest: XCTestCase {
     }
 }
 
-class CharacterDetailImageTableViewCellDelegateTestableDelegate: CharacterDetailImageTableViewCellDelegate {
+class CharacterDetailHeaderTableViewCellDelegateTestableDelegate: CharacterDetailHeaderTableViewCellDelegate {
     
     var onFavouriteCalled = false
     

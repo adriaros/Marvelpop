@@ -126,8 +126,8 @@
 		112844232876D82D00725F9B /* CharacterDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128441D2876D82D00725F9B /* CharacterDetailInteractor.swift */; };
 		112844242876D82D00725F9B /* CharacterDetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128441E2876D82D00725F9B /* CharacterDetailEntities.swift */; };
 		112844262876D83E00725F9B /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112844252876D83E00725F9B /* CharacterDetailViewController.xib */; };
-		1128442D2876D8F500725F9B /* CharacterDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128442B2876D8F500725F9B /* CharacterDetailImageTableViewCell.swift */; };
-		1128442E2876D8F500725F9B /* CharacterDetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1128442C2876D8F500725F9B /* CharacterDetailImageTableViewCell.xib */; };
+		1128442D2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128442B2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.swift */; };
+		1128442E2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1128442C2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib */; };
 		112844312876D97100725F9B /* CharacterDetailDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128442F2876D97100725F9B /* CharacterDetailDataTableViewCell.swift */; };
 		112844322876D97100725F9B /* CharacterDetailDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112844302876D97100725F9B /* CharacterDetailDataTableViewCell.xib */; };
 		112844342876DA6700725F9B /* CharacterDetailTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844332876DA6700725F9B /* CharacterDetailTableViewDataSource.swift */; };
@@ -280,8 +280,8 @@
 		1128441D2876D82D00725F9B /* CharacterDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailInteractor.swift; sourceTree = "<group>"; };
 		1128441E2876D82D00725F9B /* CharacterDetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailEntities.swift; sourceTree = "<group>"; };
 		112844252876D83E00725F9B /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
-		1128442B2876D8F500725F9B /* CharacterDetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailImageTableViewCell.swift; sourceTree = "<group>"; };
-		1128442C2876D8F500725F9B /* CharacterDetailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailImageTableViewCell.xib; sourceTree = "<group>"; };
+		1128442B2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1128442C2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		1128442F2876D97100725F9B /* CharacterDetailDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataTableViewCell.swift; sourceTree = "<group>"; };
 		112844302876D97100725F9B /* CharacterDetailDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailDataTableViewCell.xib; sourceTree = "<group>"; };
 		112844332876DA6700725F9B /* CharacterDetailTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -1338,8 +1338,8 @@
 		112844282876D8BA00725F9B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1128442B2876D8F500725F9B /* CharacterDetailImageTableViewCell.swift */,
-				1128442C2876D8F500725F9B /* CharacterDetailImageTableViewCell.xib */,
+				1128442B2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.swift */,
+				1128442C2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib */,
 				1128442F2876D97100725F9B /* CharacterDetailDataTableViewCell.swift */,
 				112844302876D97100725F9B /* CharacterDetailDataTableViewCell.xib */,
 			);
@@ -1492,7 +1492,7 @@
 				112842DF2875D47500725F9B /* FavouritesViewController.xib in Resources */,
 				112844262876D83E00725F9B /* CharacterDetailViewController.xib in Resources */,
 				112843F02876D32F00725F9B /* HomeItemTableViewCell.xib in Resources */,
-				1128442E2876D8F500725F9B /* CharacterDetailImageTableViewCell.xib in Resources */,
+				1128442E2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib in Resources */,
 				112842932875CFD300725F9B /* Assets.xcassets in Resources */,
 				112842D12875D38F00725F9B /* HomeViewController.xib in Resources */,
 				112843FD2876D42900725F9B /* LoadingTableViewCell.xib in Resources */,
@@ -1611,7 +1611,7 @@
 				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
 				112843F72876D38A00725F9B /* DSImageView.swift in Sources */,
 				112844312876D97100725F9B /* CharacterDetailDataTableViewCell.swift in Sources */,
-				1128442D2876D8F500725F9B /* CharacterDetailImageTableViewCell.swift in Sources */,
+				1128442D2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.swift in Sources */,
 				112842CC2875D35900725F9B /* HomeViewController.swift in Sources */,
 				112842CD2875D35900725F9B /* HomeProtocols.swift in Sources */,
 				112843412875EE8500725F9B /* APIKeys.swift in Sources */,

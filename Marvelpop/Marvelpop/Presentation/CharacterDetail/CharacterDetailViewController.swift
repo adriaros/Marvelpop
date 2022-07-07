@@ -21,7 +21,7 @@ class CharacterDetailViewController: UIViewController {
     }
     
     func configureTableView() {
-        tableView.register(UINib(nibName: CharacterDetailImageTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailImageTableViewCell.cellType)
+        tableView.register(UINib(nibName: CharacterDetailHeaderTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailHeaderTableViewCell.cellType)
         tableView.register(UINib(nibName: CharacterDetailDataTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailDataTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self
@@ -33,7 +33,7 @@ extension CharacterDetailViewController: CharacterDetailPresenterToViewProtocol 
 
 }
 
-extension CharacterDetailViewController: CharacterDetailImageTableViewCellDelegate {
+extension CharacterDetailViewController: CharacterDetailHeaderTableViewCellDelegate {
     
     func onFavourite() {
         presenter?.handleFavourite()

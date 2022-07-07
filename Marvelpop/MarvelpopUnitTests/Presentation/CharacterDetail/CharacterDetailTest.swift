@@ -60,7 +60,7 @@ class CharacterDetailTest: XCTestCase {
         view.loadViewIfNeeded()
         
         // Then the view has loaded the table items correctly
-        let imageCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! CharacterDetailImageTableViewCell
+        let imageCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! CharacterDetailHeaderTableViewCell
         XCTAssertEqual(imageCell.characterImageView.image, ImageAssets.CharacterDetail.logo.image)
         
         let dataCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as! CharacterDetailDataTableViewCell

@@ -20,10 +20,10 @@ extension CharacterDetailViewController: UITableViewDataSource {
         
         switch CharacterDetailTableViewDataSource.allCases[indexPath.row] {
         case .image:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailImageTableViewCell.cellType, for: indexPath) as! CharacterDetailImageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailHeaderTableViewCell.cellType, for: indexPath) as! CharacterDetailHeaderTableViewCell
             cell.delegate = self
             cell.imageLoader = imageLoader
-            cell.configure(image: character.portraitImageURL, favourite: presenter?.isFavourite ?? false)
+            cell.configure(character: character.name, imageUrl: character.portraitImageURL, favourite: presenter?.isFavourite ?? false)
             cell.configure(background: character.landscapeImageURL)
             return cell
             

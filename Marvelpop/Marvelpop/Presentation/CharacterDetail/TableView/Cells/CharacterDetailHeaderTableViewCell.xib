@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="314" id="KGk-i7-Jjw" customClass="CharacterDetailImageTableViewCell" customModule="Marvelpop" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="314" id="KGk-i7-Jjw" customClass="CharacterDetailHeaderTableViewCell" customModule="Marvelpop" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="467" height="314"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -38,23 +38,32 @@
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="08w-gP-1A5" customClass="DSImageView" customModule="Marvelpop" customModuleProvider="target">
-                        <rect key="frame" x="155" y="79" width="157" height="235"/>
+                        <rect key="frame" x="40" y="79" width="157" height="235"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="08w-gP-1A5" secondAttribute="height" multiplier="216:324" id="r1m-PP-WP2"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22N-Sy-PEC" customClass="DSLabel" customModule="Marvelpop" customModuleProvider="target">
+                        <rect key="frame" x="209" y="286" width="238" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="08w-gP-1A5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="FQQ-1y-Gjq"/>
                     <constraint firstItem="QeV-be-LqR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jjj-Qu-iT0"/>
                     <constraint firstItem="pCz-Ff-mMM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Nav-QS-p1s"/>
                     <constraint firstItem="K72-ns-7Yy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Nvl-r4-F45"/>
                     <constraint firstAttribute="bottom" secondItem="pCz-Ff-mMM" secondAttribute="bottom" constant="20" id="Qz5-Vl-kZP"/>
+                    <constraint firstItem="22N-Sy-PEC" firstAttribute="leading" secondItem="08w-gP-1A5" secondAttribute="trailing" constant="12" id="R7S-gn-bV9"/>
                     <constraint firstAttribute="trailing" secondItem="pCz-Ff-mMM" secondAttribute="trailing" id="Ra1-CN-P2v"/>
                     <constraint firstAttribute="trailing" secondItem="QeV-be-LqR" secondAttribute="trailing" id="UQ3-XH-NHl"/>
                     <constraint firstItem="08w-gP-1A5" firstAttribute="height" secondItem="pCz-Ff-mMM" secondAttribute="height" multiplier="0.8" id="Wq6-WR-C9c"/>
+                    <constraint firstAttribute="trailing" secondItem="22N-Sy-PEC" secondAttribute="trailing" constant="20" id="YdG-Mg-sQu"/>
                     <constraint firstAttribute="bottom" secondItem="08w-gP-1A5" secondAttribute="bottom" id="ijd-gH-SuO"/>
                     <constraint firstAttribute="bottom" secondItem="QeV-be-LqR" secondAttribute="bottom" constant="20" id="lNG-ws-PoG"/>
-                    <constraint firstItem="08w-gP-1A5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nTC-6e-OOl"/>
+                    <constraint firstItem="QeV-be-LqR" firstAttribute="top" secondItem="22N-Sy-PEC" secondAttribute="bottom" constant="6" id="pUA-Wf-cCd"/>
                     <constraint firstItem="pCz-Ff-mMM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pqJ-AQ-noq"/>
                     <constraint firstAttribute="trailing" secondItem="K72-ns-7Yy" secondAttribute="trailing" constant="8" id="vDA-MT-psu"/>
                 </constraints>
@@ -65,6 +74,7 @@
                 <outlet property="characterImageView" destination="08w-gP-1A5" id="1cS-Po-OYA"/>
                 <outlet property="favouriteButton" destination="K72-ns-7Yy" id="wTC-1V-DsB"/>
                 <outlet property="lineView" destination="QeV-be-LqR" id="U0G-FR-Zcw"/>
+                <outlet property="nameLabel" destination="22N-Sy-PEC" id="FsF-95-fov"/>
             </connections>
             <point key="canvasLocation" x="52.898550724637687" y="203.57142857142856"/>
         </tableViewCell>

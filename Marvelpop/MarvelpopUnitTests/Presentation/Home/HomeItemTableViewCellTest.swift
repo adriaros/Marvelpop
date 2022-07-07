@@ -40,7 +40,7 @@ class HomeItemTableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.containerShape.style, .rounded)
         XCTAssertEqual(sut.containerImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(sut.containerImageView.image, ImageAssets.Home.logo.image)
-        XCTAssertEqual(sut.titleLabel.style, .title(title, .black, .white, .left, true, 1))
+        XCTAssertEqual(sut.titleLabel.style, .title(title, .black, .white, .left, false, 1))
         XCTAssertEqual(sut.descriptionLabel.style, .paragraph(description, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, false, 2))
     }
 }
