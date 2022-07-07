@@ -30,8 +30,8 @@ class DSImageViewTest: XCTestCase {
         // Then the style is configured correctly
         XCTAssertEqual(sut.layer.cornerRadius, 12)
         XCTAssertEqual(sut.layer.shadowColor, UIColor.gray.cgColor)
-        XCTAssertEqual(sut.layer.shadowOpacity, 0.4)
-        XCTAssertEqual(sut.layer.shadowRadius, 4.0)
+        XCTAssertEqual(sut.layer.shadowOpacity, 0.6)
+        XCTAssertEqual(sut.layer.shadowRadius, 6.0)
         XCTAssertEqual(sut.layer.shadowOffset, .zero)
     }
 }

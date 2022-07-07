@@ -52,7 +52,8 @@ enum ImageAssets {
     
     enum CharacterDetail: String {
         
-        static var imageSize = "/landscape_xlarge."
+        static var imagePortraitSize = "/portrait_incredible."
+        static var imageLandscapeSize = "/landscape_incredible."
         
         var image: UIImage? {
             return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)

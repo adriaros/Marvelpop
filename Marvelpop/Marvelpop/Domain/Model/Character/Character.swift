@@ -27,8 +27,12 @@ struct Character: Equatable {
         URL(string: thumbnailPath + ImageAssets.Home.imageSize + thumbnailExtension)
     }
     
-    var detailImageURL: URL? {
-        URL(string: thumbnailPath + ImageAssets.CharacterDetail.imageSize + thumbnailExtension)
+    var portraitImageURL: URL? {
+        URL(string: thumbnailPath + ImageAssets.CharacterDetail.imagePortraitSize + thumbnailExtension)
+    }
+    
+    var landscapeImageURL: URL? {
+        URL(string: thumbnailPath + ImageAssets.CharacterDetail.imageLandscapeSize + thumbnailExtension)
     }
     
     init(_ data: APICharactersResponseModel.Data.Result) {
