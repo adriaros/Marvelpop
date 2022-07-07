@@ -23,6 +23,7 @@ protocol FavouritesInteractorToPresenterProtocol: AnyObject {
 protocol FavouritesPresenterToInteractorProtocol: AnyObject {
     var presenter: FavouritesInteractorToPresenterProtocol? { get set }
     func loadData()
+    func deleteAll()
 }
 
 protocol FavouritesViewToPresenterProtocol: AnyObject {
@@ -33,6 +34,7 @@ protocol FavouritesViewToPresenterProtocol: AnyObject {
     func setupView()
     func updateView()
     func favouriteSelected(at row: Int)
+    func requestDelete()
 }
 
 protocol FavouritesPresenterToRouterProtocol: AnyObject {

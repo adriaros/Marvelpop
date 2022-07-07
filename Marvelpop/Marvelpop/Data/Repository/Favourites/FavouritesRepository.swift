@@ -30,4 +30,8 @@ class FavouritesRepository: FavouritesRepositoryProtocol {
     func delete(favourite: Character) {
         dbWrapper.delete(favourite: Favourite(favourite))
     }
+    
+    func deleteAll() {
+        dbWrapper.deleteAll()
+    }
 }

@@ -38,6 +38,10 @@ class FavouritesPresenter: FavouritesViewToPresenterProtocol {
         
         router?.pushToCharacterDetailWith(id: favouriteID)
     }
+    
+    func requestDelete() {
+        interactor?.deleteAll()
+    }
 }
 
 extension FavouritesPresenter: FavouritesInteractorToPresenterProtocol {

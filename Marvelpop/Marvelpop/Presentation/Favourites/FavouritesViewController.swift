@@ -35,7 +35,7 @@ class FavouritesViewController: UIViewController {
     }
     
     @objc func onDeleteButton() {
-        
+        presenter?.requestDelete()
     }
 }
 

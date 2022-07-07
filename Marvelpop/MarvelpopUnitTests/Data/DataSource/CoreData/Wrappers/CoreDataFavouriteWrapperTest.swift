@@ -31,7 +31,7 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
         // When the favourite is fetched
         let fetchedFavourite = sut.fetch(favourite: favourite)
         
-        // Then the CoreData has saved and returned the favourite
+        // Then the favourite is saved and fetched correctly
         XCTAssertEqual(fetchedFavourite, favourite)
     }
     
@@ -43,7 +43,7 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
         // When the favourite is fetched
         let fetchedFavourites = sut.fetchAll()
         
-        // Then the CoreData has saved and returned the favourites
+        // Then the favourite is saved and fetched correctly
         XCTAssertEqual(fetchedFavourites.count, 1)
     }
     
@@ -55,7 +55,21 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
         // When the favourite is deleted
         sut.delete(favourite: favourite)
         
-        // Then the CoreData has saved and returned the favourites
+        // Then the favourite is saved and deleted correctly
+        XCTAssertEqual(sut.fetchAll().count, 0)
+    }
+    
+    func test_saveAndDeleteAll() throws {
+        // Given a saved favourite
+        let favourite0 = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil)))
+        let favourite1 = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Has", description: "A Blue guy", thumbnail: nil)))
+        sut.save(favourite: favourite0)
+        sut.save(favourite: favourite1)
+        
+        // When the favourites are deleted
+        sut.deleteAll()
+        
+        // Then the favourites are saved and deleted correctly
         XCTAssertEqual(sut.fetchAll().count, 0)
     }
 }

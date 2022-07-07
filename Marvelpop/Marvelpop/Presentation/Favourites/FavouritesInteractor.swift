@@ -19,4 +19,13 @@ class FavouritesInteractor: FavouritesPresenterToInteractorProtocol {
         
         presenter?.didLoad(favourites)
     }
+    
+    func deleteAll() {
+        dataProvider?.deleteAll()
+        guard let favourites = dataProvider?.fetchAll() else {
+            return
+        }
+        
+        presenter?.didLoad(favourites)
+    }
 }

@@ -14,6 +14,7 @@ class MockFavouritesRepository: FavouritesRepositoryProtocol {
     var mockCharacterFavourite: Character?
     var mockFavourites: [Favourite]?
     var favouriteCharacterDeleted: Character?
+    var deletedAllCalled = false
     
     func save(favourite: Character) {
         favouriteCharacterSaved = favourite
@@ -29,5 +30,9 @@ class MockFavouritesRepository: FavouritesRepositoryProtocol {
     
     func delete(favourite: Character) {
         favouriteCharacterDeleted = favourite
+    }
+    
+    func deleteAll() {
+        deletedAllCalled = true
     }
 }
