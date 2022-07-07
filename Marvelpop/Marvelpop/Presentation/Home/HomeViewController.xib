@@ -41,6 +41,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="8bH-0d-jLQ" secondAttribute="height" multiplier="1:1" id="YZ6-yD-aH0"/>
                             </constraints>
+                            <connections>
+                                <action selector="onKeywordEraserButton:" destination="-1" eventType="touchUpInside" id="ToL-JZ-NP3"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -117,4 +117,24 @@ class HomeTest: XCTestCase {
         // Then the user navigates to the character detail
         XCTAssertEqual(coordinator.pushedToCharacterDetailWithID, 1234)
     }
+    
+    func test_eraseTextFieldText() throws {
+        // Given a repository response
+        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        characterRepository.characterList = [character]
+        characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
+        
+        // Given a testing scenario
+        buildTestingScenario()
+        view.loadViewIfNeeded()
+        
+        // Given a text in the TextField
+        view.keywordTextField.text = "Searching something"
+        
+        // When the taps on the eraser button
+        view.onKeywordEraserButton(view.keywordEraserButton!)
+        
+        // Then the TextField text is removed
+        XCTAssertEqual(view.keywordTextField.text, "")
+    }
 }
