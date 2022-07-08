@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SnapshotTesting
 @testable import Marvelpop
 
 class FavouritesTest: XCTestCase {
@@ -138,5 +139,36 @@ class FavouritesTest: XCTestCase {
         XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, nil)
         XCTAssertTrue(favouriteRepository.deletedAllCalled)
         XCTAssertFalse(view.emptyLabel.isHidden)
+    }
+    
+    func test_snapshot_empty() {
+        // Given a emtpy array of favourites
+        favouriteRepository.mockFavourites = []
+        
+        // Given a testing scenario
+        buildTestingScenario()
+        
+        // When the view did load
+        view.loadViewIfNeeded()
+
+        // Then the snapshot is correct
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController empty - iPhoneX"))
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController empty - iPadMini"))
+    }
+    
+    func test_snapshot_list() {
+        // Given a favourite character
+        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        favouriteRepository.mockFavourites = [Favourite(character)]
+        
+        // Given a testing scenario
+        buildTestingScenario()
+        
+        // When the view did load
+        view.loadViewIfNeeded()
+
+        // Then the snapshot is correct
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController list - iPhoneX"))
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController list - iPadMini"))
     }
 }

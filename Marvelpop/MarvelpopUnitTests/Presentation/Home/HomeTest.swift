@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SnapshotTesting
 @testable import Marvelpop
 
 class HomeTest: XCTestCase {
@@ -136,5 +137,38 @@ class HomeTest: XCTestCase {
         
         // Then the TextField text is removed
         XCTAssertEqual(view.keywordTextField.text, "")
+    }
+    
+    func test_snapshot_empty() {
+        // Given a repository response
+        characterRepository.characterList = []
+        characterRepository.pagination = Pagination(offset: 0, total: 0, count: 0, limit: 20)
+
+        // Given a testing scenario
+        buildTestingScenario()
+
+        // When the view did load
+        view.loadViewIfNeeded()
+
+        // Then the snapshot is correct
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "HomeViewController empty - iPhoneX"))
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "HomeViewController empty - iPadMini"))
+    }
+    
+    func test_snapshot_list() {
+        // Given a repository response
+        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        characterRepository.characterList = [character]
+        characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
+
+        // Given a testing scenario
+        buildTestingScenario()
+
+        // When the view did load
+        view.loadViewIfNeeded()
+
+        // Then the snapshot is correct
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "HomeViewController list - iPhoneX"))
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "HomeViewController list - iPadMini"))
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SnapshotTesting
 @testable import Marvelpop
 
 class CharacterDetailTest: XCTestCase {
@@ -105,5 +106,22 @@ class CharacterDetailTest: XCTestCase {
         // Then the character is deleted as favourite and the navigation bar is updated
         XCTAssertEqual(favouriteRepository.favouriteCharacterDeleted, character)
         XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, ImageAssets.CharacterDetail.favourite.image)
+    }
+    
+    func test_snapshot_characterDetail() throws {
+        // Given a character with image
+        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        imageLoaderUseCase.image = ImageAssets.CharacterDetail.logo.image
+        
+        // Given a testing scenario
+        characterRepository.character = character
+        buildTestingScenario()
+        
+        // When the view did load
+        view.loadViewIfNeeded()
+        
+        // Then the snapshot is correct
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))
     }
 }
