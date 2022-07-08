@@ -29,5 +29,6 @@ class ComicCollectionViewCellTest: XCTestCase {
         
         // Then the cell is configured
         XCTAssertEqual(sut.nameLabel.style, .subtitle(title, .center, false, 2))
+        XCTAssertEqual(sut.itemImageView.image, ImageAssets.CharacterDetail.comic.image)
     }
 }

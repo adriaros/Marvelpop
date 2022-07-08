@@ -113,20 +113,20 @@ class CharacterDetailTest: XCTestCase {
         XCTAssertEqual(view.navigationItem.rightBarButtonItem?.image, ImageAssets.CharacterDetail.favourite.image)
     }
     
-//    func test_snapshot_characterDetail() throws {
-//        // Given a character with image
-//        imageLoaderUseCase.image = ImageAssets.CharacterDetail.logo.image
-//
-//        // Given a testing scenario
-//        characterRepository.character = character
-//        buildTestingScenario()
-//        view.overrideUserInterfaceStyle = .light
-//    
-//        // When the view did load
-//        view.loadViewIfNeeded()
-//
-//        // Then the snapshot is correct
-//        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
-//        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))
-//    }
+    func test_snapshot_characterDetail() throws {
+        // Given a character with image
+        imageLoaderUseCase.image = ImageAssets.CharacterDetail.logo.image
+
+        // Given a testing scenario
+        characterRepository.character = character
+        buildTestingScenario()
+        view.overrideUserInterfaceStyle = .light
+    
+        // When the view did load
+        view.loadViewIfNeeded()
+
+        // Then the snapshot is correct
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
+        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))
+    }
 }

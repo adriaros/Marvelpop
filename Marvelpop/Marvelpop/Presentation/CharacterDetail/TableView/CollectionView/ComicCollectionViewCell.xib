@@ -20,9 +20,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-EK-MoK">
                         <rect key="frame" x="20" y="0.0" width="113" height="133"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7q5-m4-Pnr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7q5-m4-Pnr">
                                 <rect key="frame" x="18" y="6" width="77" height="115"/>
-                                <color key="backgroundColor" red="0.55754715200000005" green="0.80783694979999998" blue="0.80000555520000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7q5-m4-Pnr" secondAttribute="height" multiplier="4:6" id="451-AL-jL1"/>
                                 </constraints>
@@ -64,6 +63,7 @@
             <size key="customSize" width="133" height="133"/>
             <connections>
                 <outlet property="descriptionView" destination="Vc1-Rp-zss" id="DM6-WV-NG1"/>
+                <outlet property="itemImageView" destination="7q5-m4-Pnr" id="9J9-mm-lOB"/>
                 <outlet property="nameLabel" destination="581-f4-4XH" id="tc7-pY-TB5"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="125.55803571428571"/>

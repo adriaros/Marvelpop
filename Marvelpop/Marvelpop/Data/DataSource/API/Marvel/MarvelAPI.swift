@@ -64,7 +64,7 @@ class MarvelAPI: MarvelAPIProtocol {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, _, _ in
+        session.dataTask(with: url) { data, _, _ in
             guard let data = data else {
                 completion(nil)
                 return

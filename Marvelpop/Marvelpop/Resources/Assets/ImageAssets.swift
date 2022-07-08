@@ -64,5 +64,6 @@ enum ImageAssets {
         case logo = "marvel_logo"
         case favourite = "heart_fill"
         case noFavourite = "heart"
+        case comic = "marvel_comic"
     }
 }
