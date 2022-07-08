@@ -1,17 +1,17 @@
 //
-//  CharacterDetailDataTableViewCell.swift
+//  CharacterDetailComicsTableViewCell.swift
 //  Marvelpop
 //
-//  Created by Adrià Ros on 7/7/22.
+//  Created by Adrià Ros on 8/7/22.
 //
 
 import UIKit
 
-class CharacterDetailDataTableViewCell: UITableViewCell {
+class CharacterDetailComicsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: DSLabel!
     @IBOutlet weak var titleLineView: UIView!
-    @IBOutlet weak var descriptionLabel: DSLabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     static var cellType: String {
         String(describing: self)
@@ -23,8 +23,7 @@ class CharacterDetailDataTableViewCell: UITableViewCell {
         titleLineView.backgroundColor = .separator
     }
     
-    func configure(title: String, text: String) {
+    func configure(title: String) {
         titleLabel.style = .title(title, .black, .white, .left, true, 1)
-        descriptionLabel.style = .paragraph(text, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, true, 0)
     }
 }

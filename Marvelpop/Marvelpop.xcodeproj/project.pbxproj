@@ -146,6 +146,8 @@
 		1128445428772CE900725F9B /* UIFont+Noteworthy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445328772CE900725F9B /* UIFont+Noteworthy.swift */; };
 		11284456287736C200725F9B /* DSTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11284455287736C200725F9B /* DSTextFieldTest.swift */; };
 		1128445B28774C3B00725F9B /* AlertControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445A28774C3B00725F9B /* AlertControllerDelegate.swift */; };
+		112AB13E287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AB13C287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift */; };
+		112AB13F287865E4007F38A4 /* CharacterDetailComicsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112AB13D287865E4007F38A4 /* CharacterDetailComicsTableViewCell.xib */; };
 		EEAFD09CF877998D1CE5FC3A /* Pods_Marvelpop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0047678D8E7CD0DBFA65FF /* Pods_Marvelpop.framework */; };
 		F0290AB9D109F85E7B769A20 /* Pods_MarvelpopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -305,6 +307,8 @@
 		1128445328772CE900725F9B /* UIFont+Noteworthy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Noteworthy.swift"; sourceTree = "<group>"; };
 		11284455287736C200725F9B /* DSTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextFieldTest.swift; sourceTree = "<group>"; };
 		1128445A28774C3B00725F9B /* AlertControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerDelegate.swift; sourceTree = "<group>"; };
+		112AB13C287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailComicsTableViewCell.swift; sourceTree = "<group>"; };
+		112AB13D287865E4007F38A4 /* CharacterDetailComicsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailComicsTableViewCell.xib; sourceTree = "<group>"; };
 		5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelpopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6099A93FAD882DE3D448FCAC /* Pods-Marvelpop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.debug.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.debug.xcconfig"; sourceTree = "<group>"; };
 		6F141BE783A8F93E992979F3 /* Pods-Marvelpop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.release.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.release.xcconfig"; sourceTree = "<group>"; };
@@ -1347,6 +1351,8 @@
 				1128442C2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib */,
 				1128442F2876D97100725F9B /* CharacterDetailDataTableViewCell.swift */,
 				112844302876D97100725F9B /* CharacterDetailDataTableViewCell.xib */,
+				112AB13C287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift */,
+				112AB13D287865E4007F38A4 /* CharacterDetailComicsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1533,6 +1539,7 @@
 				112844262876D83E00725F9B /* CharacterDetailViewController.xib in Resources */,
 				112843F02876D32F00725F9B /* CharacterListItemTableViewCell.xib in Resources */,
 				1128442E2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib in Resources */,
+				112AB13F287865E4007F38A4 /* CharacterDetailComicsTableViewCell.xib in Resources */,
 				112842932875CFD300725F9B /* Assets.xcassets in Resources */,
 				112842D12875D38F00725F9B /* HomeViewController.xib in Resources */,
 				112843FD2876D42900725F9B /* LoadingTableViewCell.xib in Resources */,
@@ -1705,6 +1712,7 @@
 				112843A72876CB8500725F9B /* FavouritesRepositoryProtocol.swift in Sources */,
 				1128439B2876CA6100725F9B /* JSONDecoder-Decodable.swift in Sources */,
 				112844202876D82D00725F9B /* CharacterDetailRouter.swift in Sources */,
+				112AB13E287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift in Sources */,
 				112843432875EE9400725F9B /* APIKeys+Marvel.swift in Sources */,
 				112844222876D82D00725F9B /* CharacterDetailProtocols.swift in Sources */,
 				112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */,

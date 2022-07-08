@@ -8,4 +8,5 @@
 enum CharacterDetailTableViewDataSource: CaseIterable {
     case image
     case data
+    case comics
 }

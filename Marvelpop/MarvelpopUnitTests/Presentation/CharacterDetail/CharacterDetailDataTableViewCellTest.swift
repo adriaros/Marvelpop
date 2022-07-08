@@ -29,7 +29,7 @@ class CharacterDetailDataTableViewCellTest: XCTestCase {
         sut.configure(title: title, text: text)
         
         // Then the cell is configured
-        XCTAssertEqual(sut.titleLabel.style, .title(title, .black, .white, .left, true, 0))
+        XCTAssertEqual(sut.titleLabel.style, .title(title, .black, .white, .left, true, 1))
         XCTAssertEqual(sut.descriptionLabel.style, .paragraph(text, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, true, 0))
     }
 }

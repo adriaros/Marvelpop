@@ -10,7 +10,7 @@ import UIKit
 extension CharacterDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter?.character != nil ? 2 : 0
+        presenter?.character != nil ? 3 : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,6 +29,11 @@ extension CharacterDetailViewController: UITableViewDataSource {
         case .data:
             let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailDataTableViewCell.cellType, for: indexPath) as! CharacterDetailDataTableViewCell
             cell.configure(title: "character_detail_about_title".localized, text: character.displayDescription)
+            return cell
+            
+        case .comics:
+            let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailComicsTableViewCell.cellType, for: indexPath) as! CharacterDetailComicsTableViewCell
+            cell.configure(title: "character_detail_comics_title".localized)
             return cell
         }
     }

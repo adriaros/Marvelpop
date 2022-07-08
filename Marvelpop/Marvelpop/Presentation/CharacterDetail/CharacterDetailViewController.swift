@@ -23,6 +23,7 @@ class CharacterDetailViewController: UIViewController {
     func configureTableView() {
         tableView.register(UINib(nibName: CharacterDetailHeaderTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailHeaderTableViewCell.cellType)
         tableView.register(UINib(nibName: CharacterDetailDataTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailDataTableViewCell.cellType)
+        tableView.register(UINib(nibName: CharacterDetailComicsTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailComicsTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
