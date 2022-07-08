@@ -64,4 +64,19 @@ class DSLabelTest: XCTestCase {
         XCTAssertEqual(sut.numberOfLines, 1)
         XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
     }
+    
+    func test_subtitle() throws {
+        // Given the style
+        let style: DSLabelStyle = .subtitle("text", .black, .white, .left, true, 1)
+        
+        // When the style is set
+        sut.style = style
+        
+        // Then the style is configured correctly
+        XCTAssertEqual(sut.text, "text")
+        XCTAssertEqual(sut.font, .noteworthySubtitle)
+        XCTAssertEqual(sut.textAlignment, .left)
+        XCTAssertEqual(sut.numberOfLines, 1)
+        XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
+    }
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ComicCollectionViewCell" customModule="Marvelpop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="133"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="133"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-EK-MoK">
+                        <rect key="frame" x="20" y="0.0" width="113" height="133"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7q5-m4-Pnr">
+                                <rect key="frame" x="18" y="6" width="77" height="115"/>
+                                <color key="backgroundColor" red="0.55754715200000005" green="0.80783694979999998" blue="0.80000555520000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7q5-m4-Pnr" secondAttribute="height" multiplier="4:6" id="451-AL-jL1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="7q5-m4-Pnr" firstAttribute="top" secondItem="aiQ-EK-MoK" secondAttribute="top" constant="6" id="FI1-aV-Eas"/>
+                            <constraint firstItem="7q5-m4-Pnr" firstAttribute="centerX" secondItem="aiQ-EK-MoK" secondAttribute="centerX" id="lMA-gI-4SV"/>
+                            <constraint firstAttribute="bottom" secondItem="7q5-m4-Pnr" secondAttribute="bottom" constant="12" id="lVU-Sz-9uv"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vc1-Rp-zss" customClass="DSShape" customModule="Marvelpop" customModuleProvider="target">
+                        <rect key="frame" x="20" y="81" width="113" height="40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="581-f4-4XH" customClass="DSLabel" customModule="Marvelpop" customModuleProvider="target">
+                        <rect key="frame" x="28" y="81" width="97" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vc1-Rp-zss" secondAttribute="trailing" id="3HG-jV-KaJ"/>
+                <constraint firstItem="581-f4-4XH" firstAttribute="trailing" secondItem="Vc1-Rp-zss" secondAttribute="trailing" constant="-8" id="56s-Tx-U4T"/>
+                <constraint firstItem="aiQ-EK-MoK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7MF-4k-A0N"/>
+                <constraint firstItem="Vc1-Rp-zss" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="FtX-My-eCU"/>
+                <constraint firstItem="aiQ-EK-MoK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="P1V-dN-POq"/>
+                <constraint firstItem="581-f4-4XH" firstAttribute="top" secondItem="Vc1-Rp-zss" secondAttribute="top" id="UAm-Tb-IZB"/>
+                <constraint firstAttribute="bottom" secondItem="Vc1-Rp-zss" secondAttribute="bottom" constant="12" id="YmA-zR-87b"/>
+                <constraint firstItem="Vc1-Rp-zss" firstAttribute="height" secondItem="aiQ-EK-MoK" secondAttribute="height" multiplier="0.3" id="ebj-LV-BXO"/>
+                <constraint firstItem="581-f4-4XH" firstAttribute="leading" secondItem="Vc1-Rp-zss" secondAttribute="leading" constant="8" id="h9i-U6-VTJ"/>
+                <constraint firstAttribute="trailing" secondItem="aiQ-EK-MoK" secondAttribute="trailing" id="hSP-fy-eLO"/>
+                <constraint firstAttribute="bottom" secondItem="aiQ-EK-MoK" secondAttribute="bottom" id="o79-Kp-JTu"/>
+                <constraint firstItem="581-f4-4XH" firstAttribute="bottom" secondItem="Vc1-Rp-zss" secondAttribute="bottom" id="xoB-2m-Bla"/>
+            </constraints>
+            <size key="customSize" width="133" height="133"/>
+            <connections>
+                <outlet property="descriptionView" destination="Vc1-Rp-zss" id="DM6-WV-NG1"/>
+                <outlet property="nameLabel" destination="581-f4-4XH" id="tc7-pY-TB5"/>
+            </connections>
+            <point key="canvasLocation" x="197.82608695652175" y="125.55803571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

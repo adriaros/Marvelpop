@@ -11,6 +11,7 @@ enum DSLabelStyle: Equatable {
     case header(_ text: String?, _ light: UIColor, _ dark: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case title(_ text: String?, _ light: UIColor, _ dark: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case paragraph(_ text: String?, _ light: UIColor, _ dark: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
+    case subtitle(_ text: String?, _ light: UIColor, _ dark: UIColor, _ alignment: NSTextAlignment = .left, _ adjustsFontSizeToFitWidth: Bool = true, _ numberOfLines: Int = 0)
     case none
 }
 
@@ -27,6 +28,9 @@ class DSLabel: UILabel {
                 
             case let .paragraph(text, light, dark, alignment, adjustsFontSizeToFitWidth, numberOfLines):
                 configure(text: text, light: light, dark: dark, font: .noteworthyParagraph, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
+                
+            case let .subtitle(text, light, dark, alignment, adjustsFontSizeToFitWidth, numberOfLines):
+                configure(text: text, light: light, dark: dark, font: .noteworthySubtitle, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
                 
             case .none:
                 break

@@ -21,7 +21,9 @@ class CharacterDetailTest: XCTestCase {
     var interactor: CharacterDetailInteractor!
     var router: CharacterDetailRouter!
     
-    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    static var comicItem = APICharactersResponseModel.Data.Result.Comics.ComicsItem(resourceURI: "", name: "Hulk 2001")
+    static var comics = APICharactersResponseModel.Data.Result.Comics(items: [comicItem])
+    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: comics))
     
     override func setUpWithError() throws {
         window = UIWindow()
@@ -68,6 +70,10 @@ class CharacterDetailTest: XCTestCase {
         let dataCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as! CharacterDetailDataTableViewCell
         XCTAssertEqual(dataCell.titleLabel.text, "character_detail_about_title".localized)
         XCTAssertEqual(dataCell.descriptionLabel.text, character.displayDescription)
+        
+        let comicsCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 2, section: 0)) as! CharacterDetailComicsTableViewCell
+        XCTAssertEqual(comicsCell.titleLabel.text, "character_detail_comics_title".localized)
+        XCTAssertEqual(comicsCell.collectionView.numberOfItems(inSection: 0), 1)
     }
     
     func test_onFavourite_save() throws {

@@ -10,31 +10,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="123" id="KGk-i7-Jjw" customClass="CharacterDetailComicsTableViewCell" customModule="Marvelpop" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="338" height="123"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="231" id="KGk-i7-Jjw" customClass="CharacterDetailComicsTableViewCell" customModule="Marvelpop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="231"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="338" height="123"/>
+                <rect key="frame" x="0.0" y="0.0" width="338" height="231"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgg-28-8Mx" customClass="DSLabel" customModule="Marvelpop" customModuleProvider="target">
-                        <rect key="frame" x="20" y="20" width="298" height="22"/>
+                        <rect key="frame" x="20" y="20" width="298" height="10"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5N-d7-jnW">
-                        <rect key="frame" x="20" y="50" width="298" height="1"/>
+                        <rect key="frame" x="20" y="38" width="298" height="1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="YSb-Fb-wnq"/>
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sCS-by-9XU">
-                        <rect key="frame" x="0.0" y="63" width="338" height="60"/>
+                        <rect key="frame" x="0.0" y="51" width="338" height="180"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="jID-ux-c01"/>
+                            <constraint firstAttribute="height" constant="180" id="jID-ux-c01"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kj2-xc-e1s">
                             <size key="itemSize" width="128" height="128"/>
@@ -63,7 +63,7 @@
                 <outlet property="titleLabel" destination="Vgg-28-8Mx" id="QjA-t6-pgh"/>
                 <outlet property="titleLineView" destination="k5N-d7-jnW" id="3He-qz-rj1"/>
             </connections>
-            <point key="canvasLocation" x="150.72463768115944" y="124.21875"/>
+            <point key="canvasLocation" x="150.72463768115944" y="160.37946428571428"/>
         </tableViewCell>
     </objects>
     <resources>

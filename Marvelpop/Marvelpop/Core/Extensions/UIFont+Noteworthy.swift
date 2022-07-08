@@ -25,6 +25,10 @@ extension UIFont {
         return UIFont(name: "Noteworthy Light", size: 18.0) ?? .systemFont(ofSize: 18.0)
     }
     
+    class var noteworthySubtitle: UIFont {
+        return UIFont(name: "Noteworthy Light", size: 12.0) ?? .systemFont(ofSize: 12.0)
+    }
+    
     class var noteworthyTabBar: UIFont {
         return UIFont(name: "Noteworthy Bold", size: 10.0) ?? .systemFont(ofSize: 10.0)
     }
