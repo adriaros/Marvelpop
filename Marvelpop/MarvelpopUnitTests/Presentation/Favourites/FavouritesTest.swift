@@ -67,7 +67,7 @@ class FavouritesTest: XCTestCase {
         // Then the view is configured
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Favourites.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
-        XCTAssertEqual(view.emptyLabel.style, .title("favourites_empty".localized, .black, .white, .center, true, 0))
+        XCTAssertEqual(view.emptyLabel.style, .title("favourites_empty".localized, .center, true, 0))
         XCTAssertFalse(view.emptyLabel.isHidden)
         
         // Then the trash button is not shown

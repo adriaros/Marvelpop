@@ -24,7 +24,7 @@ class CharacterDetailDataTableViewCell: UITableViewCell {
     }
     
     func configure(title: String, text: String) {
-        titleLabel.style = .title(title, .black, .white, .left, true, 1)
-        descriptionLabel.style = .paragraph(text, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, true, 0)
+        titleLabel.style = .title(title, .left, true, 1)
+        descriptionLabel.style = .paragraph(text, .left, true, 0)
     }
 }

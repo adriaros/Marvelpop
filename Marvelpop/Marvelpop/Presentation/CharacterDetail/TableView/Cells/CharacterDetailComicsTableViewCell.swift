@@ -44,7 +44,7 @@ class CharacterDetailComicsTableViewCell: UITableViewCell {
     
     func configure(title: String, comics: [Comic]) {
         self.comics = comics
-        titleLabel.style = .title(title, .black, .white, .left, true, 1)
+        titleLabel.style = .title(title, .left, true, 1)
     }
 }
 

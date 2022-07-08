@@ -22,6 +22,6 @@ class ComicCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(title: String) {
-        nameLabel.style = .subtitle(title, .black, .white, .center, false, 2)
+        nameLabel.style = .subtitle(title, .center, false, 2)
     }
 }

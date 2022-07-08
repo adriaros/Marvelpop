@@ -41,7 +41,7 @@ class CharacterDetailHeaderTableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.backgroundImageView.contentMode, .scaleAspectFill)
         XCTAssertEqual(sut.characterImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(sut.lineView.backgroundColor, .separator)
-        XCTAssertEqual(sut.nameLabel.style, .title("Hulk", .black, .white, .left, true, 0))
+        XCTAssertEqual(sut.nameLabel.style, .title("Hulk", .left, true, 0))
         XCTAssertEqual(sut.characterImageView.image, ImageAssets.CharacterDetail.logo.image)
         XCTAssertEqual(sut.backgroundImageView.image, ImageAssets.CharacterDetail.logo.image)
     }

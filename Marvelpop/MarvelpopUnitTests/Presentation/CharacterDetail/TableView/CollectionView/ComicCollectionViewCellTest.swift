@@ -28,6 +28,6 @@ class ComicCollectionViewCellTest: XCTestCase {
         sut.configure(title: title)
         
         // Then the cell is configured
-        XCTAssertEqual(sut.nameLabel.style, .subtitle(title, .black, .white, .center, false, 2))
+        XCTAssertEqual(sut.nameLabel.style, .subtitle(title, .center, false, 2))
     }
 }

@@ -30,7 +30,7 @@ class CharacterDetailComicsTableViewCellTest: XCTestCase {
         
         // Then the cell is configured
         XCTAssertEqual(sut.titleLineView.backgroundColor, .separator)
-        XCTAssertEqual(sut.titleLabel.style, .title(title, .black, .white, .left, true, 1))
+        XCTAssertEqual(sut.titleLabel.style, .title(title, .left, true, 1))
         
         // Then the collection view is configured
         let comicCell = sut.collectionView(sut.collectionView, cellForItemAt: IndexPath(row: 0, section: 0)) as! ComicCollectionViewCell
