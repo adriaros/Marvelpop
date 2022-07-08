@@ -27,8 +27,8 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
         }
         
         let request = CharacterListRequest(limit: pagination.limit, offset: pagination.nextOffset, nameStartsWith: keyword)
-        dataProvider?.getCharacterList(request: request) { [weak self] data, pagination, err in
-            guard err == nil else {
+        dataProvider?.getCharacterList(request: request) { [weak self] data, pagination, error in
+            guard error == nil else {
                 guaranteeMainThread {
                     self?.presenter?.throwError()
                 }

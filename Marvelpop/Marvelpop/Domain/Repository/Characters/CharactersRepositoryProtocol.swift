@@ -9,5 +9,5 @@ import Foundation
 
 protocol CharactersRepositoryProtocol {
     func getCharacterList(request: CharacterListRequest, completion: @escaping (_ data: [Character], _ pagination: Pagination?, _ error: ErrorType?) -> Void)
-    func getCharacterWith(id: Int?, completion: @escaping (_ data: Character?) -> Void)
+    func getCharacterWith(id: Int?, completion: @escaping (_ data: Character?, _ error: ErrorType?) -> Void)
 }

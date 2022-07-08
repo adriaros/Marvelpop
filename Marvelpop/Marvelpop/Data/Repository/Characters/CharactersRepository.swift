@@ -40,24 +40,30 @@ class CharactersRepository: CharactersRepositoryProtocol {
         }
     }
     
-    func getCharacterWith(id: Int?, completion: @escaping (_ data: Character?) -> Void) {
+    func getCharacterWith(id: Int?, completion: @escaping (_ data: Character?, _ error: ErrorType?) -> Void) {
         guard let id = id else {
+            completion(nil, .unknown)
             return
         }
 
         let networkRequest = NetworkRequest(path: String(format: APIEndPoint.Marvel.Get.character, String(id)), method: .get)
-        api.process(request: networkRequest) { _, data in
+        api.process(request: networkRequest) { code, data in
+            guard code == .success else {
+                completion(nil, .api(code))
+                return
+            }
+            
             guard let decodedData: APICharactersResponseModel? = JSONDecoder().decode(data: data) else {
-                completion(nil)
+                completion(nil, .decoding)
                 return
             }
             
             guard let result = decodedData?.data?.results?.first else {
-                completion(nil)
+                completion(nil, .decoding)
                 return
             }
             
-            completion(Character(result))
+            completion(Character(result), nil)
         }
     }
 }
