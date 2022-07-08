@@ -14,6 +14,7 @@ struct Character: Equatable {
     let text: String
     let thumbnailPath: String
     let thumbnailExtension: String
+    var comics: [Comic]
     
     var displayName: String {
         name.isEmpty ? "N/A" : name.capitalized
@@ -41,5 +42,6 @@ struct Character: Equatable {
         text = data.description ?? ""
         thumbnailPath = data.thumbnail?.path ?? ""
         thumbnailExtension = data.thumbnail?.ext ?? "jpg"
+        comics = data.comics?.items.compactMap { Comic($0) } ?? []
     }
 }

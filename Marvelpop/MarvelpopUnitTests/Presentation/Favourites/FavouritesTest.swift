@@ -22,6 +22,8 @@ class FavouritesTest: XCTestCase {
     var interactor: FavouritesInteractor!
     var router: FavouritesRouter!
     
+    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    
     override func setUpWithError() throws {
         window = UIWindow()
         favouriteRepository = MockFavouritesRepository()
@@ -65,7 +67,7 @@ class FavouritesTest: XCTestCase {
         // Then the view is configured
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Favourites.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
-        XCTAssertEqual(view.emptyLabel.style, .title("favourites_empty".localized, .black, .white, .center, true, 0))
+        XCTAssertEqual(view.emptyLabel.style, .title("favourites_empty".localized, .center, true, 0))
         XCTAssertFalse(view.emptyLabel.isHidden)
         
         // Then the trash button is not shown
@@ -74,7 +76,6 @@ class FavouritesTest: XCTestCase {
     
     func test_viewDidLoad() throws {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario
@@ -99,7 +100,6 @@ class FavouritesTest: XCTestCase {
     
     func test_didSelectRowAt() throws {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario
@@ -115,7 +115,6 @@ class FavouritesTest: XCTestCase {
     
     func test_onDeleteButton() throws {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario
@@ -147,6 +146,7 @@ class FavouritesTest: XCTestCase {
         
         // Given a testing scenario
         buildTestingScenario()
+        view.overrideUserInterfaceStyle = .light
         
         // When the view did load
         view.loadViewIfNeeded()
@@ -158,11 +158,11 @@ class FavouritesTest: XCTestCase {
     
     func test_snapshot_list() {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario
         buildTestingScenario()
+        view.overrideUserInterfaceStyle = .light
         
         // When the view did load
         view.loadViewIfNeeded()

@@ -19,3 +19,5 @@
 "favourites_alert_delete_description" = "¿Estás seguro que quieres borrar todos los favoritos?";
 "favourites_alert_delete_action" = "Borrar";
 "favourites_alert_delete_cancel" = "Cancelar";
+"character_detail_about_title" = "Descripción del personaje";
+"character_detail_comics_title" = "Comics";

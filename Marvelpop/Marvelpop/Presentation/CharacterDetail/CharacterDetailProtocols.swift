@@ -10,6 +10,9 @@ import UIKit
 protocol CharacterDetailPresenterToViewProtocol: AnyObject {
     var presenter: CharacterDetailViewToPresenterProtocol? { get set }
     var tableView: UITableView! { get set }
+    func showActivityIndicator()
+    func hideActivityIndicator()
+    func showErrorAlert()
     func showFavouriteButton()
     func showNotFavouriteButton()
 }
@@ -17,6 +20,7 @@ protocol CharacterDetailPresenterToViewProtocol: AnyObject {
 protocol CharacterDetailInteractorToPresenterProtocol: AnyObject {
     var isFavourite: Bool { get set }
     func didLoad(_ data: Character?, favourite: Bool)
+    func throwError()
 }
 
 protocol CharacterDetailPresenterToInteractorProtocol: AnyObject {

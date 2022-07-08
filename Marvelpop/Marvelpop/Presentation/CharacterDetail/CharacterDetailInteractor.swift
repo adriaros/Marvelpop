@@ -17,8 +17,11 @@ class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProtocol {
     private(set) var character: Character!
     
     func loadData() {
-        characters?.getCharacterWith(id: characterID, completion: { [weak self] data in
-            guard let character = data else {
+        characters?.getCharacterWith(id: characterID, completion: { [weak self] data, error in
+            guard let character = data, error == nil else {
+                guaranteeMainThread {
+                    self?.presenter?.throwError()
+                }
                 return
             }
             

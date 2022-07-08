@@ -9,6 +9,7 @@ import UIKit
 
 enum DSShapeStyle: Equatable {
     case rounded
+    case border
     case none
 }
 
@@ -19,6 +20,9 @@ class DSShape: UIView {
             switch style {
             case .rounded:
                 configure(cornerRadius: 12, shadowColor: UIColor.gray.cgColor, shadowOpacity: 0.4, shadowRadius: 4.0)
+                
+            case .border:
+                configure(borderColor: .darkGray)
                 
             case .none:
                 break
@@ -32,6 +36,12 @@ class DSShape: UIView {
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = shadowRadius
         layer.shadowOffset = .zero
+        backgroundColor = UIColor { $0.userInterfaceStyle == .dark ? .darkGray : .white }
+    }
+    
+    private func configure(borderColor: UIColor) {
+        layer.borderColor = borderColor.cgColor
+        layer.borderWidth = 1
         backgroundColor = UIColor { $0.userInterfaceStyle == .dark ? .darkGray : .white }
     }
 }

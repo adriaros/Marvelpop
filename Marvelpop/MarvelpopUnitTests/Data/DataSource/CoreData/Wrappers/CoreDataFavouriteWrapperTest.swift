@@ -13,6 +13,8 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
     var sut: CoreDataFavouriteWrapper!
     var manager: CoreDataManagerProtocol!
 
+    let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil)))
+
     override func setUpWithError() throws {
         manager = CoreDataManager(.inMemory)
         sut = CoreDataFavouriteWrapper(manager: manager)
@@ -25,7 +27,6 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
 
     func test_saveAndFetch() throws {
         // Given a saved favourite
-        let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil)))
         sut.save(favourite: favourite)
         
         // When the favourite is fetched
@@ -37,7 +38,6 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
     
     func test_saveAndFetchAll() throws {
         // Given a saved favourite
-        let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil)))
         sut.save(favourite: favourite)
         
         // When the favourite is fetched
@@ -49,7 +49,6 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
     
     func test_saveAndDelete() throws {
         // Given a saved favourite
-        let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil)))
         sut.save(favourite: favourite)
         
         // When the favourite is deleted
@@ -61,8 +60,8 @@ class CoreDataFavouriteWrapperTest: XCTestCase {
     
     func test_saveAndDeleteAll() throws {
         // Given a saved favourite
-        let favourite0 = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil)))
-        let favourite1 = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Has", description: "A Blue guy", thumbnail: nil)))
+        let favourite0 = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil)))
+        let favourite1 = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Has", description: "A Blue guy", thumbnail: nil, comics: nil)))
         sut.save(favourite: favourite0)
         sut.save(favourite: favourite1)
         

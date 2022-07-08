@@ -35,7 +35,7 @@ class CharacterDetailHeaderTableViewCell: UITableViewCell {
     }
     
     func configure(character name: String?, imageUrl: URL?) {
-        nameLabel.style = .title(name, .black, .white, .left, true, 0)
+        nameLabel.style = .title(name, .left, true, 0)
         imageLoader?.load(imageFrom: imageUrl, completion: { data in
             self.characterImageView.image = data ?? ImageAssets.CharacterDetail.logo.image
         })

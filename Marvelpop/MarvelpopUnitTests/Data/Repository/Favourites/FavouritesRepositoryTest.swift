@@ -12,6 +12,8 @@ class FavouritesRepositoryTest: XCTestCase {
     
     var sut: FavouritesRepository!
     var dbWrapper: MockCoreDataFavouriteWrapper!
+    
+    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
 
     override func setUpWithError() throws {
         dbWrapper = MockCoreDataFavouriteWrapper()
@@ -25,7 +27,6 @@ class FavouritesRepositoryTest: XCTestCase {
 
     func test_save() throws {
         // Given a character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         
         // When the character is saved as favourite
         sut.save(favourite: character)
@@ -36,7 +37,6 @@ class FavouritesRepositoryTest: XCTestCase {
     
     func test_fetch() throws {
         // Given a character saved as favourite
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         dbWrapper.mockFavourite = Favourite(character)
         
         // When the favourite is fetched
@@ -48,8 +48,7 @@ class FavouritesRepositoryTest: XCTestCase {
     
     func test_fetchAll() throws {
         // Given a favourite saved
-        let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil)))
-        dbWrapper.mockFavourites = [favourite]
+        dbWrapper.mockFavourites = [Favourite(character)]
         
         // When the favourite are fetched
         let fetchedFavourites = sut.fetchAll()
@@ -60,7 +59,6 @@ class FavouritesRepositoryTest: XCTestCase {
     
     func test_delete() throws {
         // Given a character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         
         // When the favourite is deleted
         sut.delete(favourite: character)

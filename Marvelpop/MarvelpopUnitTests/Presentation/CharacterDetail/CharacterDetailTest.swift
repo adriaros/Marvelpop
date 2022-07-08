@@ -15,14 +15,20 @@ class CharacterDetailTest: XCTestCase {
     var characterRepository: MockCharactersRepository!
     var imageLoaderUseCase: MockImageLoaderUseCase!
     var favouriteRepository: MockFavouritesRepository!
+    var alerts: SpyAlertController!
     
     var view: CharacterDetailViewController!
     var presenter: CharacterDetailPresenter!
     var interactor: CharacterDetailInteractor!
     var router: CharacterDetailRouter!
     
+    static var comicItem = APICharactersResponseModel.Data.Result.Comics.ComicsItem(resourceURI: "", name: "Hulk 2001")
+    static var comics = APICharactersResponseModel.Data.Result.Comics(items: [comicItem])
+    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: comics))
+    
     override func setUpWithError() throws {
         window = UIWindow()
+        alerts = SpyAlertController()
         favouriteRepository = MockFavouritesRepository()
         characterRepository = MockCharactersRepository()
         imageLoaderUseCase = MockImageLoaderUseCase()
@@ -30,6 +36,7 @@ class CharacterDetailTest: XCTestCase {
 
     override func tearDownWithError() throws {
         window = nil
+        alerts = nil
         favouriteRepository = nil
         characterRepository = nil
         imageLoaderUseCase = nil
@@ -44,13 +51,28 @@ class CharacterDetailTest: XCTestCase {
         presenter = view.presenter as? CharacterDetailPresenter
         interactor = presenter.interactor as? CharacterDetailInteractor
         router = presenter.router as? CharacterDetailRouter
+        view.alerts = alerts
         window.addSubview(view.view)
         window.makeKeyAndVisible()
     }
     
+    func test_viewDidLoad_error() throws {
+        // Given a testing scenario without character
+        characterRepository.character = nil
+        buildTestingScenario()
+        
+        // When the view did load
+        view.loadViewIfNeeded()
+        
+        // Then an error alert is shown
+        XCTAssertTrue(alerts.root is CharacterDetailViewController)
+        XCTAssertEqual(alerts.alertTitle, "generic_alert_error_title".localized)
+        XCTAssertEqual(alerts.alertDescription, "generic_alert_error_description".localized)
+        XCTAssertEqual(alerts.alertButton, "generic_alert_error_ok".localized)
+    }
+    
     func test_viewDidLoad() throws {
         // Given a character with image
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         imageLoaderUseCase.image = ImageAssets.CharacterDetail.logo.image
         
         // Given a testing scenario
@@ -65,13 +87,16 @@ class CharacterDetailTest: XCTestCase {
         XCTAssertEqual(imageCell.characterImageView.image, ImageAssets.CharacterDetail.logo.image)
         
         let dataCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as! CharacterDetailDataTableViewCell
-        XCTAssertEqual(dataCell.nameLabel.text, character.displayName)
+        XCTAssertEqual(dataCell.titleLabel.text, "character_detail_about_title".localized)
         XCTAssertEqual(dataCell.descriptionLabel.text, character.displayDescription)
+        
+        let comicsCell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 2, section: 0)) as! CharacterDetailComicsTableViewCell
+        XCTAssertEqual(comicsCell.titleLabel.text, "character_detail_comics_title".localized)
+        XCTAssertEqual(comicsCell.collectionView.numberOfItems(inSection: 0), 1)
     }
     
     func test_onFavourite_save() throws {
         // Given a character with image
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         imageLoaderUseCase.image = ImageAssets.CharacterDetail.logo.image
         
         // Given a testing scenario
@@ -89,7 +114,6 @@ class CharacterDetailTest: XCTestCase {
     
     func test_onFavourite_delete() throws {
         // Given a character with image
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         imageLoaderUseCase.image = ImageAssets.CharacterDetail.logo.image
         
         // Given the character saved as favourite
@@ -110,16 +134,16 @@ class CharacterDetailTest: XCTestCase {
     
     func test_snapshot_characterDetail() throws {
         // Given a character with image
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         imageLoaderUseCase.image = ImageAssets.CharacterDetail.logo.image
-        
+
         // Given a testing scenario
         characterRepository.character = character
         buildTestingScenario()
-        
+        view.overrideUserInterfaceStyle = .light
+    
         // When the view did load
         view.loadViewIfNeeded()
-        
+
         // Then the snapshot is correct
         XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
         XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))

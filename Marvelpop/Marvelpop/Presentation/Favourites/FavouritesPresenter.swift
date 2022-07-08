@@ -24,7 +24,7 @@ class FavouritesPresenter: FavouritesViewToPresenterProtocol {
     func setupView() {
         view?.backgroundImageView.image = ImageAssets.Favourites.logo.image
         view?.backgroundImageView.alpha = 0.25
-        view?.emptyLabel.style = .title("favourites_empty".localized, .black, .white, .center, true, 0)
+        view?.emptyLabel.style = .title("favourites_empty".localized, .center, true, 0)
     }
     
     func updateView() {

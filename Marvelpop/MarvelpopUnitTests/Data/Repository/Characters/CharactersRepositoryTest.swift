@@ -87,7 +87,7 @@ class CharactersRepositoryTest: XCTestCase {
         api.code = .success
         
         // When the request is executed
-        sut.getCharacterWith(id: 1011334) { data in
+        sut.getCharacterWith(id: 1011334) { data, _  in
             expectedData = data
             expectation?.fulfill()
             expectation = nil
@@ -97,5 +97,29 @@ class CharactersRepositoryTest: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
         XCTAssertEqual(expectedData?.id, 1011334)
         XCTAssertEqual(expectedData?.name, "3-D Man")
+    }
+    
+    func test_getCharacter_error() throws {
+        // Given the expectation
+        weak var expectation = self.expectation(description: #function)
+        var expectedData: Character?
+        var expectedError: ErrorType?
+        
+        // Given the expected response
+        api.jsonFile = "JSON_GetCharacter"
+        api.code = .serverError
+        
+        // When the request is executed
+        sut.getCharacterWith(id: 1011334) { data, error in
+            expectedError = error
+            expectedData = data
+            expectation?.fulfill()
+            expectation = nil
+        }
+        
+        // Then the result is decoded as expected
+        waitForExpectations(timeout: 1, handler: nil)
+        XCTAssertEqual(expectedData, nil)
+        XCTAssertEqual(expectedError, .api(.serverError))
     }
 }

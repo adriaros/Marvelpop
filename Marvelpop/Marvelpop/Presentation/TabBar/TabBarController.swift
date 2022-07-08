@@ -11,15 +11,9 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.backgroundColor = UIColor { traitCollection in
-            traitCollection.userInterfaceStyle == .dark ? .gray : .white.withAlphaComponent(0.8)
-        }
-        
+        tabBar.backgroundColor = .tabBarSelectedItem
         tabBar.tintColor = .black
-        tabBar.unselectedItemTintColor = UIColor { traitCollection in
-            traitCollection.userInterfaceStyle == .dark ? .darkGray : .lightGray
-        }
-        
+        tabBar.unselectedItemTintColor = .tabBarUnselectedItem
         UITabBarItem.setupAppearance()
     }
 }

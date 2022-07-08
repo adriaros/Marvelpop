@@ -34,4 +34,16 @@ class DSShapeTest: XCTestCase {
         XCTAssertEqual(sut.layer.shadowRadius, 4.0)
         XCTAssertEqual(sut.layer.shadowOffset, .zero)
     }
+    
+    func test_border() throws {
+        // Given the style
+        let style: DSShapeStyle = .border
+        
+        // When the style is set
+        sut.style = style
+        
+        // Then the style is configured correctly
+        XCTAssertEqual(sut.layer.borderColor, UIColor.darkGray.cgColor)
+        XCTAssertEqual(sut.layer.borderWidth, 1)
+    }
 }

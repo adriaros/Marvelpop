@@ -19,7 +19,7 @@ class MockCharactersRepository: CharactersRepositoryProtocol {
         completion(characterList, pagination, error)
     }
     
-    func getCharacterWith(id: Int?, completion: @escaping (_ data: Character?) -> Void) {
-        completion(character)
+    func getCharacterWith(id: Int?, completion: @escaping (Character?, ErrorType?) -> Void) {
+        completion(character, error)
     }
 }

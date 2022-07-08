@@ -68,7 +68,9 @@ extension HomeViewController: HomePresenterToViewProtocol {
     
     func showErrorAlert() {
         alerts?.root = self
-        alerts?.show(title: "generic_alert_error_title".localized, description: "generic_alert_error_description".localized, button: "generic_alert_error_ok".localized)
+        alerts?.show(title: "generic_alert_error_title".localized,
+                     description: "generic_alert_error_description".localized,
+                     button: "generic_alert_error_ok".localized)
     }
 }
 

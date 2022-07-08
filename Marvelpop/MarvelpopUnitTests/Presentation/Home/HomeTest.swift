@@ -22,6 +22,8 @@ class HomeTest: XCTestCase {
     var interactor: HomeInteractor!
     var router: HomeRouter!
     
+    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    
     override func setUpWithError() throws {
         window = UIWindow()
         alerts = SpyAlertController()
@@ -77,7 +79,6 @@ class HomeTest: XCTestCase {
 
     func test_viewDidLoad() throws {
         // Given a repository response
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         characterRepository.characterList = [character]
         characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
         
@@ -104,7 +105,6 @@ class HomeTest: XCTestCase {
     
     func test_didSelectRowAt() throws {
         // Given a repository response
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         characterRepository.characterList = [character]
         characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
         
@@ -121,7 +121,6 @@ class HomeTest: XCTestCase {
     
     func test_eraseTextFieldText() throws {
         // Given a repository response
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         characterRepository.characterList = [character]
         characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
         
@@ -146,7 +145,8 @@ class HomeTest: XCTestCase {
 
         // Given a testing scenario
         buildTestingScenario()
-
+        view.overrideUserInterfaceStyle = .light
+        
         // When the view did load
         view.loadViewIfNeeded()
 
@@ -157,13 +157,13 @@ class HomeTest: XCTestCase {
     
     func test_snapshot_list() {
         // Given a repository response
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         characterRepository.characterList = [character]
         characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
 
         // Given a testing scenario
         buildTestingScenario()
-
+        view.overrideUserInterfaceStyle = .light
+        
         // When the view did load
         view.loadViewIfNeeded()
 
