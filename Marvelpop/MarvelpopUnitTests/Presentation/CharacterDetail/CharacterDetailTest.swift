@@ -114,7 +114,8 @@ class CharacterDetailTest: XCTestCase {
 //        // Given a testing scenario
 //        characterRepository.character = character
 //        buildTestingScenario()
-//
+//        view.overrideUserInterfaceStyle = .light
+//    
 //        // When the view did load
 //        view.loadViewIfNeeded()
 //

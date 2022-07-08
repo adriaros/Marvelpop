@@ -146,6 +146,7 @@ class FavouritesTest: XCTestCase {
         
         // Given a testing scenario
         buildTestingScenario()
+        view.overrideUserInterfaceStyle = .light
         
         // When the view did load
         view.loadViewIfNeeded()
@@ -161,6 +162,7 @@ class FavouritesTest: XCTestCase {
         
         // Given a testing scenario
         buildTestingScenario()
+        view.overrideUserInterfaceStyle = .light
         
         // When the view did load
         view.loadViewIfNeeded()

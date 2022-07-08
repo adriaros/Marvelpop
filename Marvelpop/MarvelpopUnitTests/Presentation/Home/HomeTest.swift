@@ -145,7 +145,8 @@ class HomeTest: XCTestCase {
 
         // Given a testing scenario
         buildTestingScenario()
-
+        view.overrideUserInterfaceStyle = .light
+        
         // When the view did load
         view.loadViewIfNeeded()
 
@@ -161,7 +162,8 @@ class HomeTest: XCTestCase {
 
         // Given a testing scenario
         buildTestingScenario()
-
+        view.overrideUserInterfaceStyle = .light
+        
         // When the view did load
         view.loadViewIfNeeded()
 
