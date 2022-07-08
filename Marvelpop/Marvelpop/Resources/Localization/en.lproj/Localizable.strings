@@ -19,3 +19,4 @@
 "favourites_alert_delete_description" = "¿Do you want to remove the favourites?";
 "favourites_alert_delete_action" = "Delete";
 "favourites_alert_delete_cancel" = "Cancel";
+"character_detail_about_title" = "Character description";

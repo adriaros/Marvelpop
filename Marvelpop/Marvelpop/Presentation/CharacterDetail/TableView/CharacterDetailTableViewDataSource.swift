@@ -28,7 +28,7 @@ extension CharacterDetailViewController: UITableViewDataSource {
             
         case .data:
             let cell = tableView.dequeueReusableCell(withIdentifier: CharacterDetailDataTableViewCell.cellType, for: indexPath) as! CharacterDetailDataTableViewCell
-            cell.configure(character: character)
+            cell.configure(title: "character_detail_about_title".localized, text: character.displayDescription)
             return cell
         }
     }

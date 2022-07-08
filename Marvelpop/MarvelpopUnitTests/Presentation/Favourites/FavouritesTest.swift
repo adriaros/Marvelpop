@@ -22,6 +22,8 @@ class FavouritesTest: XCTestCase {
     var interactor: FavouritesInteractor!
     var router: FavouritesRouter!
     
+    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    
     override func setUpWithError() throws {
         window = UIWindow()
         favouriteRepository = MockFavouritesRepository()
@@ -74,7 +76,6 @@ class FavouritesTest: XCTestCase {
     
     func test_viewDidLoad() throws {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario
@@ -99,7 +100,6 @@ class FavouritesTest: XCTestCase {
     
     func test_didSelectRowAt() throws {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario
@@ -115,7 +115,6 @@ class FavouritesTest: XCTestCase {
     
     func test_onDeleteButton() throws {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario
@@ -158,7 +157,6 @@ class FavouritesTest: XCTestCase {
     
     func test_snapshot_list() {
         // Given a favourite character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
         favouriteRepository.mockFavourites = [Favourite(character)]
         
         // Given a testing scenario

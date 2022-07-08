@@ -29,6 +29,7 @@ extension APICharactersResponseModel.Data {
         let name: String?
         let description: String?
         let thumbnail: Thumbnail?
+        let comics: Comics?
     }
 }
 
@@ -42,5 +43,17 @@ extension APICharactersResponseModel.Data.Result {
             case path
             case ext = "extension"
         }
+    }
+    
+    struct Comics: Codable {
+        let items: [ComicsItem]
+    }
+}
+
+extension APICharactersResponseModel.Data.Result.Comics {
+    
+    struct ComicsItem: Codable {
+        let resourceURI: String
+        let name: String
     }
 }

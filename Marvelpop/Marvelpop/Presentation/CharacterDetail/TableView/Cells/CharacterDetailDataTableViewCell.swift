@@ -9,7 +9,8 @@ import UIKit
 
 class CharacterDetailDataTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: DSLabel!
+    @IBOutlet weak var titleLabel: DSLabel!
+    @IBOutlet weak var titleLineView: UIView!
     @IBOutlet weak var descriptionLabel: DSLabel!
     
     private let layout = UICollectionViewFlowLayout()
@@ -21,10 +22,11 @@ class CharacterDetailDataTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        titleLineView.backgroundColor = .separator
     }
     
-    func configure(character: Character) {
-        nameLabel.style = .title(character.displayName, .black, .white, .left, true, 0)
-        descriptionLabel.style = .paragraph(character.displayDescription, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, true, 0)
+    func configure(title: String, text: String) {
+        titleLabel.style = .title(title, .black, .white, .left, true, 0)
+        descriptionLabel.style = .paragraph(text, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, true, 0)
     }
 }

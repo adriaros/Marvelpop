@@ -21,14 +21,15 @@ class CharacterDetailDataTableViewCellTest: XCTestCase {
     }
 
     func test_configure() throws {
-        // Given a character
-        let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil))
+        // Given a title and text
+        let title = "Title"
+        let text = "Text"
         
         // When the cell is configured
-        sut.configure(character: character)
+        sut.configure(title: title, text: text)
         
         // Then the cell is configured
-        XCTAssertEqual(sut.nameLabel.style, .title(character.displayName, .black, .white, .left, true, 0))
-        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(character.displayDescription, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, true, 0))
+        XCTAssertEqual(sut.titleLabel.style, .title(title, .black, .white, .left, true, 0))
+        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(text, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, true, 0))
     }
 }
