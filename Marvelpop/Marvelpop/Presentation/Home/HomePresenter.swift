@@ -42,6 +42,7 @@ class HomePresenter: HomeViewToPresenterProtocol {
     func updateView(loader: Bool) {
         if loader {
             view?.showActivityIndicator()
+            view?.resultsLabel.style = .paragraph(String(format: "home_results".localized, ". . ."), .left, true, 1)
             items?.removeAll()
         }
         
@@ -59,9 +60,10 @@ class HomePresenter: HomeViewToPresenterProtocol {
 
 extension HomePresenter: HomeInteractorToPresenterProtocol {
     
-    func didLoad(_ data: [Character]) {
+    func didLoad(_ data: [Character], total: Int?) {
         view?.hideActivityIndicator()
         items = data
+        view?.resultsLabel.style = .paragraph(String(format: "home_results".localized, String(total ?? 0)), .left, true, 1)
     }
     
     func throwError() {

@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var resultsLabel: DSLabel!
     @IBOutlet weak var separatorView: DSShape!
     @IBOutlet weak var keywordContainerView: DSShape!
     @IBOutlet weak var keywordTextField: DSTextField!
@@ -37,7 +38,7 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: LoadingTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: LoadingTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 120
+        tableView.rowHeight = 130
     }
     
     func configureLoader() {

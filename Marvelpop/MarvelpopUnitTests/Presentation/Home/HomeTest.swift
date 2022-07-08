@@ -69,6 +69,7 @@ class HomeTest: XCTestCase {
         // Then the view is configured
         XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.logo.image)
         XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
+        XCTAssertEqual(view.resultsLabel.style, .paragraph(String(format: "home_results".localized, ". . ."), .left, true, 1))
         
         // Then an error alert is shown
         XCTAssertTrue(alerts.root is HomeViewController)
@@ -96,6 +97,7 @@ class HomeTest: XCTestCase {
         XCTAssertEqual(view.keywordTextField.returnKeyType, .search)
         XCTAssertEqual(view.keywordEraserButton.image(for: .normal), ImageAssets.Home.eraser.image)
         XCTAssertEqual(view.separatorView.backgroundColor, .lightGray)
+        XCTAssertEqual(view.resultsLabel.style, .paragraph(String(format: "home_results".localized, "1"), .left, true, 1))
         
         // Then the list is shown with the character
         let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterListItemTableViewCell
