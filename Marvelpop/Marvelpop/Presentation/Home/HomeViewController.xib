@@ -14,6 +14,7 @@
                 <outlet property="keywordContainerView" destination="8b8-bX-N6J" id="le9-2h-7F1"/>
                 <outlet property="keywordEraserButton" destination="8bH-0d-jLQ" id="8CQ-OV-xrP"/>
                 <outlet property="keywordTextField" destination="B7q-2Q-3Bz" id="YbJ-Lh-2li"/>
+                <outlet property="resultsLabel" destination="6TI-VV-ih9" id="Gmq-ho-0bj"/>
                 <outlet property="separatorView" destination="ynA-NV-z7W" id="Tho-wz-uBZ"/>
                 <outlet property="tableView" destination="mmt-ao-kdx" id="meL-S3-xaU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mXj-Mw-6WO"/>
@@ -58,29 +59,39 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-ao-kdx">
-                    <rect key="frame" x="0.0" y="135" width="414" height="727"/>
+                    <rect key="frame" x="0.0" y="165" width="414" height="697"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynA-NV-z7W" customClass="DSShape" customModule="Marvelpop" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="134" width="414" height="1"/>
+                    <rect key="frame" x="0.0" y="164" width="414" height="1"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Y84-ch-3sD"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TI-VV-ih9" customClass="DSLabel" customModule="Marvelpop" customModuleProvider="target">
+                    <rect key="frame" x="20" y="163" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="mmt-ao-kdx" firstAttribute="top" secondItem="ynA-NV-z7W" secondAttribute="bottom" id="9ql-OV-2qQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6TI-VV-ih9" secondAttribute="trailing" constant="20" id="BYD-Y2-COm"/>
                 <constraint firstItem="8b8-bX-N6J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="CNI-xV-NBx"/>
+                <constraint firstItem="6TI-VV-ih9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8b8-bX-N6J" secondAttribute="bottom" constant="2" id="FPH-wy-MgM"/>
                 <constraint firstItem="fac-T1-Y3n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GVw-Sj-GfG"/>
                 <constraint firstItem="ynA-NV-z7W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="M47-AS-Erm"/>
                 <constraint firstItem="mmt-ao-kdx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NZJ-d9-pty"/>
                 <constraint firstItem="mmt-ao-kdx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Pg2-4d-zhA"/>
                 <constraint firstItem="fac-T1-Y3n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RPD-Be-LSO"/>
+                <constraint firstItem="6TI-VV-ih9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="VNL-xA-ivO"/>
                 <constraint firstItem="8b8-bX-N6J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="Xis-wN-x7r"/>
-                <constraint firstItem="ynA-NV-z7W" firstAttribute="top" secondItem="8b8-bX-N6J" secondAttribute="bottom" constant="20" id="dhs-2H-AgZ"/>
+                <constraint firstItem="ynA-NV-z7W" firstAttribute="top" secondItem="8b8-bX-N6J" secondAttribute="bottom" constant="50" id="dhs-2H-AgZ"/>
+                <constraint firstItem="mmt-ao-kdx" firstAttribute="top" secondItem="6TI-VV-ih9" secondAttribute="bottom" constant="2" id="dmA-pc-zcG"/>
                 <constraint firstItem="fac-T1-Y3n" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="nZi-V2-snn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8b8-bX-N6J" secondAttribute="trailing" constant="20" id="oJY-nL-SdC"/>
                 <constraint firstItem="ynA-NV-z7W" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="svI-rE-A24"/>

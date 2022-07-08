@@ -14,6 +14,7 @@
 "generic_alert_error_description" = "Algo va mal. Vuelve a intentarlo";
 "generic_alert_error_ok" = "Entendido";
 "home_textfield_placeholder" = "Nombre de tu personaje favorito";
+"home_results" = "Número de resultados: %@";
 "favourites_empty" = "Tu lista de favoritos está vacía";
 "favourites_alert_delete_title" = "Borrar favoritos";
 "favourites_alert_delete_description" = "¿Estás seguro que quieres borrar todos los favoritos?";

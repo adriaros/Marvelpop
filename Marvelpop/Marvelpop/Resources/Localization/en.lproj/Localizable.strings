@@ -14,6 +14,7 @@
 "generic_alert_error_description" = "Something is wrong. Try again please";
 "generic_alert_error_ok" = "Ok";
 "home_textfield_placeholder" = "Name of your favorite character";
+"home_results" = "Number of results: %@";
 "favourites_empty" = "Your favourites list is empty";
 "favourites_alert_delete_title" = "Delete favourites";
 "favourites_alert_delete_description" = "¿Do you want to remove the favourites?";

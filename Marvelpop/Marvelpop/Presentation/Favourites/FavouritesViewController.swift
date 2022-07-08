@@ -33,7 +33,7 @@ class FavouritesViewController: UIViewController {
         tableView.register(UINib(nibName: CharacterListItemTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterListItemTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 120
+        tableView.rowHeight = 130
     }
     
     @objc func onDeleteButton() {

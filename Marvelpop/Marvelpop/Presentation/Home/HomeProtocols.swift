@@ -12,6 +12,7 @@ protocol HomePresenterToViewProtocol: AnyObject {
     var tableView: UITableView! { get set }
     var backgroundImageView: UIImageView! { get set }
     var activityIndicator: ActivityIndicatorView? { get set }
+    var resultsLabel: DSLabel! { get set }
     var separatorView: DSShape! { get set }
     var keywordContainerView: DSShape! { get set }
     var keywordTextField: DSTextField! { get set }
@@ -23,7 +24,7 @@ protocol HomePresenterToViewProtocol: AnyObject {
 
 protocol HomeInteractorToPresenterProtocol: AnyObject {
     var shouldShowLoadingCell: Bool { get set }
-    func didLoad(_ data: [Character])
+    func didLoad(_ data: [Character], total: Int?)
     func throwError()
 }
 

@@ -40,7 +40,7 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
             self?.presenter?.shouldShowLoadingCell = (self?.pagination.isPaginationAvailable ?? false) && data.count > 0
             
             guaranteeMainThread {
-                self?.presenter?.didLoad(self?.results ?? [])
+                self?.presenter?.didLoad(self?.results ?? [], total: pagination?.total)
             }
         }
     }
