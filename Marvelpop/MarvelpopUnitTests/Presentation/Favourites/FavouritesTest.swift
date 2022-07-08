@@ -89,7 +89,7 @@ class FavouritesTest: XCTestCase {
         XCTAssertTrue(view.emptyLabel.isHidden)
         
         // Then the list is shown with the favourite character
-        let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? HomeItemTableViewCell
+        let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterListItemTableViewCell
         XCTAssertEqual(cell?.titleLabel.text, character.displayName)
         XCTAssertEqual(cell?.descriptionLabel.text, character.displayDescription)
         

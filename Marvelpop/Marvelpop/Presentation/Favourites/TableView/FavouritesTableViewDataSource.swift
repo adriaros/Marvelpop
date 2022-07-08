@@ -18,7 +18,7 @@ extension FavouritesViewController: UITableViewDataSource {
             fatalError("Could not load items in Favourites")
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeItemTableViewCell.cellType, for: indexPath) as! HomeItemTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CharacterListItemTableViewCell.cellType, for: indexPath) as! CharacterListItemTableViewCell
         cell.imageLoader = imageLoader
         cell.configure(title: items[indexPath.row].displayName, description: items[indexPath.row].displayDescription, image: items[indexPath.row].listImageURL)
         return cell
