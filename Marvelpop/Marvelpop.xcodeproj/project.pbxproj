@@ -1257,8 +1257,8 @@
 		112843FE2876D55A00725F9B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				112844352876DA9200725F9B /* CharacterDetail */,
 				112844002876D56F00725F9B /* Common */,
+				112844352876DA9200725F9B /* CharacterDetail */,
 				112843FF2876D56200725F9B /* Home */,
 				112844462876E19500725F9B /* Favourites */,
 			);

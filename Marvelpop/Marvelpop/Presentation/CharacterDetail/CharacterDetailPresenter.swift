@@ -26,6 +26,7 @@ class CharacterDetailPresenter: CharacterDetailViewToPresenterProtocol {
     }
     
     func setupView() {
+        view?.showActivityIndicator()
         interactor?.loadData()
     }
     
@@ -37,7 +38,13 @@ class CharacterDetailPresenter: CharacterDetailViewToPresenterProtocol {
 extension CharacterDetailPresenter: CharacterDetailInteractorToPresenterProtocol {
     
     func didLoad(_ data: Character?, favourite: Bool) {
+        view?.hideActivityIndicator()
         isFavourite = favourite
         character = data
+    }
+    
+    func throwError() {
+        view?.hideActivityIndicator()
+        view?.showErrorAlert()
     }
 }

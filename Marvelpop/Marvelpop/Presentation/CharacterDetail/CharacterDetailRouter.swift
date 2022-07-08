@@ -22,6 +22,8 @@ class CharacterDetailRouter: CharacterDetailPresenterToRouterProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        view.activityIndicator = ActivityIndicatorView(style: .large)
+        view.alerts = AlertController()
         view.imageLoader = imageLoader
         interactor.characters = characters
         interactor.favourites = favourites

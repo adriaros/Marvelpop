@@ -15,6 +15,7 @@ class CharacterDetailTest: XCTestCase {
     var characterRepository: MockCharactersRepository!
     var imageLoaderUseCase: MockImageLoaderUseCase!
     var favouriteRepository: MockFavouritesRepository!
+    var alerts: SpyAlertController!
     
     var view: CharacterDetailViewController!
     var presenter: CharacterDetailPresenter!
@@ -27,6 +28,7 @@ class CharacterDetailTest: XCTestCase {
     
     override func setUpWithError() throws {
         window = UIWindow()
+        alerts = SpyAlertController()
         favouriteRepository = MockFavouritesRepository()
         characterRepository = MockCharactersRepository()
         imageLoaderUseCase = MockImageLoaderUseCase()
@@ -34,6 +36,7 @@ class CharacterDetailTest: XCTestCase {
 
     override func tearDownWithError() throws {
         window = nil
+        alerts = nil
         favouriteRepository = nil
         characterRepository = nil
         imageLoaderUseCase = nil
@@ -48,8 +51,24 @@ class CharacterDetailTest: XCTestCase {
         presenter = view.presenter as? CharacterDetailPresenter
         interactor = presenter.interactor as? CharacterDetailInteractor
         router = presenter.router as? CharacterDetailRouter
+        view.alerts = alerts
         window.addSubview(view.view)
         window.makeKeyAndVisible()
+    }
+    
+    func test_viewDidLoad_error() throws {
+        // Given a testing scenario without character
+        characterRepository.character = nil
+        buildTestingScenario()
+        
+        // When the view did load
+        view.loadViewIfNeeded()
+        
+        // Then an error alert is shown
+        XCTAssertTrue(alerts.root is CharacterDetailViewController)
+        XCTAssertEqual(alerts.alertTitle, "generic_alert_error_title".localized)
+        XCTAssertEqual(alerts.alertDescription, "generic_alert_error_description".localized)
+        XCTAssertEqual(alerts.alertButton, "generic_alert_error_ok".localized)
     }
     
     func test_viewDidLoad() throws {

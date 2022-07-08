@@ -14,9 +14,13 @@ class CharacterDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var activityIndicator: ActivityIndicatorView?
+    var alerts: AlertControllerProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureLoader()
         presenter?.setupView()
     }
     
@@ -29,12 +33,31 @@ class CharacterDetailViewController: UIViewController {
         tableView.estimatedRowHeight = 100
     }
     
+    func configureLoader() {
+        activityIndicator?.parent = view
+    }
+    
     @objc func onFavouriteButton() {
         presenter?.handleFavourite()
     }
 }
 
 extension CharacterDetailViewController: CharacterDetailPresenterToViewProtocol {
+    
+    func showActivityIndicator() {
+        activityIndicator?.start()
+    }
+    
+    func hideActivityIndicator() {
+        activityIndicator?.stop()
+    }
+    
+    func showErrorAlert() {
+        alerts?.root = self
+        alerts?.show(title: "generic_alert_error_title".localized,
+                     description: "generic_alert_error_description".localized,
+                     button: "generic_alert_error_ok".localized)
+    }
 
     func showFavouriteButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: ImageAssets.CharacterDetail.favourite.image, style: .plain, target: self, action: #selector(onFavouriteButton))
