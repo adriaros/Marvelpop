@@ -104,15 +104,15 @@
 		112843E62876D1C300725F9B /* AlertControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E52876D1C300725F9B /* AlertControllerProtocol.swift */; };
 		112843E92876D27200725F9B /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E82876D27200725F9B /* HomeTableViewDataSource.swift */; };
 		112843EC2876D28B00725F9B /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */; };
-		112843EF2876D32F00725F9B /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843ED2876D32F00725F9B /* HomeItemTableViewCell.swift */; };
-		112843F02876D32F00725F9B /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112843EE2876D32F00725F9B /* HomeItemTableViewCell.xib */; };
+		112843EF2876D32F00725F9B /* CharacterListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843ED2876D32F00725F9B /* CharacterListItemTableViewCell.swift */; };
+		112843F02876D32F00725F9B /* CharacterListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112843EE2876D32F00725F9B /* CharacterListItemTableViewCell.xib */; };
 		112843F32876D36100725F9B /* DSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843F22876D36100725F9B /* DSLabel.swift */; };
 		112843F52876D37800725F9B /* DSShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843F42876D37800725F9B /* DSShape.swift */; };
 		112843F72876D38A00725F9B /* DSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843F62876D38A00725F9B /* DSImageView.swift */; };
 		112843FC2876D42900725F9B /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843FA2876D42900725F9B /* LoadingTableViewCell.swift */; };
 		112843FD2876D42900725F9B /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112843FB2876D42900725F9B /* LoadingTableViewCell.xib */; };
 		112844042876D58C00725F9B /* SpyAllertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844032876D58C00725F9B /* SpyAllertController.swift */; };
-		112844062876D5A800725F9B /* HomeItemTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844052876D5A800725F9B /* HomeItemTableViewCellTest.swift */; };
+		112844062876D5A800725F9B /* CharacterListItemTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844052876D5A800725F9B /* CharacterListItemTableViewCellTest.swift */; };
 		112844082876D5B200725F9B /* HomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112844072876D5B200725F9B /* HomeTest.swift */; };
 		1128440D2876D65300725F9B /* FakeHomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128440C2876D65300725F9B /* FakeHomeCoordinator.swift */; };
 		1128440F2876D66A00725F9B /* FakeFavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128440E2876D66A00725F9B /* FakeFavouritesCoordinator.swift */; };
@@ -263,15 +263,15 @@
 		112843E52876D1C300725F9B /* AlertControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProtocol.swift; sourceTree = "<group>"; };
 		112843E82876D27200725F9B /* HomeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDataSource.swift; sourceTree = "<group>"; };
 		112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
-		112843ED2876D32F00725F9B /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
-		112843EE2876D32F00725F9B /* HomeItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemTableViewCell.xib; sourceTree = "<group>"; };
+		112843ED2876D32F00725F9B /* CharacterListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListItemTableViewCell.swift; sourceTree = "<group>"; };
+		112843EE2876D32F00725F9B /* CharacterListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListItemTableViewCell.xib; sourceTree = "<group>"; };
 		112843F22876D36100725F9B /* DSLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSLabel.swift; sourceTree = "<group>"; };
 		112843F42876D37800725F9B /* DSShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSShape.swift; sourceTree = "<group>"; };
 		112843F62876D38A00725F9B /* DSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImageView.swift; sourceTree = "<group>"; };
 		112843FA2876D42900725F9B /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		112843FB2876D42900725F9B /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		112844032876D58C00725F9B /* SpyAllertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAllertController.swift; sourceTree = "<group>"; };
-		112844052876D5A800725F9B /* HomeItemTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCellTest.swift; sourceTree = "<group>"; };
+		112844052876D5A800725F9B /* CharacterListItemTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListItemTableViewCellTest.swift; sourceTree = "<group>"; };
 		112844072876D5B200725F9B /* HomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTest.swift; sourceTree = "<group>"; };
 		1128440C2876D65300725F9B /* FakeHomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHomeCoordinator.swift; sourceTree = "<group>"; };
 		1128440E2876D66A00725F9B /* FakeFavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFavouritesCoordinator.swift; sourceTree = "<group>"; };
@@ -1200,20 +1200,10 @@
 		112843E72876D24700725F9B /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				112843EA2876D27F00725F9B /* Cells */,
 				112843E82876D27200725F9B /* HomeTableViewDataSource.swift */,
 				112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */,
 			);
 			path = TableView;
-			sourceTree = "<group>";
-		};
-		112843EA2876D27F00725F9B /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				112843ED2876D32F00725F9B /* HomeItemTableViewCell.swift */,
-				112843EE2876D32F00725F9B /* HomeItemTableViewCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		112843F12876D34A00725F9B /* DesignSystem */ = {
@@ -1240,6 +1230,8 @@
 			children = (
 				112843FA2876D42900725F9B /* LoadingTableViewCell.swift */,
 				112843FB2876D42900725F9B /* LoadingTableViewCell.xib */,
+				112843ED2876D32F00725F9B /* CharacterListItemTableViewCell.swift */,
+				112843EE2876D32F00725F9B /* CharacterListItemTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1259,7 +1251,6 @@
 			isa = PBXGroup;
 			children = (
 				112844072876D5B200725F9B /* HomeTest.swift */,
-				112844052876D5A800725F9B /* HomeItemTableViewCellTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1267,6 +1258,7 @@
 		112844002876D56F00725F9B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				112AB13A28782700007F38A4 /* TableView */,
 				112844012876D57800725F9B /* Controllers */,
 			);
 			path = Common;
@@ -1412,6 +1404,22 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		112AB13A28782700007F38A4 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				112AB13B28782705007F38A4 /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		112AB13B28782705007F38A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				112844052876D5A800725F9B /* CharacterListItemTableViewCellTest.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1428A1BF14C544DBA23E9BD6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1523,7 +1531,7 @@
 				112844322876D97100725F9B /* CharacterDetailDataTableViewCell.xib in Resources */,
 				112842DF2875D47500725F9B /* FavouritesViewController.xib in Resources */,
 				112844262876D83E00725F9B /* CharacterDetailViewController.xib in Resources */,
-				112843F02876D32F00725F9B /* HomeItemTableViewCell.xib in Resources */,
+				112843F02876D32F00725F9B /* CharacterListItemTableViewCell.xib in Resources */,
 				1128442E2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.xib in Resources */,
 				112842932875CFD300725F9B /* Assets.xcassets in Resources */,
 				112842D12875D38F00725F9B /* HomeViewController.xib in Resources */,
@@ -1702,7 +1710,7 @@
 				112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */,
 				112844242876D82D00725F9B /* CharacterDetailEntities.swift in Sources */,
 				112843E32876D1B500725F9B /* AlertController.swift in Sources */,
-				112843EF2876D32F00725F9B /* HomeItemTableViewCell.swift in Sources */,
+				112843EF2876D32F00725F9B /* CharacterListItemTableViewCell.swift in Sources */,
 				112842DB2875D46700725F9B /* FavouritesProtocols.swift in Sources */,
 				112842C12875D32500725F9B /* TabBarController.swift in Sources */,
 				112843712876BA6200725F9B /* Character.swift in Sources */,
@@ -1750,7 +1758,7 @@
 				11284456287736C200725F9B /* DSTextFieldTest.swift in Sources */,
 				1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */,
 				112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */,
-				112844062876D5A800725F9B /* HomeItemTableViewCellTest.swift in Sources */,
+				112844062876D5A800725F9B /* CharacterListItemTableViewCellTest.swift in Sources */,
 				112844172876D6D600725F9B /* DSImageViewTest.swift in Sources */,
 				112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */,
 				112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */,

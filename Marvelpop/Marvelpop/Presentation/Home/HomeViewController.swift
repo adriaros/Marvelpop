@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     }
     
     func configureTableView() {
-        tableView.register(UINib(nibName: HomeItemTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: HomeItemTableViewCell.cellType)
+        tableView.register(UINib(nibName: CharacterListItemTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterListItemTableViewCell.cellType)
         tableView.register(UINib(nibName: LoadingTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: LoadingTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self

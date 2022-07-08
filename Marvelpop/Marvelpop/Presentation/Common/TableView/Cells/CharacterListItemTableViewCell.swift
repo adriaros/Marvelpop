@@ -1,5 +1,5 @@
 //
-//  HomeItemTableViewCell.swift
+//  CharacterListItemTableViewCell.swift
 //  Marvelpop
 //
 //  Created by Adrià Ros on 7/7/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeItemTableViewCell: UITableViewCell {
+class CharacterListItemTableViewCell: UITableViewCell {
     
     var imageLoader: ImageLoaderUseCaseProtocol?
 
@@ -40,7 +40,7 @@ class HomeItemTableViewCell: UITableViewCell {
     
     func configure(title: String, description: String, image url: URL?) {
         titleLabel.style = .title(title, .black, .white, .left, false, 1)
-        descriptionLabel.style = .paragraph(description, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, false, 2)
+        descriptionLabel.style = .paragraph(description, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, false, 1)
         imageLoader?.load(imageFrom: url, completion: { data in
             self.containerImageView.image = data ?? ImageAssets.Home.logo.image
         })

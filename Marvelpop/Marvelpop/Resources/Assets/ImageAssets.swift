@@ -32,7 +32,7 @@ enum ImageAssets {
     
     enum Home: String {
         
-        static var imageSize = "/landscape_small."
+        static var imageSize = "/portrait_large."
         
         var image: UIImage? {
             return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysOriginal)

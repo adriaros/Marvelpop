@@ -1,5 +1,5 @@
 //
-//  HomeItemTableViewCellTest.swift
+//  CharacterListItemTableViewCellTest.swift
 //  MarvelpopUnitTests
 //
 //  Created by Adrià Ros on 7/7/22.
@@ -8,14 +8,14 @@
 import XCTest
 @testable import Marvelpop
 
-class HomeItemTableViewCellTest: XCTestCase {
+class CharacterListItemTableViewCellTest: XCTestCase {
     
-    var sut: HomeItemTableViewCell!
+    var sut: CharacterListItemTableViewCell!
     var imageLoaderUseCase: MockImageLoaderUseCase!
 
     override func setUpWithError() throws {
         imageLoaderUseCase = MockImageLoaderUseCase()
-        sut = Bundle(for: HomeItemTableViewCell.self).loadNibNamed(HomeItemTableViewCell.cellType, owner: nil)?.first as? HomeItemTableViewCell
+        sut = Bundle(for: CharacterListItemTableViewCell.self).loadNibNamed(CharacterListItemTableViewCell.cellType, owner: nil)?.first as? CharacterListItemTableViewCell
         sut.layoutSubviews()
     }
 
@@ -41,6 +41,6 @@ class HomeItemTableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.containerImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(sut.containerImageView.image, ImageAssets.Home.logo.image)
         XCTAssertEqual(sut.titleLabel.style, .title(title, .black, .white, .left, false, 1))
-        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(description, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, false, 2))
+        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(description, .black.withAlphaComponent(0.8), .white.withAlphaComponent(0.8), .left, false, 1))
     }
 }
