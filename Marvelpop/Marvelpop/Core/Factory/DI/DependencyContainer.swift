@@ -21,7 +21,7 @@ final class DependencyContainer: DependencyFactory {
        CoreDataManager()
     }()
     
-    lazy var coreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol = {
+    lazy var coreDataFavouriteWrapper: CoreDataFavouriteWrapping = {
        CoreDataFavouriteWrapper(manager: coreDataManager)
     }()
     

@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
+final class CoreDataFavouriteWrapper: CoreDataFavouriteWrapping {
     
     private let manager: CoreDataManagerProtocol
     
