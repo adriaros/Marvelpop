@@ -29,7 +29,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AI-lh-JIH" customClass="DSLabel" customModule="Marvelpop" customModuleProvider="target">
-                    <rect key="frame" x="20" y="782" width="374" height="0.0"/>
+                    <rect key="frame" x="20" y="836" width="374" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                 <constraint firstItem="NC7-Yr-O4I" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cs1-k7-CmY"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5AI-lh-JIH" secondAttribute="trailing" constant="20" id="d68-7V-Bom"/>
                 <constraint firstItem="NC7-Yr-O4I" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="f6O-fu-QIg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5AI-lh-JIH" secondAttribute="bottom" constant="80" id="hVI-9c-8yf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5AI-lh-JIH" secondAttribute="bottom" constant="26" id="hVI-9c-8yf"/>
                 <constraint firstItem="NC7-Yr-O4I" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jbI-GF-apS"/>
                 <constraint firstItem="6uV-TB-XH7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rA4-3V-Jw4"/>
                 <constraint firstItem="NC7-Yr-O4I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tGL-x4-Oz9"/>
