@@ -154,6 +154,7 @@
 		112AB14C287884F8007F38A4 /* ComicCollectionViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AB14B287884F8007F38A4 /* ComicCollectionViewCellTest.swift */; };
 		112AB14E28788599007F38A4 /* CharacterDetailComicsTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AB14D28788599007F38A4 /* CharacterDetailComicsTableViewCellTest.swift */; };
 		112AB1512878885C007F38A4 /* UIColor+UserInterfaceStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AB1502878885C007F38A4 /* UIColor+UserInterfaceStyle.swift */; };
+		114B8786287985ED00B858D6 /* String+Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114B8785287985ED00B858D6 /* String+Shortcuts.swift */; };
 		EEAFD09CF877998D1CE5FC3A /* Pods_Marvelpop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0047678D8E7CD0DBFA65FF /* Pods_Marvelpop.framework */; };
 		F0290AB9D109F85E7B769A20 /* Pods_MarvelpopUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */; };
 /* End PBXBuildFile section */
@@ -321,6 +322,7 @@
 		112AB14B287884F8007F38A4 /* ComicCollectionViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCollectionViewCellTest.swift; sourceTree = "<group>"; };
 		112AB14D28788599007F38A4 /* CharacterDetailComicsTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailComicsTableViewCellTest.swift; sourceTree = "<group>"; };
 		112AB1502878885C007F38A4 /* UIColor+UserInterfaceStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+UserInterfaceStyle.swift"; sourceTree = "<group>"; };
+		114B8785287985ED00B858D6 /* String+Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Shortcuts.swift"; sourceTree = "<group>"; };
 		5D75775E0E7DB28E14E24DAC /* Pods_MarvelpopUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelpopUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6099A93FAD882DE3D448FCAC /* Pods-Marvelpop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.debug.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.debug.xcconfig"; sourceTree = "<group>"; };
 		6F141BE783A8F93E992979F3 /* Pods-Marvelpop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelpop.release.xcconfig"; path = "Target Support Files/Pods-Marvelpop/Pods-Marvelpop.release.xcconfig"; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 			children = (
 				112843442875EEB000725F9B /* String+MD5.swift */,
 				112842F12875D74200725F9B /* String+Localization.swift */,
+				114B8785287985ED00B858D6 /* String+Shortcuts.swift */,
 				112843202875E15F00725F9B /* UINavigationBar+Appearance.swift */,
 				112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */,
 				1128444A2876EFB500725F9B /* UIDevice+UserInterfaceIdiom.swift */,
@@ -1737,6 +1740,7 @@
 				112842CF2875D35900725F9B /* HomeEntities.swift in Sources */,
 				112843F72876D38A00725F9B /* DSImageView.swift in Sources */,
 				112844312876D97100725F9B /* CharacterDetailDataTableViewCell.swift in Sources */,
+				114B8786287985ED00B858D6 /* String+Shortcuts.swift in Sources */,
 				1128442D2876D8F500725F9B /* CharacterDetailHeaderTableViewCell.swift in Sources */,
 				112842CC2875D35900725F9B /* HomeViewController.swift in Sources */,
 				112842CD2875D35900725F9B /* HomeProtocols.swift in Sources */,

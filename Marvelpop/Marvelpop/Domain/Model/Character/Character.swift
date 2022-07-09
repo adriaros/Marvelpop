@@ -21,7 +21,7 @@ struct Character: Equatable {
     }
     
     var displayDescription: String {
-        text.isEmpty ? "N/A" : text
+        text.isEmpty || text.isBlank ? "N/A" : text
     }
     
     var listImageURL: URL? {
