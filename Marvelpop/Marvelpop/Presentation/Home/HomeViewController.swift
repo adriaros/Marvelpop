@@ -11,7 +11,7 @@ final class HomeViewController: UIViewController {
     
     var presenter: HomeViewToPresenterProtocol?
     var imageLoader: ImageLoading?
-    var alerts: AlertControllerProtocol?
+    var alerts: AlertControllerProvider?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!

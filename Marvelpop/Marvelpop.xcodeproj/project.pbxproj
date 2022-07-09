@@ -101,7 +101,7 @@
 		112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */; };
 		112843E12876D1A300725F9B /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E02876D1A300725F9B /* ActivityIndicatorView.swift */; };
 		112843E32876D1B500725F9B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E22876D1B500725F9B /* AlertController.swift */; };
-		112843E62876D1C300725F9B /* AlertControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E52876D1C300725F9B /* AlertControllerProtocol.swift */; };
+		112843E62876D1C300725F9B /* AlertControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E52876D1C300725F9B /* AlertControllerProvider.swift */; };
 		112843E92876D27200725F9B /* HomeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E82876D27200725F9B /* HomeTableViewDataSource.swift */; };
 		112843EC2876D28B00725F9B /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */; };
 		112843EF2876D32F00725F9B /* CharacterListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843ED2876D32F00725F9B /* CharacterListItemTableViewCell.swift */; };
@@ -269,7 +269,7 @@
 		112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseTest.swift; sourceTree = "<group>"; };
 		112843E02876D1A300725F9B /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		112843E22876D1B500725F9B /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		112843E52876D1C300725F9B /* AlertControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProtocol.swift; sourceTree = "<group>"; };
+		112843E52876D1C300725F9B /* AlertControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerProvider.swift; sourceTree = "<group>"; };
 		112843E82876D27200725F9B /* HomeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDataSource.swift; sourceTree = "<group>"; };
 		112843EB2876D28B00725F9B /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		112843ED2876D32F00725F9B /* CharacterListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -1213,7 +1213,7 @@
 		112843E42876D1B900725F9B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				112843E52876D1C300725F9B /* AlertControllerProtocol.swift */,
+				112843E52876D1C300725F9B /* AlertControllerProvider.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1773,7 +1773,7 @@
 				112843B42876CC2400725F9B /* MediaRepository.swift in Sources */,
 				112842D82875D46700725F9B /* FavouritesPresenter.swift in Sources */,
 				112843882876C1CF00725F9B /* ImageCache.swift in Sources */,
-				112843E62876D1C300725F9B /* AlertControllerProtocol.swift in Sources */,
+				112843E62876D1C300725F9B /* AlertControllerProvider.swift in Sources */,
 				112842CA2875D35900725F9B /* HomePresenter.swift in Sources */,
 				112843A72876CB8500725F9B /* FavouritesRepositoring.swift in Sources */,
 				1128439B2876CA6100725F9B /* JSONDecoder-Decodable.swift in Sources */,

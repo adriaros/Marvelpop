@@ -15,7 +15,7 @@ final class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var activityIndicator: ActivityIndicatorView?
-    var alerts: AlertControllerProtocol?
+    var alerts: AlertControllerProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()

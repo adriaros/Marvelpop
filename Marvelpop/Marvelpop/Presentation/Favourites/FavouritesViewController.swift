@@ -16,7 +16,7 @@ final class FavouritesViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var emptyLabel: DSLabel!
     
-    var alerts: AlertControllerProtocol?
+    var alerts: AlertControllerProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
