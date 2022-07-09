@@ -13,7 +13,7 @@ final class DependencyContainer: DependencyFactory {
         MarvelAPI()
     }()
     
-    lazy var imageCache: ImageCacheProtocol = {
+    lazy var imageCache: ImageCaching = {
         ImageCache()
     }()
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ImageCache: ImageCacheProtocol {
+final class ImageCache: ImageCaching {
     
     private let cachedImages = NSCache<NSURL, UIImage>()
     
