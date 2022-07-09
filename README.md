@@ -67,3 +67,60 @@ Bla
 - This app is designed for both light and dark modes
 
 ## Testing
+
+This application mostly uses Unit Tests.
+
+### Unit Tests with XCTest
+
+#### What is tested?
+
+The whole project is tested with Unit Tests, from views to repositories.
+
+> Core
+>> Factory
+>>> Test that the Factory in charge of creating the view controllers creates them correctly.
+
+>> Coordinator
+>>> Test that the app navigation works correctly
+
+> Data
+>> Repository
+>>> Test that all repositories connect correctly to their data provider and transform the data to that known by the domain
+
+>> DataSource
+>>> Test that the network or database requests work correctly
+
+> Domain
+>> UseCases
+>>> Test the use cases work correctly
+
+> Presentation
+>> VIPER modules
+>>> Test the VIPER architecture by building a test scenario that simulates the expected response to verify that the behavior is the expected.
+
+> Resources
+>> Design system
+>>> Test the design system components are configurated correctly
+
+### SnapshotTesting
+
+The app uses SnapshotTesting to test the main views
+
+- Home
+- Favourites
+- Character detail
+
+#### Why Snapshot Testing?
+
+SnapshotTesting is a great way to test views without running manual tests or slower, more complex and laborious UI tests.
+
+This ensures that if there is any change in the interface it will be captured as it will compare the original image (or as it was before) to the current one.
+
+Furthermore, you can test the interfaces for different devices in a few seconds. 
+
+> Warning!
+>> The original snapshots were taken with an iPhone 13. Therefore, in order to run the tests correctly, they must be run on an iPhone 13, otherwise errors will pop up warning that the snapshot tests could not be run
+
+### Mocks
+
+The project uses Mocks, Fakes and Spies to test anything. A library like "Sourcery" could have been used to generate those mocks but in the end, being a small project, it's not that necessary, and doing it manually was enough.
