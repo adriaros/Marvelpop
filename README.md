@@ -10,7 +10,9 @@ Next I will show you a brief guide on how to run the application and how it is b
 
 ## Installation
 
-Bla 
+1. Clone or download the project.
+2. Run `pod install` in the project folder (where the Podfile is located).
+3. Use `Marvelpop.xcworkspace` to open the project. 
 
 ## Device and modes
 
