@@ -17,6 +17,7 @@ protocol HomePresenterToViewProtocol: AnyObject {
     var keywordContainerView: DSShape! { get set }
     var keywordTextField: DSTextField! { get set }
     var keywordEraserButton: UIButton! { get set }
+    var refreshControl: UIRefreshControl { get set }
     func showActivityIndicator()
     func hideActivityIndicator()
     func showErrorAlert()
@@ -41,6 +42,7 @@ protocol HomeViewToPresenterProtocol: AnyObject {
     var items: [Character]? { get set }
     func setupView()
     func updateView(loader: Bool)
+    func refreshView()
     func characterSelected(at row: Int)
 }
 

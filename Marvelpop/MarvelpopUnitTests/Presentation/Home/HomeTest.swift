@@ -105,6 +105,27 @@ class HomeTest: XCTestCase {
         XCTAssertEqual(cell?.descriptionLabel.text, character.displayDescription)
     }
     
+    func test_bounce() throws {
+        // Given a repository response
+        characterRepository.characterList = [character]
+        characterRepository.pagination = Pagination(offset: 0, total: 1, count: 1, limit: 20)
+        
+        // Given a testing scenario
+        buildTestingScenario()
+        view.loadViewIfNeeded()
+        
+        // When the user bounces the table
+        view.bounce(view.refreshControl)
+        
+        // Then the view is configured
+        XCTAssertEqual(view.resultsLabel.style, .paragraph(String(format: "home_results".localized, "1"), .left, true, 1))
+        
+        // Then the list is shown with the character
+        let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? CharacterListItemTableViewCell
+        XCTAssertEqual(cell?.titleLabel.text, character.displayName)
+        XCTAssertEqual(cell?.descriptionLabel.text, character.displayDescription)
+    }
+    
     func test_didSelectRowAt() throws {
         // Given a repository response
         characterRepository.characterList = [character]

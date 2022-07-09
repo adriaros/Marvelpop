@@ -50,6 +50,12 @@ class HomePresenter: HomeViewToPresenterProtocol {
         interactor?.loadData(keyword: view?.keywordTextField.text, reset: loader)
     }
     
+    func refreshView() {
+        view?.resultsLabel.style = .paragraph(String(format: "home_results".localized, ". . ."), .left, true, 1)
+        items?.removeAll()
+        interactor?.loadData(keyword: view?.keywordTextField.text, reset: true)
+    }
+    
     func characterSelected(at row: Int) {
         guard let characterID = items?[row].id else {
             return
@@ -62,13 +68,18 @@ class HomePresenter: HomeViewToPresenterProtocol {
 extension HomePresenter: HomeInteractorToPresenterProtocol {
     
     func didLoad(_ data: [Character], total: Int?) {
-        view?.hideActivityIndicator()
+        stopLoaders()
         items = data
         view?.resultsLabel.style = .paragraph(String(format: "home_results".localized, String(total ?? 0)), .left, true, 1)
     }
     
     func throwError() {
-        view?.hideActivityIndicator()
+        stopLoaders()
         view?.showErrorAlert()
+    }
+    
+    private func stopLoaders() {
+        view?.hideActivityIndicator()
+        view?.refreshControl.endRefreshing()
     }
 }

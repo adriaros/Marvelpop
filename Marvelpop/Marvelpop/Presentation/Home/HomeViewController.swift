@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var keywordTextField: DSTextField!
     @IBOutlet weak var keywordEraserButton: UIButton!
     
+    var refreshControl: UIRefreshControl = UIRefreshControl()
     var activityIndicator: ActivityIndicatorView?
     var alerts: AlertControllerProtocol?
     
@@ -39,6 +40,8 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 130
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(bounce(_:)), for: .valueChanged)
     }
     
     func configureLoader() {
@@ -48,6 +51,10 @@ class HomeViewController: UIViewController {
     func configureKeywordTextField() {
         hideKeyboardWhenTappedAround()
         keywordTextField.delegate = self
+    }
+    
+    @objc func bounce(_ sender: Any) {
+        presenter?.refreshView()
     }
     
     @IBAction func onKeywordEraserButton(_ sender: Any) {
