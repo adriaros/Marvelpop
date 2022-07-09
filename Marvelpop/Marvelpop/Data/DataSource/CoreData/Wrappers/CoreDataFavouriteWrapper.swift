@@ -10,9 +10,9 @@ import CoreData
 
 final class CoreDataFavouriteWrapper: CoreDataFavouriteWrapping {
     
-    private let manager: CoreDataManagerProtocol
+    private let manager: CoreDataManaging
     
-    init(manager: CoreDataManagerProtocol) {
+    init(manager: CoreDataManaging) {
         self.manager = manager
     }
     

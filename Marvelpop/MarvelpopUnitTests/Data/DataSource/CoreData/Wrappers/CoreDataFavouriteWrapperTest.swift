@@ -11,7 +11,7 @@ import XCTest
 final class CoreDataFavouriteWrapperTest: XCTestCase {
     
     private var sut: CoreDataFavouriteWrapper!
-    private var manager: CoreDataManagerProtocol!
+    private var manager: CoreDataManaging!
 
     private let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil)))
 

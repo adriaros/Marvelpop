@@ -17,7 +17,7 @@ final class DependencyContainer: DependencyFactory {
         ImageCache()
     }()
     
-    lazy var coreDataManager: CoreDataManagerProtocol = {
+    lazy var coreDataManager: CoreDataManaging = {
        CoreDataManager()
     }()
     

@@ -65,7 +65,7 @@
 		112843532875F2C100725F9B /* SpyMarvelURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843522875F2C100725F9B /* SpyMarvelURLProtocol.swift */; };
 		1128435B2876B8F500725F9B /* MarvelpopCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 112843592876B8F400725F9B /* MarvelpopCoreData.xcdatamodeld */; };
 		112843622876B98E00725F9B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843612876B98E00725F9B /* CoreDataManager.swift */; };
-		112843652876B9A300725F9B /* CoreDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843642876B9A300725F9B /* CoreDataManagerProtocol.swift */; };
+		112843652876B9A300725F9B /* CoreDataManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843642876B9A300725F9B /* CoreDataManaging.swift */; };
 		112843672876B9CB00725F9B /* CoreDataFavouriteWrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843662876B9CB00725F9B /* CoreDataFavouriteWrapping.swift */; };
 		112843692876B9D500725F9B /* CoreDataFavouriteWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843682876B9D500725F9B /* CoreDataFavouriteWrapper.swift */; };
 		1128436E2876BA1400725F9B /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128436D2876BA1400725F9B /* Favourite.swift */; };
@@ -233,7 +233,7 @@
 		112843522875F2C100725F9B /* SpyMarvelURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyMarvelURLProtocol.swift; sourceTree = "<group>"; };
 		1128435A2876B8F500725F9B /* MarvelpopCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarvelpopCoreData.xcdatamodel; sourceTree = "<group>"; };
 		112843612876B98E00725F9B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		112843642876B9A300725F9B /* CoreDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerProtocol.swift; sourceTree = "<group>"; };
+		112843642876B9A300725F9B /* CoreDataManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManaging.swift; sourceTree = "<group>"; };
 		112843662876B9CB00725F9B /* CoreDataFavouriteWrapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavouriteWrapping.swift; sourceTree = "<group>"; };
 		112843682876B9D500725F9B /* CoreDataFavouriteWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavouriteWrapper.swift; sourceTree = "<group>"; };
 		1128436D2876BA1400725F9B /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
@@ -820,7 +820,7 @@
 		1128435F2876B97D00725F9B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				112843642876B9A300725F9B /* CoreDataManagerProtocol.swift */,
+				112843642876B9A300725F9B /* CoreDataManaging.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1727,7 +1727,7 @@
 				112843812876C00000725F9B /* APICharactersResponseModel.swift in Sources */,
 				112843E12876D1A300725F9B /* ActivityIndicatorView.swift in Sources */,
 				1128433C2875EE3100725F9B /* APIEndPoint+Marvel.swift in Sources */,
-				112843652876B9A300725F9B /* CoreDataManagerProtocol.swift in Sources */,
+				112843652876B9A300725F9B /* CoreDataManaging.swift in Sources */,
 				112843672876B9CB00725F9B /* CoreDataFavouriteWrapping.swift in Sources */,
 				112843152875DBEF00725F9B /* ViewControllerContainer.swift in Sources */,
 				112842D92875D46700725F9B /* FavouritesRouter.swift in Sources */,
