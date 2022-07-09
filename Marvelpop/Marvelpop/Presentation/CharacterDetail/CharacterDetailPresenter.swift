@@ -9,7 +9,7 @@ import UIKit
 
 final class CharacterDetailPresenter: CharacterDetailViewToPresenterProtocol {
     
-    var view: CharacterDetailPresenterToViewProtocol?
+    weak var view: CharacterDetailPresenterToViewProtocol?
     var interactor: CharacterDetailPresenterToInteractorProtocol?
     var router: CharacterDetailPresenterToRouterProtocol?
     

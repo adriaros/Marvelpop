@@ -9,7 +9,7 @@ import UIKit
 
 final class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProtocol {
     
-    var presenter: CharacterDetailInteractorToPresenterProtocol?
+    weak var presenter: CharacterDetailInteractorToPresenterProtocol?
     var characters: CharactersRepositoring?
     var favourites: FavouritesRepositoring?
     var characterID: Int?

@@ -9,7 +9,7 @@ import UIKit
 
 final class FavouritesPresenter: FavouritesViewToPresenterProtocol {
     
-    var view: FavouritesPresenterToViewProtocol?
+    weak var view: FavouritesPresenterToViewProtocol?
     var interactor: FavouritesPresenterToInteractorProtocol?
     var router: FavouritesPresenterToRouterProtocol?
     

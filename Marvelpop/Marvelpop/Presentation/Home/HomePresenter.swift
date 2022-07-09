@@ -9,7 +9,7 @@ import UIKit
 
 final class HomePresenter: HomeViewToPresenterProtocol {
     
-    var view: HomePresenterToViewProtocol?
+    weak var view: HomePresenterToViewProtocol?
     var interactor: HomePresenterToInteractorProtocol?
     var router: HomePresenterToRouterProtocol?
     

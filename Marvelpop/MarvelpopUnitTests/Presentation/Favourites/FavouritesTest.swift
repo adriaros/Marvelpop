@@ -13,7 +13,7 @@ final class FavouritesTest: XCTestCase {
 
     private var window: UIWindow!
     private var favouriteRepository: MockFavouritesRepository!
-    private var ImageLoading: MockImageLoaderUseCase!
+    private var ImageLoading: MockImageLoader!
     private var coordinator: FakeFavouritesCoordinator!
     private var alerts: SpyAlertController!
     
@@ -27,7 +27,7 @@ final class FavouritesTest: XCTestCase {
     override func setUpWithError() throws {
         window = UIWindow()
         favouriteRepository = MockFavouritesRepository()
-        ImageLoading = MockImageLoaderUseCase()
+        ImageLoading = MockImageLoader()
         coordinator = FakeFavouritesCoordinator()
         alerts = SpyAlertController()
     }

@@ -97,7 +97,7 @@
 		112843CE2876CEED00725F9B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843CD2876CEED00725F9B /* ImageLoader.swift */; };
 		112843D12876CEFB00725F9B /* ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D02876CEFB00725F9B /* ImageLoading.swift */; };
 		112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */; };
-		112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */; };
+		112843DA2876CF8C00725F9B /* MockImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D92876CF8C00725F9B /* MockImageLoader.swift */; };
 		112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */; };
 		112843E12876D1A300725F9B /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E02876D1A300725F9B /* ActivityIndicatorView.swift */; };
 		112843E32876D1B500725F9B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843E22876D1B500725F9B /* AlertController.swift */; };
@@ -265,7 +265,7 @@
 		112843CD2876CEED00725F9B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		112843D02876CEFB00725F9B /* ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoading.swift; sourceTree = "<group>"; };
 		112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread-GuaranteeMainThread.swift"; sourceTree = "<group>"; };
-		112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageLoaderUseCase.swift; sourceTree = "<group>"; };
+		112843D92876CF8C00725F9B /* MockImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageLoader.swift; sourceTree = "<group>"; };
 		112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseTest.swift; sourceTree = "<group>"; };
 		112843E02876D1A300725F9B /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		112843E22876D1B500725F9B /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -1179,7 +1179,7 @@
 		112843D82876CF7900725F9B /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */,
+				112843D92876CF8C00725F9B /* MockImageLoader.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -1833,7 +1833,7 @@
 				11284456287736C200725F9B /* DSTextFieldTest.swift in Sources */,
 				112AB14E28788599007F38A4 /* CharacterDetailComicsTableViewCellTest.swift in Sources */,
 				1128434B2875EF6400725F9B /* FakeMarvelAPI.swift in Sources */,
-				112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */,
+				112843DA2876CF8C00725F9B /* MockImageLoader.swift in Sources */,
 				112844062876D5A800725F9B /* CharacterListItemTableViewCellTest.swift in Sources */,
 				112844172876D6D600725F9B /* DSImageViewTest.swift in Sources */,
 				112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */,

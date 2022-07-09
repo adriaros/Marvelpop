@@ -9,7 +9,7 @@ import UIKit
 
 final class FavouritesInteractor: FavouritesPresenterToInteractorProtocol {
     
-    var presenter: FavouritesInteractorToPresenterProtocol?
+    weak var presenter: FavouritesInteractorToPresenterProtocol?
     var dataProvider: FavouritesRepositoring?
     
     func loadData() {

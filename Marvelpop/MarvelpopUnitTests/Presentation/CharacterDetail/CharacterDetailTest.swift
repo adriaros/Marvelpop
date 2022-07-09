@@ -13,7 +13,7 @@ final class CharacterDetailTest: XCTestCase {
 
     private var window: UIWindow!
     private var characterRepository: MockCharactersRepository!
-    private var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var imageLoaderUseCase: MockImageLoader!
     private var favouriteRepository: MockFavouritesRepository!
     private var alerts: SpyAlertController!
     
@@ -31,7 +31,7 @@ final class CharacterDetailTest: XCTestCase {
         alerts = SpyAlertController()
         favouriteRepository = MockFavouritesRepository()
         characterRepository = MockCharactersRepository()
-        imageLoaderUseCase = MockImageLoaderUseCase()
+        imageLoaderUseCase = MockImageLoader()
     }
 
     override func tearDownWithError() throws {

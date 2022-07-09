@@ -11,11 +11,11 @@ import XCTest
 final class CharacterDetailHeaderTableViewCellTest: XCTestCase {
 
     private var sut: CharacterDetailHeaderTableViewCell!
-    private var imageLoader: MockImageLoaderUseCase!
+    private var imageLoader: MockImageLoader!
     
     override func setUpWithError() throws {
         sut = Bundle(for: CharacterDetailHeaderTableViewCell.self).loadNibNamed(CharacterDetailHeaderTableViewCell.cellType, owner: nil)?.first as? CharacterDetailHeaderTableViewCell
-        imageLoader = MockImageLoaderUseCase()
+        imageLoader = MockImageLoader()
         sut.imageLoader = imageLoader
         sut.layoutSubviews()
     }

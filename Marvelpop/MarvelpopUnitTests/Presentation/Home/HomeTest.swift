@@ -14,7 +14,7 @@ final class HomeTest: XCTestCase {
     private var window: UIWindow!
     private var coordinator: FakeHomeCoordinator!
     private var characterRepository: MockCharactersRepository!
-    private var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var imageLoaderUseCase: MockImageLoader!
     private var alerts: SpyAlertController!
     
     private var view: HomeViewController!
@@ -28,7 +28,7 @@ final class HomeTest: XCTestCase {
         window = UIWindow()
         alerts = SpyAlertController()
         characterRepository = MockCharactersRepository()
-        imageLoaderUseCase = MockImageLoaderUseCase()
+        imageLoaderUseCase = MockImageLoader()
         coordinator = FakeHomeCoordinator()
     }
 

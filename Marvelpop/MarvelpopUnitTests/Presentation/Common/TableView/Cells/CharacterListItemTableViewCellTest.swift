@@ -11,10 +11,10 @@ import XCTest
 final class CharacterListItemTableViewCellTest: XCTestCase {
     
     private var sut: CharacterListItemTableViewCell!
-    private var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var imageLoaderUseCase: MockImageLoader!
 
     override func setUpWithError() throws {
-        imageLoaderUseCase = MockImageLoaderUseCase()
+        imageLoaderUseCase = MockImageLoader()
         sut = Bundle(for: CharacterListItemTableViewCell.self).loadNibNamed(CharacterListItemTableViewCell.cellType, owner: nil)?.first as? CharacterListItemTableViewCell
         sut.layoutSubviews()
     }

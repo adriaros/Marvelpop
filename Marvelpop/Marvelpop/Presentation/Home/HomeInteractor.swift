@@ -9,7 +9,7 @@ import UIKit
 
 final class HomeInteractor: HomePresenterToInteractorProtocol {
     
-    var presenter: HomeInteractorToPresenterProtocol?
+    weak var presenter: HomeInteractorToPresenterProtocol?
     var dataProvider: CharactersRepositoring?
     var pagination = HomeTableViewPaginationManager()
     
