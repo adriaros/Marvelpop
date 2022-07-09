@@ -8,7 +8,7 @@
 import UIKit
 @testable import Marvelpop
 
-class SpyAlertController: AlertControllerProtocol {
+final class SpyAlertController: AlertControllerProvider {
     
     var root: UIViewController?
     var delegate: AlertControllerDelegate?

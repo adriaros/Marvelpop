@@ -9,11 +9,11 @@ import XCTest
 import UIKit
 @testable import Marvelpop
 
-class MediaRepositoryTest: XCTestCase {
+final class MediaRepositoryTest: XCTestCase {
     
-    var sut: MediaRepository!
-    var api: FakeMarvelAPI!
-    var cache: MockImageCache!
+    private var sut: MediaRepository!
+    private var api: FakeMarvelAPI!
+    private var cache: MockImageCache!
 
     override func setUpWithError() throws {
         api = FakeMarvelAPI()
@@ -28,7 +28,7 @@ class MediaRepositoryTest: XCTestCase {
 
     func test_downaloadImageFrom() throws {
         // Given the expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var expectedImage: UIImage?
         
         // Given a image
@@ -38,8 +38,7 @@ class MediaRepositoryTest: XCTestCase {
         // When downloading image from URL
         sut.download(imageFrom: URL(string: "image/path")) { data in
             expectedImage = data
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the result is the expected image

@@ -8,9 +8,9 @@
 import XCTest
 @testable import Marvelpop
 
-class CharacterDetailComicsTableViewCellTest: XCTestCase {
+final class CharacterDetailComicsTableViewCellTest: XCTestCase {
     
-    var sut: CharacterDetailComicsTableViewCell!
+    private var sut: CharacterDetailComicsTableViewCell!
 
     override func setUpWithError() throws {
         sut = Bundle(for: CharacterDetailComicsTableViewCell.self).loadNibNamed(CharacterDetailComicsTableViewCell.cellType, owner: nil)?.first as? CharacterDetailComicsTableViewCell

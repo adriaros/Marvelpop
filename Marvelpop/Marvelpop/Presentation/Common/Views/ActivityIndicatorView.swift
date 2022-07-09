@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActivityIndicatorView: UIActivityIndicatorView {
+final class ActivityIndicatorView: UIActivityIndicatorView {
     
     var parent: UIView!
     

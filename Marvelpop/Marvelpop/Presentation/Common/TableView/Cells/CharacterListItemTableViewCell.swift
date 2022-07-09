@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CharacterListItemTableViewCell: UITableViewCell {
+final class CharacterListItemTableViewCell: UITableViewCell {
     
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
 
     @IBOutlet weak var containerShape: DSShape!
     @IBOutlet weak var titleLabel: DSLabel!
@@ -40,7 +40,7 @@ class CharacterListItemTableViewCell: UITableViewCell {
     
     func configure(title: String, description: String, image url: URL?) {
         titleLabel.style = .title(title, .left, false, 1)
-        descriptionLabel.style = .paragraph(description, .left, false, 1)
+        descriptionLabel.style = .paragraph(description, .left, false, 2)
         imageLoader?.load(imageFrom: url, completion: { data in
             self.containerImageView.image = data ?? ImageAssets.Home.logo.image
         })

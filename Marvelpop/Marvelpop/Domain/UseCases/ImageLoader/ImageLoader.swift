@@ -1,5 +1,5 @@
 //
-//  ImageLoaderUseCase.swift
+//  ImageLoader.swift
 //  Marvelpop
 //
 //  Created by Adrià Ros on 7/7/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ImageLoaderUseCase: ImageLoaderUseCaseProtocol {
+final class ImageLoader: ImageLoading {
     
-    let provider: MediaRepositoryProtocol
+    private let provider: MediaRepositoring
     
-    init(provider: MediaRepositoryProtocol) {
+    init(provider: MediaRepositoring) {
         self.provider = provider
     }
     

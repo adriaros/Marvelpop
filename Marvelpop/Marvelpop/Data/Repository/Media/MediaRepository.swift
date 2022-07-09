@@ -7,12 +7,12 @@
 
 import UIKit
 
-class MediaRepository: MediaRepositoryProtocol {
+final class MediaRepository: MediaRepositoring {
     
-    let api: MarvelAPIProtocol
-    let cache: ImageCacheProtocol
+    private let api: APIProvider
+    private let cache: ImageCaching
     
-    init(api: MarvelAPIProtocol, cache: ImageCacheProtocol) {
+    init(api: APIProvider, cache: ImageCaching) {
         self.api = api
         self.cache = cache
     }

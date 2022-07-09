@@ -9,7 +9,7 @@ import UIKit
 
 class CharacterDetailHeaderTableViewCell: UITableViewCell {
 
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
     
     @IBOutlet weak var nameLabel: DSLabel!
     @IBOutlet weak var characterImageView: DSImageView!

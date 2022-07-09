@@ -8,31 +8,31 @@
 import Foundation
 @testable import Marvelpop
 
-class FakeDependencyContainer: DependencyFactory {
+final class FakeDependencyContainer: DependencyFactory {
     
-    var mockMarvelApi: MarvelAPIProtocol!
-    var mockCharactersRepository: CharactersRepositoryProtocol!
-    var mockMediaRepository: MediaRepositoryProtocol!
-    var mockImageLoaderUseCase: ImageLoaderUseCaseProtocol!
-    var mockFavouritesRepository: FavouritesRepositoryProtocol!
+    var mockMarvelApi: APIProvider!
+    var mockCharactersRepository: CharactersRepositoring!
+    var mockMediaRepository: MediaRepositoring!
+    var mockImageLoader: ImageLoading!
+    var mockFavouritesRepository: FavouritesRepositoring!
    
-    var marvelAPI: MarvelAPIProtocol {
+    var marvelAPI: APIProvider {
         mockMarvelApi
     }
     
-    var charactersRepository: CharactersRepositoryProtocol {
+    var charactersRepository: CharactersRepositoring {
         mockCharactersRepository
     }
     
-    var mediaRepository: MediaRepositoryProtocol {
+    var mediaRepository: MediaRepositoring {
         mockMediaRepository
     }
     
-    var favouritesRepository: FavouritesRepositoryProtocol {
+    var favouritesRepository: FavouritesRepositoring {
         mockFavouritesRepository
     }
     
-    var imageLoaderUseCase: ImageLoaderUseCaseProtocol {
-        mockImageLoaderUseCase
+    var imageLoader: ImageLoading {
+        mockImageLoader
     }
 }

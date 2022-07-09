@@ -8,7 +8,7 @@
 import Foundation
 @testable import Marvelpop
 
-class FakeViewControllerContainer: ViewControllerFactory {
+final class FakeViewControllerContainer: ViewControllerFactory {
     
     var fakeTabBar: TabBarController!
     var fakeHome: HomeViewController!

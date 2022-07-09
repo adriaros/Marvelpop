@@ -8,12 +8,12 @@
 import XCTest
 @testable import Marvelpop
 
-class FavouritesRepositoryTest: XCTestCase {
+final class FavouritesRepositoryTest: XCTestCase {
     
-    var sut: FavouritesRepository!
-    var dbWrapper: MockCoreDataFavouriteWrapper!
+    private var sut: FavouritesRepository!
+    private var dbWrapper: MockCoreDataFavouriteWrapper!
     
-    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
 
     override func setUpWithError() throws {
         dbWrapper = MockCoreDataFavouriteWrapper()

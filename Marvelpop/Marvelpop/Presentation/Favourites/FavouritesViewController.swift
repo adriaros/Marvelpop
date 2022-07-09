@@ -7,16 +7,16 @@
 
 import UIKit
 
-class FavouritesViewController: UIViewController {
+final class FavouritesViewController: UIViewController {
     
     var presenter: FavouritesViewToPresenterProtocol?
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var emptyLabel: DSLabel!
     
-    var alerts: AlertControllerProtocol?
+    var alerts: AlertControllerProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class FavouritesViewController: UIViewController {
         presenter?.updateView()
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView.register(UINib(nibName: CharacterListItemTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterListItemTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self

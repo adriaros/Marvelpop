@@ -8,10 +8,10 @@
 import XCTest
 @testable import Marvelpop
 
-class HomeCoordinatorTest: XCTestCase {
+final class HomeCoordinatorTest: XCTestCase {
     
-    var sut: HomeCoordinator!
-    var viewControllerContainer: FakeViewControllerContainer!
+    private var sut: HomeCoordinator!
+    private var viewControllerContainer: FakeViewControllerContainer!
 
     override func setUpWithError() throws {
         viewControllerContainer = FakeViewControllerContainer()

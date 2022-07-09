@@ -9,14 +9,14 @@ import XCTest
 import UIKit
 @testable import Marvelpop
 
-class ImageLoaderUseCaseTest: XCTestCase {
+final class ImageLoaderUseCaseTest: XCTestCase {
     
-    var sut: ImageLoaderUseCase!
-    var imageRepository: MockMediaRepository!
+    private var sut: ImageLoader!
+    private var imageRepository: MockMediaRepository!
 
     override func setUpWithError() throws {
         imageRepository = MockMediaRepository()
-        sut = ImageLoaderUseCase(provider: imageRepository)
+        sut = ImageLoader(provider: imageRepository)
     }
 
     override func tearDownWithError() throws {
@@ -26,7 +26,7 @@ class ImageLoaderUseCaseTest: XCTestCase {
     
     func test_loadImageFromCache() throws {
         // Given a expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var result: UIImage?
         
         // Given an image stored in cache
@@ -36,8 +36,7 @@ class ImageLoaderUseCaseTest: XCTestCase {
         // When the method is executed
         sut.load(imageFrom: URL(string: "/image/path")) { data in
             result = data
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the image is loaded from the cache
@@ -47,7 +46,7 @@ class ImageLoaderUseCaseTest: XCTestCase {
     
     func test_loadImageFromCloud() throws {
         // Given a expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var result: UIImage?
         
         // Given an image to download
@@ -57,8 +56,7 @@ class ImageLoaderUseCaseTest: XCTestCase {
         // When the method is executed
         sut.load(imageFrom: URL(string: "image/path")) { data in
             result = data
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the image is downloaded and stored in cache

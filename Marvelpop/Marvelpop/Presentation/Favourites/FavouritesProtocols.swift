@@ -38,6 +38,6 @@ protocol FavouritesViewToPresenterProtocol: AnyObject {
 }
 
 protocol FavouritesPresenterToRouterProtocol: AnyObject {
-    static func createModule(coordinator: FavouritesRouting, dataProvider: FavouritesRepositoryProtocol?, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController
+    static func createModule(coordinator: FavouritesRouting, dataProvider: FavouritesRepositoring?, imageLoader: ImageLoading) -> UIViewController
     func pushToCharacterDetailWith(id: Int)
 }

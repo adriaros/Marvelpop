@@ -7,37 +7,37 @@
 
 import Foundation
 
-class DependencyContainer: DependencyFactory {
+final class DependencyContainer: DependencyFactory {
     
-    lazy var marvelAPI: MarvelAPIProtocol = {
+    lazy var marvelAPI: APIProvider = {
         MarvelAPI()
     }()
     
-    lazy var imageCache: ImageCacheProtocol = {
+    lazy var imageCache: ImageCaching = {
         ImageCache()
     }()
     
-    lazy var coreDataManager: CoreDataManagerProtocol = {
+    lazy var coreDataManager: CoreDataManaging = {
        CoreDataManager()
     }()
     
-    lazy var coreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol = {
+    lazy var coreDataFavouriteWrapper: CoreDataFavouriteWrapping = {
        CoreDataFavouriteWrapper(manager: coreDataManager)
     }()
     
-    lazy var charactersRepository: CharactersRepositoryProtocol = {
+    lazy var charactersRepository: CharactersRepositoring = {
         CharactersRepository(api: marvelAPI)
     }()
     
-    lazy var mediaRepository: MediaRepositoryProtocol = {
+    lazy var mediaRepository: MediaRepositoring = {
         MediaRepository(api: marvelAPI, cache: imageCache)
     }()
     
-    lazy var favouritesRepository: FavouritesRepositoryProtocol = {
+    lazy var favouritesRepository: FavouritesRepositoring = {
         FavouritesRepository(dbWrapper: coreDataFavouriteWrapper)
     }()
     
-    lazy var imageLoaderUseCase: ImageLoaderUseCaseProtocol = {
-        ImageLoaderUseCase(provider: mediaRepository)
+    lazy var imageLoader: ImageLoading = {
+        ImageLoader(provider: mediaRepository)
     }()
 }

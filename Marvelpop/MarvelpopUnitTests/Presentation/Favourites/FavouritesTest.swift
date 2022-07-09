@@ -9,25 +9,25 @@ import XCTest
 import SnapshotTesting
 @testable import Marvelpop
 
-class FavouritesTest: XCTestCase {
+final class FavouritesTest: XCTestCase {
 
-    var window: UIWindow!
-    var favouriteRepository: MockFavouritesRepository!
-    var imageLoaderUseCase: MockImageLoaderUseCase!
-    var coordinator: FakeFavouritesCoordinator!
-    var alerts: SpyAlertController!
+    private var window: UIWindow!
+    private var favouriteRepository: MockFavouritesRepository!
+    private var ImageLoading: MockImageLoader!
+    private var coordinator: FakeFavouritesCoordinator!
+    private var alerts: SpyAlertController!
     
-    var view: FavouritesViewController!
-    var presenter: FavouritesPresenter!
-    var interactor: FavouritesInteractor!
-    var router: FavouritesRouter!
+    private var view: FavouritesViewController!
+    private var presenter: FavouritesPresenter!
+    private var interactor: FavouritesInteractor!
+    private var router: FavouritesRouter!
     
-    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
     
     override func setUpWithError() throws {
         window = UIWindow()
         favouriteRepository = MockFavouritesRepository()
-        imageLoaderUseCase = MockImageLoaderUseCase()
+        ImageLoading = MockImageLoader()
         coordinator = FakeFavouritesCoordinator()
         alerts = SpyAlertController()
     }
@@ -35,7 +35,7 @@ class FavouritesTest: XCTestCase {
     override func tearDownWithError() throws {
         window = nil
         favouriteRepository = nil
-        imageLoaderUseCase = nil
+        ImageLoading = nil
         coordinator = nil
         view = nil
         presenter = nil
@@ -45,7 +45,7 @@ class FavouritesTest: XCTestCase {
     }
     
     private func buildTestingScenario() {
-        view = FavouritesRouter.createModule(coordinator: coordinator, dataProvider: favouriteRepository, imageLoader: imageLoaderUseCase) as? FavouritesViewController
+        view = FavouritesRouter.createModule(coordinator: coordinator, dataProvider: favouriteRepository, imageLoader: ImageLoading) as? FavouritesViewController
         presenter = view.presenter as? FavouritesPresenter
         interactor = presenter.interactor as? FavouritesInteractor
         router = presenter.router as? FavouritesRouter
@@ -152,8 +152,13 @@ class FavouritesTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController empty - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController empty - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController empty - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController empty - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
     
     func test_snapshot_list() {
@@ -168,7 +173,12 @@ class FavouritesTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController list - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController list - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController list - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController list - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
 }

@@ -7,13 +7,13 @@
 
 import UIKit
 
-class HomeInteractor: HomePresenterToInteractorProtocol {
+final class HomeInteractor: HomePresenterToInteractorProtocol {
     
-    var presenter: HomeInteractorToPresenterProtocol?
-    var dataProvider: CharactersRepositoryProtocol?
+    weak var presenter: HomeInteractorToPresenterProtocol?
+    var dataProvider: CharactersRepositoring?
     var pagination = HomeTableViewPaginationManager()
     
-    var results: [Character] = []
+    private var results: [Character] = []
     
     func loadData(keyword: String?, reset: Bool) {
         

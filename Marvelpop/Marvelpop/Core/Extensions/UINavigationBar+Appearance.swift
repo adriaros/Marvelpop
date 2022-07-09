@@ -12,7 +12,7 @@ extension UINavigationBar {
     static func setupAppearance() {
         UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor { $0.userInterfaceStyle == .dark ? .white : .black },
-            NSAttributedString.Key.font: UIFont.noteworthyNavigation
+            NSAttributedString.Key.font: UIFont.navigation
         ]
     }
 }

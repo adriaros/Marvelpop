@@ -8,7 +8,7 @@
 import UIKit
 @testable import Marvelpop
 
-class FakeFavouritesCoordinator: Coordinator {
+final class FakeFavouritesCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?

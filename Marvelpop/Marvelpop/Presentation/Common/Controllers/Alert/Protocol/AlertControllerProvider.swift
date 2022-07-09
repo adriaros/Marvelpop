@@ -1,5 +1,5 @@
 //
-//  AlertControllerProtocol.swift
+//  AlertControllerProvider.swift
 //  Marvelpop
 //
 //  Created by Adrià Ros on 7/7/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AlertControllerProtocol {
+protocol AlertControllerProvider {
     var root: UIViewController? { get set }
     var delegate: AlertControllerDelegate? { get set }
     func show(title: String, description: String, button: String)

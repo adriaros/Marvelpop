@@ -8,9 +8,9 @@
 import XCTest
 @testable import Marvelpop
 
-class DSLabelTest: XCTestCase {
+final class DSLabelTest: XCTestCase {
     
-    var sut: DSLabel!
+    private var sut: DSLabel!
 
     override func setUpWithError() throws {
         sut = DSLabel(frame: CGRect(x: 0, y: 0, width: 50, height: 20))
@@ -29,7 +29,7 @@ class DSLabelTest: XCTestCase {
         
         // Then the style is configured correctly
         XCTAssertEqual(sut.text, "title")
-        XCTAssertEqual(sut.font, .noteworthyTitle)
+        XCTAssertEqual(sut.font, .title)
         XCTAssertEqual(sut.textAlignment, .left)
         XCTAssertEqual(sut.numberOfLines, 1)
         XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
@@ -44,7 +44,7 @@ class DSLabelTest: XCTestCase {
         
         // Then the style is configured correctly
         XCTAssertEqual(sut.text, "text")
-        XCTAssertEqual(sut.font, .noteworthyParagraph)
+        XCTAssertEqual(sut.font, .paragraph)
         XCTAssertEqual(sut.textAlignment, .left)
         XCTAssertEqual(sut.numberOfLines, 1)
         XCTAssertTrue(sut.adjustsFontSizeToFitWidth)
@@ -59,7 +59,7 @@ class DSLabelTest: XCTestCase {
         
         // Then the style is configured correctly
         XCTAssertEqual(sut.text, "text")
-        XCTAssertEqual(sut.font, .noteworthySubtitle)
+        XCTAssertEqual(sut.font, .subtitle)
         XCTAssertEqual(sut.textAlignment, .left)
         XCTAssertEqual(sut.numberOfLines, 1)
         XCTAssertTrue(sut.adjustsFontSizeToFitWidth)

@@ -8,17 +8,26 @@
 import XCTest
 @testable import Marvelpop
 
-class ViewControllerContainerTest: XCTestCase {
+final class ViewControllerContainerTest: XCTestCase {
     
-    var sut: ViewControllerFactory!
-    var container: FakeDependencyContainer!
+    private var sut: ViewControllerFactory!
+    private var container: FakeDependencyContainer!
+    private var characters: MockCharactersRepository!
+    private var favourites: MockFavouritesRepository!
+    private var imageLoader: MockImageLoader!
 
     override func setUpWithError() throws {
         container = FakeDependencyContainer()
         sut = ViewControllerContainer(container: container)
+        characters = MockCharactersRepository()
+        favourites = MockFavouritesRepository()
+        imageLoader = MockImageLoader()
     }
 
     override func tearDownWithError() throws {
+        imageLoader = nil
+        favourites = nil
+        characters = nil
         container = nil
         sut = nil
     }
@@ -33,8 +42,8 @@ class ViewControllerContainerTest: XCTestCase {
     
     func test_makeHome() throws {
         // Given the data providers
-        container.mockCharactersRepository = MockCharactersRepository()
-        container.mockImageLoaderUseCase = MockImageLoaderUseCase()
+        container.mockCharactersRepository = characters
+        container.mockImageLoader = imageLoader
         
         // Given a home coordinator
         let coordinator = FakeHomeCoordinator()
@@ -48,8 +57,8 @@ class ViewControllerContainerTest: XCTestCase {
 
     func test_makeFavourites() throws {
         // Given the data providers
-        container.mockFavouritesRepository = MockFavouritesRepository()
-        container.mockImageLoaderUseCase = MockImageLoaderUseCase()
+        container.mockFavouritesRepository = favourites
+        container.mockImageLoader = imageLoader
         
         // Given a favourites coordinator
         let coordinator = FakeFavouritesCoordinator()
@@ -63,9 +72,10 @@ class ViewControllerContainerTest: XCTestCase {
     
     func test_makeCharacterDetail() throws {
         // Given the data providers
-        container.mockCharactersRepository = MockCharactersRepository()
-        container.mockFavouritesRepository = MockFavouritesRepository()
-        container.mockImageLoaderUseCase = MockImageLoaderUseCase()
+        characters.character = Character(APICharactersResponseModel.Data.Result(id: 0, name: "", description: "", thumbnail: nil, comics: nil))
+        container.mockCharactersRepository = characters
+        container.mockFavouritesRepository = favourites
+        container.mockImageLoader = imageLoader
         
         // When the make home method is executed
         let characterDetailViewController = sut.makeCharacterDetail(characterID: 1)

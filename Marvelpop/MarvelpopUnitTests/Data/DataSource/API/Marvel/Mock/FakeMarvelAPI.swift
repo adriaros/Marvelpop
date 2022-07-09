@@ -8,7 +8,7 @@
 import UIKit
 @testable import Marvelpop
 
-class FakeMarvelAPI: MarvelAPIProtocol {
+final class FakeMarvelAPI: APIProvider {
     
     var code: HTTPStatusCode!
     var jsonFile: String?

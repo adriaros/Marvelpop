@@ -13,7 +13,7 @@ enum DSShapeStyle: Equatable {
     case none
 }
 
-class DSShape: UIView {
+final class DSShape: UIView {
     
     var style: DSShapeStyle = .none {
         didSet {

@@ -12,7 +12,7 @@ enum DSTextFieldStyle: Equatable {
     case none
 }
 
-class DSTextField: UITextField {
+final class DSTextField: UITextField {
     
     var style: DSTextFieldStyle = .none {
         didSet {
@@ -27,8 +27,8 @@ class DSTextField: UITextField {
     }
     
     func configure(placeholder: String?) {
-        font = UIFont.noteworthyParagraph
+        font = UIFont.paragraph
         textColor = .black
-        attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: [.foregroundColor: UIColor.textFieldText, .font: UIFont.noteworthyParagraph])
+        attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: [.foregroundColor: UIColor.textFieldText, .font: UIFont.paragraph])
     }
 }

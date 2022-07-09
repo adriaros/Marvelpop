@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestingSceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class TestingSceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
@@ -19,7 +19,7 @@ class TestingSceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
-class TestingRootViewController: UIViewController {
+final class TestingRootViewController: UIViewController {
 
     override func loadView() {
         let label = UILabel()

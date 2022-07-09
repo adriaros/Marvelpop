@@ -1,5 +1,5 @@
 //
-//  CoreDataManagerProtocol.swift
+//  CoreDataManaging.swift
 //  Marvelpop
 //
 //  Created by Adrià Ros on 7/7/22.
@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-protocol CoreDataManagerProtocol {
+protocol CoreDataManaging {
     var context: NSManagedObjectContext { get }
     func save(entity: NSManagedObject)
     func fetch<T: NSManagedObject>() -> T?

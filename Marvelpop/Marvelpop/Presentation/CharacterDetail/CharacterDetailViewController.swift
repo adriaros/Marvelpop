@@ -7,15 +7,15 @@
 
 import UIKit
 
-class CharacterDetailViewController: UIViewController {
+final class CharacterDetailViewController: UIViewController {
     
     var presenter: CharacterDetailViewToPresenterProtocol?
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
     
     @IBOutlet weak var tableView: UITableView!
     
     var activityIndicator: ActivityIndicatorView?
-    var alerts: AlertControllerProtocol?
+    var alerts: AlertControllerProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class CharacterDetailViewController: UIViewController {
         presenter?.setupView()
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView.register(UINib(nibName: CharacterDetailHeaderTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailHeaderTableViewCell.cellType)
         tableView.register(UINib(nibName: CharacterDetailDataTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailDataTableViewCell.cellType)
         tableView.register(UINib(nibName: CharacterDetailComicsTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailComicsTableViewCell.cellType)
@@ -33,7 +33,7 @@ class CharacterDetailViewController: UIViewController {
         tableView.estimatedRowHeight = 100
     }
     
-    func configureLoader() {
+    private func configureLoader() {
         activityIndicator?.parent = view
     }
     

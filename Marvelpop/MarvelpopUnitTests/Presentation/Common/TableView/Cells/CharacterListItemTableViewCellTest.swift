@@ -8,13 +8,13 @@
 import XCTest
 @testable import Marvelpop
 
-class CharacterListItemTableViewCellTest: XCTestCase {
+final class CharacterListItemTableViewCellTest: XCTestCase {
     
-    var sut: CharacterListItemTableViewCell!
-    var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var sut: CharacterListItemTableViewCell!
+    private var imageLoaderUseCase: MockImageLoader!
 
     override func setUpWithError() throws {
-        imageLoaderUseCase = MockImageLoaderUseCase()
+        imageLoaderUseCase = MockImageLoader()
         sut = Bundle(for: CharacterListItemTableViewCell.self).loadNibNamed(CharacterListItemTableViewCell.cellType, owner: nil)?.first as? CharacterListItemTableViewCell
         sut.layoutSubviews()
     }
@@ -41,6 +41,6 @@ class CharacterListItemTableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.containerImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(sut.containerImageView.image, ImageAssets.Home.logo.image)
         XCTAssertEqual(sut.titleLabel.style, .title(title, .left, false, 1))
-        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(description, .left, false, 1))
+        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(description, .left, false, 2))
     }
 }

@@ -8,10 +8,10 @@
 import XCTest
 @testable import Marvelpop
 
-class FavouritesCoordinatorTest: XCTestCase {
+final class FavouritesCoordinatorTest: XCTestCase {
 
-    var sut: FavouritesCoordinator!
-    var viewControllerContainer: FakeViewControllerContainer!
+    private var sut: FavouritesCoordinator!
+    private var viewControllerContainer: FakeViewControllerContainer!
 
     override func setUpWithError() throws {
         viewControllerContainer = FakeViewControllerContainer()

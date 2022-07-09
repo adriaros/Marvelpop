@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MarvelAPI: MarvelAPIProtocol {
+final class MarvelAPI: APIProvider {
     
-    var session: URLSession
+    private let session: URLSession
     
     init(session: URLSession = URLSession.shared) {
         self.session = session

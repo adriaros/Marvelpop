@@ -7,11 +7,11 @@
 
 import UIKit
 
-class HomeRouter: HomePresenterToRouterProtocol {
+final class HomeRouter: HomePresenterToRouterProtocol {
     
-    var coordinator: HomeRouting?
+    private var coordinator: HomeRouting?
         
-    class func createModule(coordinator: HomeRouting, dataProvider: CharactersRepositoryProtocol, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController {
+    class func createModule(coordinator: HomeRouting, dataProvider: CharactersRepositoring, imageLoader: ImageLoading) -> UIViewController {
         
         let view = HomeViewController()
         let presenter = HomePresenter()

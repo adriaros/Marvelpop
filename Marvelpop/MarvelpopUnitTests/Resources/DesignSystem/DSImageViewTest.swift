@@ -8,9 +8,9 @@
 import XCTest
 @testable import Marvelpop
 
-class DSImageViewTest: XCTestCase {
+final class DSImageViewTest: XCTestCase {
     
-    var sut: DSImageView!
+    private var sut: DSImageView!
 
     override func setUpWithError() throws {
         sut = DSImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 20))

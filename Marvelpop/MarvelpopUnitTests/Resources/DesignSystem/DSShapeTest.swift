@@ -8,9 +8,9 @@
 import XCTest
 @testable import Marvelpop
 
-class DSShapeTest: XCTestCase {
+final class DSShapeTest: XCTestCase {
     
-    var sut: DSShape!
+    private var sut: DSShape!
 
     override func setUpWithError() throws {
         sut = DSShape(frame: CGRect(x: 0, y: 0, width: 50, height: 20))

@@ -7,16 +7,16 @@
 
 import UIKit
 
-class FavouritesCoordinator: Coordinator {
+final class FavouritesCoordinator: Coordinator {
     
-    var backButtonItem: UIBarButtonItem {
+    private var backButtonItem: UIBarButtonItem {
         UIBarButtonItem(image: ImageAssets.Navigation.back.image, style: .plain, target: self, action: #selector(back(_:)))
     }
     
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
         
-    let container: ViewControllerFactory
+    private let container: ViewControllerFactory
     
     init(container: ViewControllerFactory) {
         self.container = container

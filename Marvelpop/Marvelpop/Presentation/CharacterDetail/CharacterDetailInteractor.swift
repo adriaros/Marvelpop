@@ -7,14 +7,14 @@
 
 import UIKit
 
-class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProtocol {
+final class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProtocol {
     
-    var presenter: CharacterDetailInteractorToPresenterProtocol?
-    var characters: CharactersRepositoryProtocol?
-    var favourites: FavouritesRepositoryProtocol?
+    weak var presenter: CharacterDetailInteractorToPresenterProtocol?
+    var characters: CharactersRepositoring?
+    var favourites: FavouritesRepositoring?
     var characterID: Int?
     
-    private(set) var character: Character!
+    private var character: Character!
     
     func loadData() {
         characters?.getCharacterWith(id: characterID, completion: { [weak self] data, error in

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct AlertController: AlertControllerProtocol {
+struct AlertController: AlertControllerProvider {
     
     var root: UIViewController?
     

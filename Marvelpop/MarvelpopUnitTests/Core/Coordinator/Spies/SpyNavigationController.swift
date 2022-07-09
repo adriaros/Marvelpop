@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SpyNavigationController: UINavigationController {
+final class SpyNavigationController: UINavigationController {
     
     var pushedViewController: UIViewController?
     

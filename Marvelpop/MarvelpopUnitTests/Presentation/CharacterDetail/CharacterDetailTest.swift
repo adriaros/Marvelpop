@@ -9,29 +9,29 @@ import XCTest
 import SnapshotTesting
 @testable import Marvelpop
 
-class CharacterDetailTest: XCTestCase {
+final class CharacterDetailTest: XCTestCase {
 
-    var window: UIWindow!
-    var characterRepository: MockCharactersRepository!
-    var imageLoaderUseCase: MockImageLoaderUseCase!
-    var favouriteRepository: MockFavouritesRepository!
-    var alerts: SpyAlertController!
+    private var window: UIWindow!
+    private var characterRepository: MockCharactersRepository!
+    private var imageLoaderUseCase: MockImageLoader!
+    private var favouriteRepository: MockFavouritesRepository!
+    private var alerts: SpyAlertController!
     
-    var view: CharacterDetailViewController!
-    var presenter: CharacterDetailPresenter!
-    var interactor: CharacterDetailInteractor!
-    var router: CharacterDetailRouter!
+    private var view: CharacterDetailViewController!
+    private var presenter: CharacterDetailPresenter!
+    private var interactor: CharacterDetailInteractor!
+    private var router: CharacterDetailRouter!
     
-    static var comicItem = APICharactersResponseModel.Data.Result.Comics.ComicsItem(resourceURI: "", name: "Hulk 2001")
-    static var comics = APICharactersResponseModel.Data.Result.Comics(items: [comicItem])
-    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: comics))
+    private static var comicItem = APICharactersResponseModel.Data.Result.Comics.ComicsItem(resourceURI: "", name: "Hulk 2001")
+    private static var comics = APICharactersResponseModel.Data.Result.Comics(items: [comicItem])
+    private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: comics))
     
     override func setUpWithError() throws {
         window = UIWindow()
         alerts = SpyAlertController()
         favouriteRepository = MockFavouritesRepository()
         characterRepository = MockCharactersRepository()
-        imageLoaderUseCase = MockImageLoaderUseCase()
+        imageLoaderUseCase = MockImageLoader()
     }
 
     override func tearDownWithError() throws {
@@ -145,7 +145,12 @@ class CharacterDetailTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
 }
