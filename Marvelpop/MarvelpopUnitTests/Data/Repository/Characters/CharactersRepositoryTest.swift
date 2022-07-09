@@ -10,8 +10,8 @@ import XCTest
 
 class CharactersRepositoryTest: XCTestCase {
     
-    var sut: CharactersRepository!
-    var api: FakeMarvelAPI!
+    private var sut: CharactersRepository!
+    private var api: FakeMarvelAPI!
 
     override func setUpWithError() throws {
         api = FakeMarvelAPI()

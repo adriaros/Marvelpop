@@ -10,7 +10,7 @@ import XCTest
 
 class DSLabelTest: XCTestCase {
     
-    var sut: DSLabel!
+    private var sut: DSLabel!
 
     override func setUpWithError() throws {
         sut = DSLabel(frame: CGRect(x: 0, y: 0, width: 50, height: 20))

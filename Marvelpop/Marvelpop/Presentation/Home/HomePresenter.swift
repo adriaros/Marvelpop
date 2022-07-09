@@ -26,13 +26,13 @@ class HomePresenter: HomeViewToPresenterProtocol {
         configureKeywordView()
     }
     
-    func configureBackgroundView() {
+    private func configureBackgroundView() {
         view?.backgroundImageView.image = ImageAssets.Home.background.image
         view?.backgroundImageView.contentMode = .scaleAspectFit
         view?.backgroundImageView.alpha = 0.8
     }
     
-    func configureKeywordView() {
+    private func configureKeywordView() {
         view?.keywordContainerView.style = .rounded
         view?.keywordTextField.style = .basic("home_textfield_placeholder".localized)
         view?.keywordTextField.returnKeyType = .search

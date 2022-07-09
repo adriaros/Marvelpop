@@ -11,18 +11,18 @@ import SnapshotTesting
 
 class FavouritesTest: XCTestCase {
 
-    var window: UIWindow!
-    var favouriteRepository: MockFavouritesRepository!
-    var imageLoaderUseCase: MockImageLoaderUseCase!
-    var coordinator: FakeFavouritesCoordinator!
-    var alerts: SpyAlertController!
+    private var window: UIWindow!
+    private var favouriteRepository: MockFavouritesRepository!
+    private var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var coordinator: FakeFavouritesCoordinator!
+    private var alerts: SpyAlertController!
     
-    var view: FavouritesViewController!
-    var presenter: FavouritesPresenter!
-    var interactor: FavouritesInteractor!
-    var router: FavouritesRouter!
+    private var view: FavouritesViewController!
+    private var presenter: FavouritesPresenter!
+    private var interactor: FavouritesInteractor!
+    private var router: FavouritesRouter!
     
-    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
     
     override func setUpWithError() throws {
         window = UIWindow()

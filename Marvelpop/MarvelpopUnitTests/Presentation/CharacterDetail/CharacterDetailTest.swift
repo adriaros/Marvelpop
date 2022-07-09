@@ -11,20 +11,20 @@ import SnapshotTesting
 
 class CharacterDetailTest: XCTestCase {
 
-    var window: UIWindow!
-    var characterRepository: MockCharactersRepository!
-    var imageLoaderUseCase: MockImageLoaderUseCase!
-    var favouriteRepository: MockFavouritesRepository!
-    var alerts: SpyAlertController!
+    private var window: UIWindow!
+    private var characterRepository: MockCharactersRepository!
+    private var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var favouriteRepository: MockFavouritesRepository!
+    private var alerts: SpyAlertController!
     
-    var view: CharacterDetailViewController!
-    var presenter: CharacterDetailPresenter!
-    var interactor: CharacterDetailInteractor!
-    var router: CharacterDetailRouter!
+    private var view: CharacterDetailViewController!
+    private var presenter: CharacterDetailPresenter!
+    private var interactor: CharacterDetailInteractor!
+    private var router: CharacterDetailRouter!
     
-    static var comicItem = APICharactersResponseModel.Data.Result.Comics.ComicsItem(resourceURI: "", name: "Hulk 2001")
-    static var comics = APICharactersResponseModel.Data.Result.Comics(items: [comicItem])
-    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: comics))
+    private static var comicItem = APICharactersResponseModel.Data.Result.Comics.ComicsItem(resourceURI: "", name: "Hulk 2001")
+    private static var comics = APICharactersResponseModel.Data.Result.Comics(items: [comicItem])
+    private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: comics))
     
     override func setUpWithError() throws {
         window = UIWindow()

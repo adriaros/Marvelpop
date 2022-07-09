@@ -29,7 +29,7 @@ class FavouritesViewController: UIViewController {
         presenter?.updateView()
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView.register(UINib(nibName: CharacterListItemTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterListItemTableViewCell.cellType)
         tableView.dataSource = self
         tableView.delegate = self

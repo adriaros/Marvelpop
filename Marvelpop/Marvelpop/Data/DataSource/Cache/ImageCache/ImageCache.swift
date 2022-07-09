@@ -9,7 +9,7 @@ import UIKit
 
 class ImageCache: ImageCacheProtocol {
     
-    let cachedImages = NSCache<NSURL, UIImage>()
+    private let cachedImages = NSCache<NSURL, UIImage>()
     
     func set(image: UIImage, url: URL) {
         cachedImages.setObject(image, forKey: NSURL(fileURLWithPath: url.absoluteString))

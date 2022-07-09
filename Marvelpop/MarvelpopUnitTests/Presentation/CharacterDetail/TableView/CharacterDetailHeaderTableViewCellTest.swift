@@ -10,8 +10,8 @@ import XCTest
 
 class CharacterDetailHeaderTableViewCellTest: XCTestCase {
 
-    var sut: CharacterDetailHeaderTableViewCell!
-    var imageLoader: MockImageLoaderUseCase!
+    private var sut: CharacterDetailHeaderTableViewCell!
+    private var imageLoader: MockImageLoaderUseCase!
     
     override func setUpWithError() throws {
         sut = Bundle(for: CharacterDetailHeaderTableViewCell.self).loadNibNamed(CharacterDetailHeaderTableViewCell.cellType, owner: nil)?.first as? CharacterDetailHeaderTableViewCell

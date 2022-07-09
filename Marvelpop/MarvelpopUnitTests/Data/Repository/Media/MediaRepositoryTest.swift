@@ -11,9 +11,9 @@ import UIKit
 
 class MediaRepositoryTest: XCTestCase {
     
-    var sut: MediaRepository!
-    var api: FakeMarvelAPI!
-    var cache: MockImageCache!
+    private var sut: MediaRepository!
+    private var api: FakeMarvelAPI!
+    private var cache: MockImageCache!
 
     override func setUpWithError() throws {
         api = FakeMarvelAPI()

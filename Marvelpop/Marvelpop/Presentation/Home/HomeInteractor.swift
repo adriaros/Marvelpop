@@ -13,7 +13,7 @@ class HomeInteractor: HomePresenterToInteractorProtocol {
     var dataProvider: CharactersRepositoryProtocol?
     var pagination = HomeTableViewPaginationManager()
     
-    var results: [Character] = []
+    private var results: [Character] = []
     
     func loadData(keyword: String?, reset: Bool) {
         

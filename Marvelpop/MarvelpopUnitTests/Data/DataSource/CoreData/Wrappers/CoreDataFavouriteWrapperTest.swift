@@ -10,10 +10,10 @@ import XCTest
 
 class CoreDataFavouriteWrapperTest: XCTestCase {
     
-    var sut: CoreDataFavouriteWrapper!
-    var manager: CoreDataManagerProtocol!
+    private var sut: CoreDataFavouriteWrapper!
+    private var manager: CoreDataManagerProtocol!
 
-    let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil)))
+    private let favourite = Favourite(Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil)))
 
     override func setUpWithError() throws {
         manager = CoreDataManager(.inMemory)

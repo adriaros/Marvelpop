@@ -11,8 +11,8 @@ import UIKit
 
 class ImageLoaderUseCaseTest: XCTestCase {
     
-    var sut: ImageLoaderUseCase!
-    var imageRepository: MockMediaRepository!
+    private var sut: ImageLoaderUseCase!
+    private var imageRepository: MockMediaRepository!
 
     override func setUpWithError() throws {
         imageRepository = MockMediaRepository()

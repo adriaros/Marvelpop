@@ -11,10 +11,10 @@ class HomeViewController: UIViewController {
     
     var presenter: HomeViewToPresenterProtocol?
     var imageLoader: ImageLoaderUseCaseProtocol?
+    var alerts: AlertControllerProtocol?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
-    
     @IBOutlet weak var resultsLabel: DSLabel!
     @IBOutlet weak var separatorView: DSShape!
     @IBOutlet weak var keywordContainerView: DSShape!
@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
     
     var refreshControl: UIRefreshControl = UIRefreshControl()
     var activityIndicator: ActivityIndicatorView?
-    var alerts: AlertControllerProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +33,7 @@ class HomeViewController: UIViewController {
         presenter?.updateView(loader: true)
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView.register(UINib(nibName: CharacterListItemTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterListItemTableViewCell.cellType)
         tableView.register(UINib(nibName: LoadingTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: LoadingTableViewCell.cellType)
         tableView.dataSource = self
@@ -44,11 +43,11 @@ class HomeViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(bounce(_:)), for: .valueChanged)
     }
     
-    func configureLoader() {
+    private func configureLoader() {
         activityIndicator?.parent = view
     }
     
-    func configureKeywordTextField() {
+    private func configureKeywordTextField() {
         hideKeyboardWhenTappedAround()
         keywordTextField.delegate = self
     }

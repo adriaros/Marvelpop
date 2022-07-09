@@ -10,8 +10,8 @@ import XCTest
 
 class CharacterListItemTableViewCellTest: XCTestCase {
     
-    var sut: CharacterListItemTableViewCell!
-    var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var sut: CharacterListItemTableViewCell!
+    private var imageLoaderUseCase: MockImageLoaderUseCase!
 
     override func setUpWithError() throws {
         imageLoaderUseCase = MockImageLoaderUseCase()

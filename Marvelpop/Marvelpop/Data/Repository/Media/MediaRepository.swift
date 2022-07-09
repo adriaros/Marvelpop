@@ -9,8 +9,8 @@ import UIKit
 
 class MediaRepository: MediaRepositoryProtocol {
     
-    let api: MarvelAPIProtocol
-    let cache: ImageCacheProtocol
+    private let api: MarvelAPIProtocol
+    private let cache: ImageCacheProtocol
     
     init(api: MarvelAPIProtocol, cache: ImageCacheProtocol) {
         self.api = api

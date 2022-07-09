@@ -12,10 +12,10 @@ class MainCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController?
     
-    let window: UIWindow?
-    let container: ViewControllerFactory
+    private let window: UIWindow?
+    private let container: ViewControllerFactory
     
-    var rootViewController: TabBarController!
+    private(set) var rootViewController: TabBarController!
     
     init(window: UIWindow?, container: ViewControllerFactory) {
         self.window = window

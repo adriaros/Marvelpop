@@ -9,7 +9,7 @@ import Foundation
 
 class ViewControllerContainer: ViewControllerFactory {
     
-    var container: DependencyFactory
+    private let container: DependencyFactory
     
     init(container: DependencyFactory) {
         self.container = container

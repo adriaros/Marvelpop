@@ -10,7 +10,7 @@ import XCTest
 
 class DSTextFieldTest: XCTestCase {
     
-    var sut: DSTextField!
+    private var sut: DSTextField!
 
     override func setUpWithError() throws {
         sut = DSTextField(frame: CGRect(x: 0, y: 0, width: 50, height: 40))

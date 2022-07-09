@@ -10,8 +10,8 @@ import XCTest
 
 class ViewControllerContainerTest: XCTestCase {
     
-    var sut: ViewControllerFactory!
-    var container: FakeDependencyContainer!
+    private var sut: ViewControllerFactory!
+    private var container: FakeDependencyContainer!
 
     override func setUpWithError() throws {
         container = FakeDependencyContainer()

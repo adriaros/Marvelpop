@@ -24,7 +24,7 @@ class CharacterDetailViewController: UIViewController {
         presenter?.setupView()
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView.register(UINib(nibName: CharacterDetailHeaderTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailHeaderTableViewCell.cellType)
         tableView.register(UINib(nibName: CharacterDetailDataTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailDataTableViewCell.cellType)
         tableView.register(UINib(nibName: CharacterDetailComicsTableViewCell.cellType, bundle: nil), forCellReuseIdentifier: CharacterDetailComicsTableViewCell.cellType)
@@ -33,7 +33,7 @@ class CharacterDetailViewController: UIViewController {
         tableView.estimatedRowHeight = 100
     }
     
-    func configureLoader() {
+    private func configureLoader() {
         activityIndicator?.parent = view
     }
     

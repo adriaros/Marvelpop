@@ -10,7 +10,7 @@ import XCTest
 
 class ComicCollectionViewCellTest: XCTestCase {
     
-    var sut: ComicCollectionViewCell!
+    private var sut: ComicCollectionViewCell!
     
     override func setUpWithError() throws {
         sut = Bundle(for: ComicCollectionViewCell.self).loadNibNamed(ComicCollectionViewCell.cellType, owner: nil)?.first as? ComicCollectionViewCell

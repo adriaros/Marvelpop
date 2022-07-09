@@ -10,7 +10,7 @@ import XCTest
 
 class MarvelAPITest: XCTestCase {
     
-    var sut: MarvelAPI!
+    private var sut: MarvelAPI!
 
     override func setUpWithError() throws {
         var urlSession: URLSession {

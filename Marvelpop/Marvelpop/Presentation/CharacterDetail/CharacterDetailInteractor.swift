@@ -14,7 +14,7 @@ class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProtocol {
     var favourites: FavouritesRepositoryProtocol?
     var characterID: Int?
     
-    private(set) var character: Character!
+    private var character: Character!
     
     func loadData() {
         characters?.getCharacterWith(id: characterID, completion: { [weak self] data, error in

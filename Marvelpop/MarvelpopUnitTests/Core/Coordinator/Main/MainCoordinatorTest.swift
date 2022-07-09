@@ -10,8 +10,8 @@ import XCTest
 
 class MainCoordinatorTest: XCTestCase {
     
-    var viewControllerContainer: FakeViewControllerContainer!
-    var sut: MainCoordinator!
+    private var viewControllerContainer: FakeViewControllerContainer!
+    private var sut: MainCoordinator!
 
     override func setUpWithError() throws {
         viewControllerContainer = FakeViewControllerContainer()

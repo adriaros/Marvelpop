@@ -11,18 +11,18 @@ import SnapshotTesting
 
 class HomeTest: XCTestCase {
 
-    var window: UIWindow!
-    var coordinator: FakeHomeCoordinator!
-    var characterRepository: MockCharactersRepository!
-    var imageLoaderUseCase: MockImageLoaderUseCase!
-    var alerts: SpyAlertController!
+    private var window: UIWindow!
+    private var coordinator: FakeHomeCoordinator!
+    private var characterRepository: MockCharactersRepository!
+    private var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var alerts: SpyAlertController!
     
-    var view: HomeViewController!
-    var presenter: HomePresenter!
-    var interactor: HomeInteractor!
-    var router: HomeRouter!
+    private var view: HomeViewController!
+    private var presenter: HomePresenter!
+    private var interactor: HomeInteractor!
+    private var router: HomeRouter!
     
-    let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
+    private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
     
     override func setUpWithError() throws {
         window = UIWindow()

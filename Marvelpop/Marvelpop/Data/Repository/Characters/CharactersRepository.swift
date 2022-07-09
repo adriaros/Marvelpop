@@ -9,7 +9,7 @@ import Foundation
 
 class CharactersRepository: CharactersRepositoryProtocol {
     
-    var api: MarvelAPIProtocol
+    private let api: MarvelAPIProtocol
     
     init(api: MarvelAPIProtocol) {
         self.api = api
