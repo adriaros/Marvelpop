@@ -27,8 +27,9 @@ class HomePresenter: HomeViewToPresenterProtocol {
     }
     
     func configureBackgroundView() {
-        view?.backgroundImageView.image = ImageAssets.Home.logo.image
-        view?.backgroundImageView.alpha = 0.25
+        view?.backgroundImageView.image = ImageAssets.Home.background.image
+        view?.backgroundImageView.contentMode = .scaleAspectFit
+        view?.backgroundImageView.alpha = 0.8
     }
     
     func configureKeywordView() {

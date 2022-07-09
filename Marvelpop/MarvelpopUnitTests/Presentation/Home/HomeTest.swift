@@ -67,8 +67,8 @@ class HomeTest: XCTestCase {
         view.loadViewIfNeeded()
         
         // Then the view is configured
-        XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.logo.image)
-        XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
+        XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.background.image)
+        XCTAssertEqual(view.backgroundImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(view.resultsLabel.style, .paragraph(String(format: "home_results".localized, ". . ."), .left, true, 1))
         
         // Then an error alert is shown
@@ -90,8 +90,8 @@ class HomeTest: XCTestCase {
         view.loadViewIfNeeded()
         
         // Then the view is configured
-        XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.logo.image)
-        XCTAssertEqual(view.backgroundImageView.alpha, 0.25)
+        XCTAssertEqual(view.backgroundImageView.image, ImageAssets.Home.background.image)
+        XCTAssertEqual(view.backgroundImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(view.keywordContainerView.style, .rounded)
         XCTAssertEqual(view.keywordTextField.style, .basic("home_textfield_placeholder".localized))
         XCTAssertEqual(view.keywordTextField.returnKeyType, .search)

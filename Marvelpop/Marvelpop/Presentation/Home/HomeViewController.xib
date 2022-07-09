@@ -26,7 +26,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fac-T1-Y3n">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="153" y="165" width="261" height="348.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fac-T1-Y3n" secondAttribute="height" multiplier="583:778" id="7al-tq-hwV"/>
+                    </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-bX-N6J" userLabel="KeywordContainerView" customClass="DSShape" customModule="Marvelpop" customModuleProvider="target">
                     <rect key="frame" x="20" y="56" width="374" height="58"/>
@@ -83,19 +86,18 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6TI-VV-ih9" secondAttribute="trailing" constant="20" id="BYD-Y2-COm"/>
                 <constraint firstItem="8b8-bX-N6J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="CNI-xV-NBx"/>
                 <constraint firstItem="6TI-VV-ih9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8b8-bX-N6J" secondAttribute="bottom" constant="2" id="FPH-wy-MgM"/>
-                <constraint firstItem="fac-T1-Y3n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GVw-Sj-GfG"/>
                 <constraint firstItem="ynA-NV-z7W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="M47-AS-Erm"/>
                 <constraint firstItem="mmt-ao-kdx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NZJ-d9-pty"/>
                 <constraint firstItem="mmt-ao-kdx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Pg2-4d-zhA"/>
-                <constraint firstItem="fac-T1-Y3n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RPD-Be-LSO"/>
                 <constraint firstItem="6TI-VV-ih9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="VNL-xA-ivO"/>
                 <constraint firstItem="8b8-bX-N6J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="Xis-wN-x7r"/>
                 <constraint firstItem="ynA-NV-z7W" firstAttribute="top" secondItem="8b8-bX-N6J" secondAttribute="bottom" constant="50" id="dhs-2H-AgZ"/>
                 <constraint firstItem="mmt-ao-kdx" firstAttribute="top" secondItem="6TI-VV-ih9" secondAttribute="bottom" constant="2" id="dmA-pc-zcG"/>
-                <constraint firstItem="fac-T1-Y3n" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="nZi-V2-snn"/>
+                <constraint firstItem="fac-T1-Y3n" firstAttribute="top" secondItem="ynA-NV-z7W" secondAttribute="bottom" id="n8K-BH-qgb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8b8-bX-N6J" secondAttribute="trailing" constant="20" id="oJY-nL-SdC"/>
                 <constraint firstItem="ynA-NV-z7W" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="svI-rE-A24"/>
                 <constraint firstItem="fac-T1-Y3n" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="svS-aj-96K"/>
+                <constraint firstItem="fac-T1-Y3n" firstAttribute="height" secondItem="mmt-ao-kdx" secondAttribute="height" multiplier="0.5" id="uLC-t3-TQu"/>
                 <constraint firstItem="mmt-ao-kdx" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="uRd-rv-HVm"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
