@@ -63,6 +63,7 @@ Bla
 
 ## Device and modes
 
-
+- This app is compatible for both iPhone and Ipad
+- This app is designed for both light and dark modes
 
 ## Testing
