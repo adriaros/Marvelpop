@@ -11,7 +11,7 @@ final class HomeRouter: HomePresenterToRouterProtocol {
     
     private var coordinator: HomeRouting?
         
-    class func createModule(coordinator: HomeRouting, dataProvider: CharactersRepositoring, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController {
+    class func createModule(coordinator: HomeRouting, dataProvider: CharactersRepositoring, imageLoader: ImageLoading) -> UIViewController {
         
         let view = HomeViewController()
         let presenter = HomePresenter()

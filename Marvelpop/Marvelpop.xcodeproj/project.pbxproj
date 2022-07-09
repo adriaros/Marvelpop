@@ -94,8 +94,8 @@
 		112843C52876CD6600725F9B /* CharactersRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843C42876CD6600725F9B /* CharactersRepositoryTest.swift */; };
 		112843C72876CDA000725F9B /* MockFavouritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843C62876CDA000725F9B /* MockFavouritesRepository.swift */; };
 		112843C92876CDC000725F9B /* FavouritesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843C82876CDC000725F9B /* FavouritesRepositoryTest.swift */; };
-		112843CE2876CEED00725F9B /* ImageLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843CD2876CEED00725F9B /* ImageLoaderUseCase.swift */; };
-		112843D12876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D02876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift */; };
+		112843CE2876CEED00725F9B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843CD2876CEED00725F9B /* ImageLoader.swift */; };
+		112843D12876CEFB00725F9B /* ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D02876CEFB00725F9B /* ImageLoading.swift */; };
 		112843D42876CF3700725F9B /* Thread-GuaranteeMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */; };
 		112843DA2876CF8C00725F9B /* MockImageLoaderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */; };
 		112843DC2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */; };
@@ -262,8 +262,8 @@
 		112843C42876CD6600725F9B /* CharactersRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepositoryTest.swift; sourceTree = "<group>"; };
 		112843C62876CDA000725F9B /* MockFavouritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouritesRepository.swift; sourceTree = "<group>"; };
 		112843C82876CDC000725F9B /* FavouritesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRepositoryTest.swift; sourceTree = "<group>"; };
-		112843CD2876CEED00725F9B /* ImageLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCase.swift; sourceTree = "<group>"; };
-		112843D02876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseProtocol.swift; sourceTree = "<group>"; };
+		112843CD2876CEED00725F9B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		112843D02876CEFB00725F9B /* ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoading.swift; sourceTree = "<group>"; };
 		112843D32876CF3700725F9B /* Thread-GuaranteeMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread-GuaranteeMainThread.swift"; sourceTree = "<group>"; };
 		112843D92876CF8C00725F9B /* MockImageLoaderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageLoaderUseCase.swift; sourceTree = "<group>"; };
 		112843DB2876CF9E00725F9B /* ImageLoaderUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderUseCaseTest.swift; sourceTree = "<group>"; };
@@ -1130,7 +1130,7 @@
 			isa = PBXGroup;
 			children = (
 				112843CC2876CEE500725F9B /* Protocol */,
-				112843CD2876CEED00725F9B /* ImageLoaderUseCase.swift */,
+				112843CD2876CEED00725F9B /* ImageLoader.swift */,
 			);
 			path = ImageLoader;
 			sourceTree = "<group>";
@@ -1138,7 +1138,7 @@
 		112843CC2876CEE500725F9B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				112843D02876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift */,
+				112843D02876CEFB00725F9B /* ImageLoading.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1733,7 +1733,7 @@
 				112842D92875D46700725F9B /* FavouritesRouter.swift in Sources */,
 				112842CB2875D35900725F9B /* HomeRouter.swift in Sources */,
 				112843B22876CC0800725F9B /* CharactersRepository.swift in Sources */,
-				112843D12876CEFB00725F9B /* ImageLoaderUseCaseProtocol.swift in Sources */,
+				112843D12876CEFB00725F9B /* ImageLoading.swift in Sources */,
 				1128445228772BC600725F9B /* DSTextField.swift in Sources */,
 				112843132875DBE400725F9B /* ViewControllerFactory.swift in Sources */,
 				112842CE2875D35900725F9B /* HomeInteractor.swift in Sources */,
@@ -1766,7 +1766,7 @@
 				112842EF2875D59C00725F9B /* FavouritesCoordinator.swift in Sources */,
 				112842DD2875D46700725F9B /* FavouritesEntities.swift in Sources */,
 				112842B62875D24700725F9B /* ImageAssets.swift in Sources */,
-				112843CE2876CEED00725F9B /* ImageLoaderUseCase.swift in Sources */,
+				112843CE2876CEED00725F9B /* ImageLoader.swift in Sources */,
 				112842F22875D74200725F9B /* String+Localization.swift in Sources */,
 				112844232876D82D00725F9B /* CharacterDetailInteractor.swift in Sources */,
 				1128444B2876EFB500725F9B /* UIDevice+UserInterfaceIdiom.swift in Sources */,

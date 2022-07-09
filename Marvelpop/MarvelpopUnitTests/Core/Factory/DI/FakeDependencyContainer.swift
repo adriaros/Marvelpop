@@ -13,7 +13,7 @@ final class FakeDependencyContainer: DependencyFactory {
     var mockMarvelApi: APIProvider!
     var mockCharactersRepository: CharactersRepositoring!
     var mockMediaRepository: MediaRepositoring!
-    var mockImageLoaderUseCase: ImageLoaderUseCaseProtocol!
+    var mockImageLoader: ImageLoading!
     var mockFavouritesRepository: FavouritesRepositoring!
    
     var marvelAPI: APIProvider {
@@ -32,7 +32,7 @@ final class FakeDependencyContainer: DependencyFactory {
         mockFavouritesRepository
     }
     
-    var imageLoaderUseCase: ImageLoaderUseCaseProtocol {
-        mockImageLoaderUseCase
+    var imageLoader: ImageLoading {
+        mockImageLoader
     }
 }

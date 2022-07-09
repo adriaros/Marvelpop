@@ -13,7 +13,7 @@ final class FavouritesTest: XCTestCase {
 
     private var window: UIWindow!
     private var favouriteRepository: MockFavouritesRepository!
-    private var imageLoaderUseCase: MockImageLoaderUseCase!
+    private var ImageLoading: MockImageLoaderUseCase!
     private var coordinator: FakeFavouritesCoordinator!
     private var alerts: SpyAlertController!
     
@@ -27,7 +27,7 @@ final class FavouritesTest: XCTestCase {
     override func setUpWithError() throws {
         window = UIWindow()
         favouriteRepository = MockFavouritesRepository()
-        imageLoaderUseCase = MockImageLoaderUseCase()
+        ImageLoading = MockImageLoaderUseCase()
         coordinator = FakeFavouritesCoordinator()
         alerts = SpyAlertController()
     }
@@ -35,7 +35,7 @@ final class FavouritesTest: XCTestCase {
     override func tearDownWithError() throws {
         window = nil
         favouriteRepository = nil
-        imageLoaderUseCase = nil
+        ImageLoading = nil
         coordinator = nil
         view = nil
         presenter = nil
@@ -45,7 +45,7 @@ final class FavouritesTest: XCTestCase {
     }
     
     private func buildTestingScenario() {
-        view = FavouritesRouter.createModule(coordinator: coordinator, dataProvider: favouriteRepository, imageLoader: imageLoaderUseCase) as? FavouritesViewController
+        view = FavouritesRouter.createModule(coordinator: coordinator, dataProvider: favouriteRepository, imageLoader: ImageLoading) as? FavouritesViewController
         presenter = view.presenter as? FavouritesPresenter
         interactor = presenter.interactor as? FavouritesInteractor
         router = presenter.router as? FavouritesRouter

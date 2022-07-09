@@ -10,7 +10,7 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     var presenter: HomeViewToPresenterProtocol?
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
     var alerts: AlertControllerProtocol?
     
     @IBOutlet weak var tableView: UITableView!

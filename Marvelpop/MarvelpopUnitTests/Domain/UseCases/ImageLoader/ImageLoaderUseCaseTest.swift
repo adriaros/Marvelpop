@@ -11,12 +11,12 @@ import UIKit
 
 final class ImageLoaderUseCaseTest: XCTestCase {
     
-    private var sut: ImageLoaderUseCase!
+    private var sut: ImageLoader!
     private var imageRepository: MockMediaRepository!
 
     override func setUpWithError() throws {
         imageRepository = MockMediaRepository()
-        sut = ImageLoaderUseCase(provider: imageRepository)
+        sut = ImageLoader(provider: imageRepository)
     }
 
     override func tearDownWithError() throws {

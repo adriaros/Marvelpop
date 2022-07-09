@@ -10,7 +10,7 @@ import UIKit
 final class FavouritesViewController: UIViewController {
     
     var presenter: FavouritesViewToPresenterProtocol?
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!

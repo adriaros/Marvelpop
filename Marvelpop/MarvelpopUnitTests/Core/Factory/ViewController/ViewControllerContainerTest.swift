@@ -34,7 +34,7 @@ final class ViewControllerContainerTest: XCTestCase {
     func test_makeHome() throws {
         // Given the data providers
         container.mockCharactersRepository = MockCharactersRepository()
-        container.mockImageLoaderUseCase = MockImageLoaderUseCase()
+        container.mockImageLoader = MockImageLoaderUseCase()
         
         // Given a home coordinator
         let coordinator = FakeHomeCoordinator()
@@ -49,7 +49,7 @@ final class ViewControllerContainerTest: XCTestCase {
     func test_makeFavourites() throws {
         // Given the data providers
         container.mockFavouritesRepository = MockFavouritesRepository()
-        container.mockImageLoaderUseCase = MockImageLoaderUseCase()
+        container.mockImageLoader = MockImageLoaderUseCase()
         
         // Given a favourites coordinator
         let coordinator = FakeFavouritesCoordinator()
@@ -65,7 +65,7 @@ final class ViewControllerContainerTest: XCTestCase {
         // Given the data providers
         container.mockCharactersRepository = MockCharactersRepository()
         container.mockFavouritesRepository = MockFavouritesRepository()
-        container.mockImageLoaderUseCase = MockImageLoaderUseCase()
+        container.mockImageLoader = MockImageLoaderUseCase()
         
         // When the make home method is executed
         let characterDetailViewController = sut.makeCharacterDetail(characterID: 1)

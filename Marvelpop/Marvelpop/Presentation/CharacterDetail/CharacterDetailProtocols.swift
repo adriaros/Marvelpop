@@ -39,5 +39,5 @@ protocol CharacterDetailViewToPresenterProtocol: AnyObject {
 }
 
 protocol CharacterDetailPresenterToRouterProtocol: AnyObject {
-    static func createModule(characterID: Int, characters: CharactersRepositoring, favourites: FavouritesRepositoring, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController
+    static func createModule(characterID: Int, characters: CharactersRepositoring, favourites: FavouritesRepositoring, imageLoader: ImageLoading) -> UIViewController
 }

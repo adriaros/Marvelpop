@@ -8,7 +8,7 @@
 import UIKit
 @testable import Marvelpop
 
-final class MockImageLoaderUseCase: ImageLoaderUseCaseProtocol {
+final class MockImageLoaderUseCase: ImageLoading {
     
     var image: UIImage?
     

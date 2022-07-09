@@ -20,14 +20,14 @@ final class ViewControllerContainer: ViewControllerFactory {
     }
     
     func makeHome(coordinator: HomeRouting) -> HomeViewController {
-        HomeRouter.createModule(coordinator: coordinator, dataProvider: container.charactersRepository, imageLoader: container.imageLoaderUseCase) as! HomeViewController
+        HomeRouter.createModule(coordinator: coordinator, dataProvider: container.charactersRepository, imageLoader: container.imageLoader) as! HomeViewController
     }
     
     func makeFavourites(coordinator: FavouritesRouting) -> FavouritesViewController {
-        FavouritesRouter.createModule(coordinator: coordinator, dataProvider: container.favouritesRepository, imageLoader: container.imageLoaderUseCase) as! FavouritesViewController
+        FavouritesRouter.createModule(coordinator: coordinator, dataProvider: container.favouritesRepository, imageLoader: container.imageLoader) as! FavouritesViewController
     }
     
     func makeCharacterDetail(characterID: Int) -> CharacterDetailViewController {
-        CharacterDetailRouter.createModule(characterID: characterID, characters: container.charactersRepository, favourites: container.favouritesRepository, imageLoader: container.imageLoaderUseCase) as! CharacterDetailViewController
+        CharacterDetailRouter.createModule(characterID: characterID, characters: container.charactersRepository, favourites: container.favouritesRepository, imageLoader: container.imageLoader) as! CharacterDetailViewController
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 final class CharacterDetailViewController: UIViewController {
     
     var presenter: CharacterDetailViewToPresenterProtocol?
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
     
     @IBOutlet weak var tableView: UITableView!
     

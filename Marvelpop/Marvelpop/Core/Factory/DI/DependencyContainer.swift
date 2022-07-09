@@ -37,7 +37,7 @@ final class DependencyContainer: DependencyFactory {
         FavouritesRepository(dbWrapper: coreDataFavouriteWrapper)
     }()
     
-    lazy var imageLoaderUseCase: ImageLoaderUseCaseProtocol = {
-        ImageLoaderUseCase(provider: mediaRepository)
+    lazy var imageLoader: ImageLoading = {
+        ImageLoader(provider: mediaRepository)
     }()
 }

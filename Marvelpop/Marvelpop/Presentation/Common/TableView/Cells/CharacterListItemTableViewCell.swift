@@ -9,7 +9,7 @@ import UIKit
 
 final class CharacterListItemTableViewCell: UITableViewCell {
     
-    var imageLoader: ImageLoaderUseCaseProtocol?
+    var imageLoader: ImageLoading?
 
     @IBOutlet weak var containerShape: DSShape!
     @IBOutlet weak var titleLabel: DSLabel!

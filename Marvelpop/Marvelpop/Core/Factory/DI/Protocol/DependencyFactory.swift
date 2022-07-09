@@ -12,5 +12,5 @@ protocol DependencyFactory {
     var charactersRepository: CharactersRepositoring { get }
     var mediaRepository: MediaRepositoring { get }
     var favouritesRepository: FavouritesRepositoring { get }
-    var imageLoaderUseCase: ImageLoaderUseCaseProtocol { get }
+    var imageLoader: ImageLoading { get }
 }

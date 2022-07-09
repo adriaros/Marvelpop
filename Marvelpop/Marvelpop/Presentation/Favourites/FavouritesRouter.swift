@@ -11,7 +11,7 @@ final class FavouritesRouter: FavouritesPresenterToRouterProtocol {
         
     var coordinator: FavouritesRouting?
     
-    class func createModule(coordinator: FavouritesRouting, dataProvider: FavouritesRepositoring?, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController {
+    class func createModule(coordinator: FavouritesRouting, dataProvider: FavouritesRepositoring?, imageLoader: ImageLoading) -> UIViewController {
         
         let view = FavouritesViewController()
         let presenter = FavouritesPresenter()
