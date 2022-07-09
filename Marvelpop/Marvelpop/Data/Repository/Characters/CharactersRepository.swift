@@ -18,12 +18,13 @@ final class CharactersRepository: CharactersRepositoryProtocol {
     func getCharacterList(request: CharacterListRequest, completion: @escaping (_ data: [Character], _ pagination: Pagination?, _ error: ErrorType?) -> Void) {
         let networkRequest = NetworkRequest(path: APIEndPoint.Marvel.Get.characters, method: .get, queryItems: request.queryItems)
         api.process(request: networkRequest) { code, data in
-            guard code == .success else {
+            if code != .success {
                 completion([], nil, .api(code))
                 return
             }
             
-            guard let decodedData: APICharactersResponseModel? = JSONDecoder().decode(data: data), let safeData = decodedData?.data, let results = safeData.results else {
+            let decodedData: APICharactersResponseModel? = JSONDecoder().decode(data: data)
+            guard let safeData = decodedData?.data, let results = safeData.results else {
                 completion([], nil, .decoding)
                 return
             }
@@ -43,16 +44,12 @@ final class CharactersRepository: CharactersRepositoryProtocol {
 
         let networkRequest = NetworkRequest(path: String(format: APIEndPoint.Marvel.Get.character, String(id)), method: .get)
         api.process(request: networkRequest) { code, data in
-            guard code == .success else {
+            if code != .success {
                 completion(nil, .api(code))
                 return
             }
             
-            guard let decodedData: APICharactersResponseModel? = JSONDecoder().decode(data: data) else {
-                completion(nil, .decoding)
-                return
-            }
-            
+            let decodedData: APICharactersResponseModel? = JSONDecoder().decode(data: data)
             guard let result = decodedData?.data?.results?.first else {
                 completion(nil, .decoding)
                 return
