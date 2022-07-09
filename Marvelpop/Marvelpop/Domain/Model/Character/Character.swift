@@ -17,11 +17,11 @@ struct Character: Equatable {
     var comics: [Comic]
     
     var displayName: String {
-        name.isEmpty ? "N/A" : name.capitalized
+        name.isEmpty || text.isBlank ? "N/A" : name.capitalized
     }
     
     var displayDescription: String {
-        text.isEmpty ? "N/A" : text
+        text.isEmpty || text.isBlank ? "N/A" : text
     }
     
     var listImageURL: URL? {
