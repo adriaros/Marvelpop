@@ -8,7 +8,7 @@
 import UIKit
 @testable import Marvelpop
 
-final class MockMediaRepository: MediaRepositoryProtocol {
+final class MockMediaRepository: MediaRepositoring {
     
     var imageDownloaded: UIImage?
     var imageToStore: UIImage?

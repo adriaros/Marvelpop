@@ -8,7 +8,7 @@
 import Foundation
 @testable import Marvelpop
 
-final class MockCharactersRepository: CharactersRepositoryProtocol {
+final class MockCharactersRepository: CharactersRepositoring {
     
     var characterList: [Character] = []
     var pagination: Pagination?

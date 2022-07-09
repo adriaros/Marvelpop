@@ -25,15 +25,15 @@ final class DependencyContainer: DependencyFactory {
        CoreDataFavouriteWrapper(manager: coreDataManager)
     }()
     
-    lazy var charactersRepository: CharactersRepositoryProtocol = {
+    lazy var charactersRepository: CharactersRepositoring = {
         CharactersRepository(api: marvelAPI)
     }()
     
-    lazy var mediaRepository: MediaRepositoryProtocol = {
+    lazy var mediaRepository: MediaRepositoring = {
         MediaRepository(api: marvelAPI, cache: imageCache)
     }()
     
-    lazy var favouritesRepository: FavouritesRepositoryProtocol = {
+    lazy var favouritesRepository: FavouritesRepositoring = {
         FavouritesRepository(dbWrapper: coreDataFavouriteWrapper)
     }()
     

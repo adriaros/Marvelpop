@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FavouritesRepository: FavouritesRepositoryProtocol {
+final class FavouritesRepository: FavouritesRepositoring {
     
     private let dbWrapper: CoreDataFavouriteWrapperProtocol
     

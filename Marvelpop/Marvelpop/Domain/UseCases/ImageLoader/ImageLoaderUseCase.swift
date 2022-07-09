@@ -9,9 +9,9 @@ import UIKit
 
 final class ImageLoaderUseCase: ImageLoaderUseCaseProtocol {
     
-    private let provider: MediaRepositoryProtocol
+    private let provider: MediaRepositoring
     
-    init(provider: MediaRepositoryProtocol) {
+    init(provider: MediaRepositoring) {
         self.provider = provider
     }
     

@@ -10,8 +10,8 @@ import UIKit
 final class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProtocol {
     
     var presenter: CharacterDetailInteractorToPresenterProtocol?
-    var characters: CharactersRepositoryProtocol?
-    var favourites: FavouritesRepositoryProtocol?
+    var characters: CharactersRepositoring?
+    var favourites: FavouritesRepositoring?
     var characterID: Int?
     
     private var character: Character!

@@ -10,7 +10,7 @@ import UIKit
 final class FavouritesInteractor: FavouritesPresenterToInteractorProtocol {
     
     var presenter: FavouritesInteractorToPresenterProtocol?
-    var dataProvider: FavouritesRepositoryProtocol?
+    var dataProvider: FavouritesRepositoring?
     
     func loadData() {
         guard let favourites = dataProvider?.fetchAll() else {

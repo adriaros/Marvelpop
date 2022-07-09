@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class CharactersRepository: CharactersRepositoryProtocol {
+final class CharactersRepository: CharactersRepositoring {
     
     private let api: MarvelAPIProtocol
     
