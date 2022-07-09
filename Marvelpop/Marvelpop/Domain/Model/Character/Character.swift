@@ -17,7 +17,7 @@ struct Character: Equatable {
     var comics: [Comic]
     
     var displayName: String {
-        name.isEmpty || text.isBlank ? "N/A" : name.capitalized
+        name.isEmpty ? "N/A" : name.capitalized
     }
     
     var displayDescription: String {
