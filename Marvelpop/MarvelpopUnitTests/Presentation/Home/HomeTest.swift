@@ -25,7 +25,7 @@ final class HomeTest: XCTestCase {
     private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
     
     override func setUpWithError() throws {
-        window = UIWindow(frame: CGRect(x: 0, y: 0, width: 390, height: 844))
+        window = UIWindow()
         alerts = SpyAlertController()
         characterRepository = MockCharactersRepository()
         imageLoaderUseCase = MockImageLoader()
