@@ -28,7 +28,7 @@ final class MarvelAPITest: XCTestCase {
 
     func test_process() throws {
         // Given the expectations
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var expectedCode: HTTPStatusCode?
         
         // Given a request
@@ -37,8 +37,7 @@ final class MarvelAPITest: XCTestCase {
         // When the request is processed
         sut.process(request: request) { code, _ in
             expectedCode = code
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the SpyMarvelURLProtocol has checked the marvel api parameters and the code is success

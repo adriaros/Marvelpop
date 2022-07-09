@@ -25,7 +25,7 @@ final class CharactersRepositoryTest: XCTestCase {
 
     func test_getCharacterList_success() throws {
         // Given the expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var expectedData: [Character]?
         var expectedPagination: Pagination?
         
@@ -37,8 +37,7 @@ final class CharactersRepositoryTest: XCTestCase {
         sut.getCharacterList(request: CharacterListRequest()) { data, pagination, _ in
             expectedData = data
             expectedPagination = pagination
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the result is decoded as expected
@@ -53,7 +52,7 @@ final class CharactersRepositoryTest: XCTestCase {
     
     func test_getCharacterList_error() throws {
         // Given the expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var expectedData: [Character]?
         var expectedPagination: Pagination?
         var expectedError: ErrorType?
@@ -66,8 +65,7 @@ final class CharactersRepositoryTest: XCTestCase {
             expectedData = data
             expectedPagination = pagination
             expectedError = err
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the result is decoded as expected
@@ -79,7 +77,7 @@ final class CharactersRepositoryTest: XCTestCase {
     
     func test_getCharacter() throws {
         // Given the expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var expectedData: Character?
         
         // Given the expected response
@@ -89,8 +87,7 @@ final class CharactersRepositoryTest: XCTestCase {
         // When the request is executed
         sut.getCharacterWith(id: 1011334) { data, _  in
             expectedData = data
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the result is decoded as expected
@@ -101,7 +98,7 @@ final class CharactersRepositoryTest: XCTestCase {
     
     func test_getCharacter_error() throws {
         // Given the expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var expectedData: Character?
         var expectedError: ErrorType?
         
@@ -113,8 +110,7 @@ final class CharactersRepositoryTest: XCTestCase {
         sut.getCharacterWith(id: 1011334) { data, error in
             expectedError = error
             expectedData = data
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the result is decoded as expected

@@ -28,7 +28,7 @@ final class MediaRepositoryTest: XCTestCase {
 
     func test_downaloadImageFrom() throws {
         // Given the expectation
-        weak var expectation = self.expectation(description: #function)
+        let expectation = expectation(description: #function)
         var expectedImage: UIImage?
         
         // Given a image
@@ -38,8 +38,7 @@ final class MediaRepositoryTest: XCTestCase {
         // When downloading image from URL
         sut.download(imageFrom: URL(string: "image/path")) { data in
             expectedImage = data
-            expectation?.fulfill()
-            expectation = nil
+            expectation.fulfill()
         }
         
         // Then the result is the expected image
