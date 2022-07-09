@@ -10,6 +10,6 @@ import UIKit
 extension UITabBarItem {
     
     static func setupAppearance() {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.noteworthyTabBar], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.tabBar], for: .normal)
     }
 }

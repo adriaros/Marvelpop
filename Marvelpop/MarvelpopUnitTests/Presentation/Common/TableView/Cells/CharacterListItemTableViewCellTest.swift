@@ -41,6 +41,6 @@ final class CharacterListItemTableViewCellTest: XCTestCase {
         XCTAssertEqual(sut.containerImageView.contentMode, .scaleAspectFit)
         XCTAssertEqual(sut.containerImageView.image, ImageAssets.Home.logo.image)
         XCTAssertEqual(sut.titleLabel.style, .title(title, .left, false, 1))
-        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(description, .left, false, 1))
+        XCTAssertEqual(sut.descriptionLabel.style, .paragraph(description, .left, false, 2))
     }
 }

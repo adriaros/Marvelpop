@@ -143,7 +143,7 @@
 		1128444D28770AEC00725F9B /* CharacterDetailTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128444C28770AEC00725F9B /* CharacterDetailTableViewDelegate.swift */; };
 		112844502877221B00725F9B /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128444F2877221B00725F9B /* UIViewController+Keyboard.swift */; };
 		1128445228772BC600725F9B /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445128772BC600725F9B /* DSTextField.swift */; };
-		1128445428772CE900725F9B /* UIFont+Noteworthy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445328772CE900725F9B /* UIFont+Noteworthy.swift */; };
+		1128445428772CE900725F9B /* UIFont+AmericanTypewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445328772CE900725F9B /* UIFont+AmericanTypewriter.swift */; };
 		11284456287736C200725F9B /* DSTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11284455287736C200725F9B /* DSTextFieldTest.swift */; };
 		1128445B28774C3B00725F9B /* AlertControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128445A28774C3B00725F9B /* AlertControllerDelegate.swift */; };
 		112AB13E287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AB13C287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift */; };
@@ -311,7 +311,7 @@
 		1128444C28770AEC00725F9B /* CharacterDetailTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableViewDelegate.swift; sourceTree = "<group>"; };
 		1128444F2877221B00725F9B /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		1128445128772BC600725F9B /* DSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextField.swift; sourceTree = "<group>"; };
-		1128445328772CE900725F9B /* UIFont+Noteworthy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Noteworthy.swift"; sourceTree = "<group>"; };
+		1128445328772CE900725F9B /* UIFont+AmericanTypewriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AmericanTypewriter.swift"; sourceTree = "<group>"; };
 		11284455287736C200725F9B /* DSTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextFieldTest.swift; sourceTree = "<group>"; };
 		1128445A28774C3B00725F9B /* AlertControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerDelegate.swift; sourceTree = "<group>"; };
 		112AB13C287865E4007F38A4 /* CharacterDetailComicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailComicsTableViewCell.swift; sourceTree = "<group>"; };
@@ -530,7 +530,7 @@
 				112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */,
 				1128444A2876EFB500725F9B /* UIDevice+UserInterfaceIdiom.swift */,
 				1128444F2877221B00725F9B /* UIViewController+Keyboard.swift */,
-				1128445328772CE900725F9B /* UIFont+Noteworthy.swift */,
+				1128445328772CE900725F9B /* UIFont+AmericanTypewriter.swift */,
 				112AB1502878885C007F38A4 /* UIColor+UserInterfaceStyle.swift */,
 			);
 			path = Extensions;
@@ -1793,7 +1793,7 @@
 				112843E92876D27200725F9B /* HomeTableViewDataSource.swift in Sources */,
 				1128429F2875D06300725F9B /* main.swift in Sources */,
 				112843862876C1BD00725F9B /* ImageCaching.swift in Sources */,
-				1128445428772CE900725F9B /* UIFont+Noteworthy.swift in Sources */,
+				1128445428772CE900725F9B /* UIFont+AmericanTypewriter.swift in Sources */,
 				112842ED2875D59100725F9B /* HomeCoordinator.swift in Sources */,
 				112843112875DBDB00725F9B /* DependencyFactory.swift in Sources */,
 				112843452875EEB000725F9B /* String+MD5.swift in Sources */,

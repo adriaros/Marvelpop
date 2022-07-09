@@ -20,13 +20,13 @@ final class DSLabel: UILabel {
         didSet {
             switch style {
             case let .title(text, alignment, adjustsFontSizeToFitWidth, numberOfLines):
-                configure(text: text, color: .title, font: .noteworthyTitle, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
+                configure(text: text, color: .title, font: .title, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
                 
             case let .paragraph(text, alignment, adjustsFontSizeToFitWidth, numberOfLines):
-                configure(text: text, color: .paragraph, font: .noteworthyParagraph, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
+                configure(text: text, color: .paragraph, font: .paragraph, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
                 
             case let .subtitle(text, alignment, adjustsFontSizeToFitWidth, numberOfLines):
-                configure(text: text, color: .title, font: .noteworthySubtitle, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
+                configure(text: text, color: .title, font: .subtitle, alignment: alignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, numberOfLines: numberOfLines)
                 
             case .none:
                 break

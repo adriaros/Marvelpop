@@ -27,8 +27,8 @@ final class DSTextField: UITextField {
     }
     
     func configure(placeholder: String?) {
-        font = UIFont.noteworthyParagraph
+        font = UIFont.paragraph
         textColor = .black
-        attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: [.foregroundColor: UIColor.textFieldText, .font: UIFont.noteworthyParagraph])
+        attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: [.foregroundColor: UIColor.textFieldText, .font: UIFont.paragraph])
     }
 }
