@@ -152,8 +152,13 @@ final class FavouritesTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController empty - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController empty - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController empty - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController empty - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
     
     func test_snapshot_list() {
@@ -168,7 +173,12 @@ final class FavouritesTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController list - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController list - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "FavouritesViewController list - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "FavouritesViewController list - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
 }

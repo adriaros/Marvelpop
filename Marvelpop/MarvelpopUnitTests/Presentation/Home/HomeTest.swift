@@ -25,7 +25,7 @@ final class HomeTest: XCTestCase {
     private let character = Character(APICharactersResponseModel.Data.Result(id: 1234, name: "Hulk", description: "A Green guy", thumbnail: nil, comics: nil))
     
     override func setUpWithError() throws {
-        window = UIWindow()
+        window = UIWindow(frame: CGRect(x: 0, y: 0, width: 390, height: 844))
         alerts = SpyAlertController()
         characterRepository = MockCharactersRepository()
         imageLoaderUseCase = MockImageLoader()
@@ -174,8 +174,13 @@ final class HomeTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "HomeViewController empty - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "HomeViewController empty - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "HomeViewController empty - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "HomeViewController empty - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
     
     func test_snapshot_list() {
@@ -191,7 +196,12 @@ final class HomeTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "HomeViewController list - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "HomeViewController list - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "HomeViewController list - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "HomeViewController list - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
 }

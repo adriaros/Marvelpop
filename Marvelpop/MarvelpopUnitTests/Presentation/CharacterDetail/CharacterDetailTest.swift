@@ -145,7 +145,12 @@ final class CharacterDetailTest: XCTestCase {
         view.loadViewIfNeeded()
 
         // Then the snapshot is correct
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
-        XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))
+        if UIDevice.current.name == "iPhone 13" {
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPhoneX), named: "CharacterDetailViewController - iPhoneX"))
+            XCTAssertNil(verifySnapshot(matching: view, as: .image(on: .iPadMini), named: "CharacterDetailViewController - iPadMini"))
+        } else {
+            XCTAssert(UIDevice.current.name == "iPhone 13",
+                      "The original snapshots have been made with an iPhone 13, please, to run these tests, run them with an iPhone 13")
+        }
     }
 }
