@@ -8,7 +8,7 @@
 import UIKit
 @testable import Marvelpop
 
-class MockImageCache: ImageCacheProtocol {
+final class MockImageCache: ImageCacheProtocol {
     
     var imageSet: UIImage?
     var imageSetUrl: URL?

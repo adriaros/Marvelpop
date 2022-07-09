@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavouritesRouter: FavouritesPresenterToRouterProtocol {
+final class FavouritesRouter: FavouritesPresenterToRouterProtocol {
         
     var coordinator: FavouritesRouting?
     

@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class FavouritesCoordinatorTest: XCTestCase {
+final class FavouritesCoordinatorTest: XCTestCase {
 
     private var sut: FavouritesCoordinator!
     private var viewControllerContainer: FakeViewControllerContainer!

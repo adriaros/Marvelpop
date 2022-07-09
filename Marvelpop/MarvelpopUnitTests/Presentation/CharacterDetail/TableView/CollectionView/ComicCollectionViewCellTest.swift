@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class ComicCollectionViewCellTest: XCTestCase {
+final class ComicCollectionViewCellTest: XCTestCase {
     
     private var sut: ComicCollectionViewCell!
     

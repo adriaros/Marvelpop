@@ -14,7 +14,7 @@ enum DSLabelStyle: Equatable {
     case none
 }
 
-class DSLabel: UILabel {
+final class DSLabel: UILabel {
     
     var style: DSLabelStyle = .none {
         didSet {

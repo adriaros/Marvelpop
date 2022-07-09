@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeRouter: HomePresenterToRouterProtocol {
+final class HomeRouter: HomePresenterToRouterProtocol {
     
     private var coordinator: HomeRouting?
         

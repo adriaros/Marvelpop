@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class FavouritesRepositoryTest: XCTestCase {
+final class FavouritesRepositoryTest: XCTestCase {
     
     private var sut: FavouritesRepository!
     private var dbWrapper: MockCoreDataFavouriteWrapper!

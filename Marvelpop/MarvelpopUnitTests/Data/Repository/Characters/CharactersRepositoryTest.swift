@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class CharactersRepositoryTest: XCTestCase {
+final class CharactersRepositoryTest: XCTestCase {
     
     private var sut: CharactersRepository!
     private var api: FakeMarvelAPI!

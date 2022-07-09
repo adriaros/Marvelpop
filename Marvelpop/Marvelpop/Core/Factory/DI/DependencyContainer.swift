@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DependencyContainer: DependencyFactory {
+final class DependencyContainer: DependencyFactory {
     
     lazy var marvelAPI: MarvelAPIProtocol = {
         MarvelAPI()

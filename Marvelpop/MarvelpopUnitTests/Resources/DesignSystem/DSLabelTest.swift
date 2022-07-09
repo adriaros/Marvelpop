@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class DSLabelTest: XCTestCase {
+final class DSLabelTest: XCTestCase {
     
     private var sut: DSLabel!
 

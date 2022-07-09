@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class DSShapeTest: XCTestCase {
+final class DSShapeTest: XCTestCase {
     
     private var sut: DSShape!
 

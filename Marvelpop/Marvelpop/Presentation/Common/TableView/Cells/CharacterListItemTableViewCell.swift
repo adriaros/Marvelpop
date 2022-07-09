@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterListItemTableViewCell: UITableViewCell {
+final class CharacterListItemTableViewCell: UITableViewCell {
     
     var imageLoader: ImageLoaderUseCaseProtocol?
 

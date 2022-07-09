@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class CoreDataFavouriteWrapperTest: XCTestCase {
+final class CoreDataFavouriteWrapperTest: XCTestCase {
     
     private var sut: CoreDataFavouriteWrapper!
     private var manager: CoreDataManagerProtocol!

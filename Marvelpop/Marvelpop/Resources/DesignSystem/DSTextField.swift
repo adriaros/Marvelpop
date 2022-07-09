@@ -12,7 +12,7 @@ enum DSTextFieldStyle: Equatable {
     case none
 }
 
-class DSTextField: UITextField {
+final class DSTextField: UITextField {
     
     var style: DSTextFieldStyle = .none {
         didSet {

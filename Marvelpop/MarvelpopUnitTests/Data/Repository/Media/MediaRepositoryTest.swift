@@ -9,7 +9,7 @@ import XCTest
 import UIKit
 @testable import Marvelpop
 
-class MediaRepositoryTest: XCTestCase {
+final class MediaRepositoryTest: XCTestCase {
     
     private var sut: MediaRepository!
     private var api: FakeMarvelAPI!

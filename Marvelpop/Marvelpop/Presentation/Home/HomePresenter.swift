@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomePresenter: HomeViewToPresenterProtocol {
+final class HomePresenter: HomeViewToPresenterProtocol {
     
     var view: HomePresenterToViewProtocol?
     var interactor: HomePresenterToInteractorProtocol?

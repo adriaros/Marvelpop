@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class ViewControllerContainerTest: XCTestCase {
+final class ViewControllerContainerTest: XCTestCase {
     
     private var sut: ViewControllerFactory!
     private var container: FakeDependencyContainer!

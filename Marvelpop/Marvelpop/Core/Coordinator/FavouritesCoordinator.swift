@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavouritesCoordinator: Coordinator {
+final class FavouritesCoordinator: Coordinator {
     
     private var backButtonItem: UIBarButtonItem {
         UIBarButtonItem(image: ImageAssets.Navigation.back.image, style: .plain, target: self, action: #selector(back(_:)))

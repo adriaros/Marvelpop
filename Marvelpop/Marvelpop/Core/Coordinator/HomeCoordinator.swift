@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator {
+final class HomeCoordinator: Coordinator {
     
     private var backButtonItem: UIBarButtonItem {
         UIBarButtonItem(image: ImageAssets.Navigation.back.image, style: .plain, target: self, action: #selector(back(_:)))

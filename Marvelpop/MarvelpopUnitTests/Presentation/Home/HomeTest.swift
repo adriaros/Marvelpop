@@ -9,7 +9,7 @@ import XCTest
 import SnapshotTesting
 @testable import Marvelpop
 
-class HomeTest: XCTestCase {
+final class HomeTest: XCTestCase {
 
     private var window: UIWindow!
     private var coordinator: FakeHomeCoordinator!

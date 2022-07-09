@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageLoaderUseCase: ImageLoaderUseCaseProtocol {
+final class ImageLoaderUseCase: ImageLoaderUseCaseProtocol {
     
     private let provider: MediaRepositoryProtocol
     

@@ -9,7 +9,7 @@ import XCTest
 import SnapshotTesting
 @testable import Marvelpop
 
-class CharacterDetailTest: XCTestCase {
+final class CharacterDetailTest: XCTestCase {
 
     private var window: UIWindow!
     private var characterRepository: MockCharactersRepository!

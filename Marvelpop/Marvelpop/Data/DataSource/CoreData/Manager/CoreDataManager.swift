@@ -13,7 +13,7 @@ enum CoreDatabasePersistenceType {
     case inMemory
 }
 
-class CoreDataManager: CoreDataManagerProtocol {
+final class CoreDataManager: CoreDataManagerProtocol {
     
     private let container: NSPersistentContainer
     

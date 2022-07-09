@@ -8,7 +8,7 @@
 import Foundation
 import XCTest
 
-class SpyMarvelURLProtocol: URLProtocol {
+final class SpyMarvelURLProtocol: URLProtocol {
     
     override class func canInit(with request: URLRequest) -> Bool {
         return true

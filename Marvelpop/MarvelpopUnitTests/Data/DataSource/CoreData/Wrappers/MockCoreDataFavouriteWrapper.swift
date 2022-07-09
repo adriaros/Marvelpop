@@ -8,7 +8,7 @@
 import Foundation
 @testable import Marvelpop
 
-class MockCoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
+final class MockCoreDataFavouriteWrapper: CoreDataFavouriteWrapperProtocol {
     
     var favouriteSaved: Favourite?
     var mockFavourite: Favourite?

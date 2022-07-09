@@ -8,7 +8,7 @@
 import Foundation
 @testable import Marvelpop
 
-class FakeDependencyContainer: DependencyFactory {
+final class FakeDependencyContainer: DependencyFactory {
     
     var mockMarvelApi: MarvelAPIProtocol!
     var mockCharactersRepository: CharactersRepositoryProtocol!

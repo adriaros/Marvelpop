@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class CharacterDetailDataTableViewCellTest: XCTestCase {
+final class CharacterDetailDataTableViewCellTest: XCTestCase {
     
     private var sut: CharacterDetailDataTableViewCell!
 

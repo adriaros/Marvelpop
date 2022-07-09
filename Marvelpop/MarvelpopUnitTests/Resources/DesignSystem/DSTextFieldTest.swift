@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class DSTextFieldTest: XCTestCase {
+final class DSTextFieldTest: XCTestCase {
     
     private var sut: DSTextField!
 

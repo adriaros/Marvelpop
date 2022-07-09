@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewControllerContainer: ViewControllerFactory {
+final class ViewControllerContainer: ViewControllerFactory {
     
     private let container: DependencyFactory
     

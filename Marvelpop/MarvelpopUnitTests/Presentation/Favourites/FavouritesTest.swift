@@ -9,7 +9,7 @@ import XCTest
 import SnapshotTesting
 @testable import Marvelpop
 
-class FavouritesTest: XCTestCase {
+final class FavouritesTest: XCTestCase {
 
     private var window: UIWindow!
     private var favouriteRepository: MockFavouritesRepository!

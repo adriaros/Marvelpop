@@ -12,7 +12,7 @@ enum DSImageViewStyle: Equatable {
     case none
 }
 
-class DSImageView: UIImageView {
+final class DSImageView: UIImageView {
     
     var style: DSImageViewStyle = .none {
         didSet {

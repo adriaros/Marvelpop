@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class CharacterListItemTableViewCellTest: XCTestCase {
+final class CharacterListItemTableViewCellTest: XCTestCase {
     
     private var sut: CharacterListItemTableViewCell!
     private var imageLoaderUseCase: MockImageLoaderUseCase!

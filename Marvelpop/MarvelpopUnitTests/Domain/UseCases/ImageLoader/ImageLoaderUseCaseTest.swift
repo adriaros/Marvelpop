@@ -9,7 +9,7 @@ import XCTest
 import UIKit
 @testable import Marvelpop
 
-class ImageLoaderUseCaseTest: XCTestCase {
+final class ImageLoaderUseCaseTest: XCTestCase {
     
     private var sut: ImageLoaderUseCase!
     private var imageRepository: MockMediaRepository!

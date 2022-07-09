@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterDetailPresenter: CharacterDetailViewToPresenterProtocol {
+final class CharacterDetailPresenter: CharacterDetailViewToPresenterProtocol {
     
     var view: CharacterDetailPresenterToViewProtocol?
     var interactor: CharacterDetailPresenterToInteractorProtocol?

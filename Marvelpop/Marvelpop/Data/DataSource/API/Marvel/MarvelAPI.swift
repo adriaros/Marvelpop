@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MarvelAPI: MarvelAPIProtocol {
+final class MarvelAPI: MarvelAPIProtocol {
     
     private let session: URLSession
     

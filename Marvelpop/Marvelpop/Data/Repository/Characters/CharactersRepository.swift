@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CharactersRepository: CharactersRepositoryProtocol {
+final class CharactersRepository: CharactersRepositoryProtocol {
     
     private let api: MarvelAPIProtocol
     
@@ -23,12 +23,7 @@ class CharactersRepository: CharactersRepositoryProtocol {
                 return
             }
             
-            guard let decodedData: APICharactersResponseModel? = JSONDecoder().decode(data: data) else {
-                completion([], nil, .decoding)
-                return
-            }
-            
-            guard let safeData = decodedData?.data, let results = safeData.results else {
+            guard let decodedData: APICharactersResponseModel? = JSONDecoder().decode(data: data), let safeData = decodedData?.data, let results = safeData.results else {
                 completion([], nil, .decoding)
                 return
             }

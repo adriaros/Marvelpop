@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class HomeCoordinatorTest: XCTestCase {
+final class HomeCoordinatorTest: XCTestCase {
     
     private var sut: HomeCoordinator!
     private var viewControllerContainer: FakeViewControllerContainer!

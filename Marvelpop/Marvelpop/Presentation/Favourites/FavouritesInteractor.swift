@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavouritesInteractor: FavouritesPresenterToInteractorProtocol {
+final class FavouritesInteractor: FavouritesPresenterToInteractorProtocol {
     
     var presenter: FavouritesInteractorToPresenterProtocol?
     var dataProvider: FavouritesRepositoryProtocol?

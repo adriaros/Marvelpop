@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavouritesViewController: UIViewController {
+final class FavouritesViewController: UIViewController {
     
     var presenter: FavouritesViewToPresenterProtocol?
     var imageLoader: ImageLoaderUseCaseProtocol?

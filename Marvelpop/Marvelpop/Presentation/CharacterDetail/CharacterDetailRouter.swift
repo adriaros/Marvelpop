@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterDetailRouter: CharacterDetailPresenterToRouterProtocol {
+final class CharacterDetailRouter: CharacterDetailPresenterToRouterProtocol {
         
     class func createModule(characterID: Int, characters: CharactersRepositoryProtocol, favourites: FavouritesRepositoryProtocol, imageLoader: ImageLoaderUseCaseProtocol) -> UIViewController {
         

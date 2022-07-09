@@ -8,7 +8,7 @@
 import Foundation
 @testable import Marvelpop
 
-class MockFavouritesRepository: FavouritesRepositoryProtocol {
+final class MockFavouritesRepository: FavouritesRepositoryProtocol {
     
     var favouriteCharacterSaved: Character?
     var mockCharacterFavourite: Character?

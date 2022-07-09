@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvelpop
 
-class DSImageViewTest: XCTestCase {
+final class DSImageViewTest: XCTestCase {
     
     private var sut: DSImageView!
 
