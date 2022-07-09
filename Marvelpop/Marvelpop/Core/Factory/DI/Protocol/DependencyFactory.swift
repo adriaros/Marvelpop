@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DependencyFactory {
-    var marvelAPI: MarvelAPIProtocol { get }
+    var marvelAPI: APIProvider { get }
     var charactersRepository: CharactersRepositoring { get }
     var mediaRepository: MediaRepositoring { get }
     var favouritesRepository: FavouritesRepositoring { get }

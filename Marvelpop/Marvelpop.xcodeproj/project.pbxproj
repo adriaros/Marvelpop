@@ -49,7 +49,7 @@
 		1128431F2875DD1C00725F9B /* FakeViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128431E2875DD1C00725F9B /* FakeViewControllerContainer.swift */; };
 		112843212875E15F00725F9B /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843202875E15F00725F9B /* UINavigationBar+Appearance.swift */; };
 		112843232875E52C00725F9B /* UITabBarItem+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */; };
-		1128432E2875EC1300725F9B /* MarvelAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128432D2875EC1300725F9B /* MarvelAPIProtocol.swift */; };
+		1128432E2875EC1300725F9B /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128432D2875EC1300725F9B /* APIProvider.swift */; };
 		112843302875EC2700725F9B /* QueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128432F2875EC2700725F9B /* QueryItem.swift */; };
 		112843322875EC3500725F9B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843312875EC3500725F9B /* HTTPMethod.swift */; };
 		112843342875EC4A00725F9B /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112843332875EC4A00725F9B /* HTTPStatusCode.swift */; };
@@ -216,7 +216,7 @@
 		1128431E2875DD1C00725F9B /* FakeViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewControllerContainer.swift; sourceTree = "<group>"; };
 		112843202875E15F00725F9B /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
 		112843222875E52C00725F9B /* UITabBarItem+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Appearance.swift"; sourceTree = "<group>"; };
-		1128432D2875EC1300725F9B /* MarvelAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIProtocol.swift; sourceTree = "<group>"; };
+		1128432D2875EC1300725F9B /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		1128432F2875EC2700725F9B /* QueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItem.swift; sourceTree = "<group>"; };
 		112843312875EC3500725F9B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		112843332875EC4A00725F9B /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
@@ -681,6 +681,7 @@
 		112843272875EBD200725F9B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				1128432B2875EBFE00725F9B /* Protocol */,
 				1128433F2875EE7700725F9B /* Keys */,
 				112843282875EBDA00725F9B /* EndPoints */,
 				112843292875EBDF00725F9B /* Entities */,
@@ -713,7 +714,6 @@
 			isa = PBXGroup;
 			children = (
 				1128437F2876BFED00725F9B /* Model */,
-				1128432B2875EBFE00725F9B /* Protocol */,
 				112843372875EDC800725F9B /* MarvelAPI.swift */,
 			);
 			path = Marvel;
@@ -722,7 +722,7 @@
 		1128432B2875EBFE00725F9B /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				1128432D2875EC1300725F9B /* MarvelAPIProtocol.swift */,
+				1128432D2875EC1300725F9B /* APIProvider.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1799,7 +1799,7 @@
 				112843452875EEB000725F9B /* String+MD5.swift in Sources */,
 				112843692876B9D500725F9B /* CoreDataFavouriteWrapper.swift in Sources */,
 				1128441F2876D82D00725F9B /* CharacterDetailPresenter.swift in Sources */,
-				1128432E2875EC1300725F9B /* MarvelAPIProtocol.swift in Sources */,
+				1128432E2875EC1300725F9B /* APIProvider.swift in Sources */,
 				112843A52876CB7A00725F9B /* CharactersRepositoring.swift in Sources */,
 				112843F32876D36100725F9B /* DSLabel.swift in Sources */,
 			);

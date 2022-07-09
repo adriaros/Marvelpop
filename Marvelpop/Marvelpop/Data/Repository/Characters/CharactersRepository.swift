@@ -9,9 +9,9 @@ import Foundation
 
 final class CharactersRepository: CharactersRepositoring {
     
-    private let api: MarvelAPIProtocol
+    private let api: APIProvider
     
-    init(api: MarvelAPIProtocol) {
+    init(api: APIProvider) {
         self.api = api
     }
 

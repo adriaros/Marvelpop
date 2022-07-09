@@ -10,13 +10,13 @@ import Foundation
 
 final class FakeDependencyContainer: DependencyFactory {
     
-    var mockMarvelApi: MarvelAPIProtocol!
+    var mockMarvelApi: APIProvider!
     var mockCharactersRepository: CharactersRepositoring!
     var mockMediaRepository: MediaRepositoring!
     var mockImageLoaderUseCase: ImageLoaderUseCaseProtocol!
     var mockFavouritesRepository: FavouritesRepositoring!
    
-    var marvelAPI: MarvelAPIProtocol {
+    var marvelAPI: APIProvider {
         mockMarvelApi
     }
     

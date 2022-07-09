@@ -9,7 +9,7 @@ import Foundation
 
 final class DependencyContainer: DependencyFactory {
     
-    lazy var marvelAPI: MarvelAPIProtocol = {
+    lazy var marvelAPI: APIProvider = {
         MarvelAPI()
     }()
     
