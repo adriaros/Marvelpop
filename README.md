@@ -14,9 +14,23 @@ Next I will show you a brief guide on how to run the application and how it is b
 2. Run `pod install` in the project folder (where the Podfile is located).
 3. Use `Marvelpop.xcworkspace` to open the project. 
 
-## Device and modes
+## Usage
 
-Bla
+### Home
+
+Infinite scrollable list to search for your favorite marvel character. Contains a text field to search by name (The text must match or start with the name of the character being searched for).
+
+Each item in the list can be selected to view details.
+
+### Favourites
+
+A list containing the favorite characters selected by the user.
+
+### Character detail
+
+The detail of the character. It includes the image, the name, the description and the comics where the character appears.
+
+Also, user can select as favorite by touching the "heart" button on the navigation bar.
 
 ## Project structure
 
@@ -46,6 +60,9 @@ Bla
 ### Resources
 
 Bla
+
+## Device and modes
+
 
 
 ## Testing
