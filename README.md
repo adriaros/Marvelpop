@@ -36,7 +36,7 @@ Also, user can select as favorite by touching the "heart" button on the navigati
 
 This project has been built using clean architecture.
 
-### Why?
+### Why clean architecture?
 
 Using this architecture ensures that the application will be scalable, easy to maintain, testable and also follows the SOLID principles.
 
