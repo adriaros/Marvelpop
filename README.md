@@ -32,6 +32,11 @@ The detail of the character. It includes the image, the name, the description an
 
 Also, user can select as favorite by touching the "heart" button on the navigation bar.
 
+## Device and modes
+
+- This app is compatible for both iPhone and Ipad
+- This app is designed for both light and dark modes
+
 ## Project structure
 
 This project has been built using clean architecture.
@@ -155,10 +160,18 @@ Character Detail
 
 Bla
 
-## Device and modes
 
-- This app is compatible for both iPhone and Ipad
-- This app is designed for both light and dark modes
+### Why VIPER?
+
+### Why Repository pattern?
+
+### Why URL Session?
+
+### Why Caching images?
+
+### Why Core Data?
+
+
 
 ## Testing
 
