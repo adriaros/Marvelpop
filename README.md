@@ -78,27 +78,80 @@ This means that clients should not have more methods than they actually use. Thi
 
 This means that our classes should depend on interfaces or abstract classes instead of concrete classes and functions. This means that we do not directly depend on the class itself, for example, if it is a third-party framework and it changes, the operation of our application is not affected.
 
-### Main
+### Clean architecture applied to this project
 
-Bla
+The project is organized using a structure of different layers
 
-### Core
+#### Main
 
-Bla
+This layer contains the main components responsible for building the project.
 
-### Data
+#### Core
 
-Bla
+This layer contains all those common components in the application.
 
-### Domain
+> Utilities
+>> Basic functions used in the app
 
-Bla
+> Factory `Pattern used to create objects without specifying their concrete classes.`
+>> Dependency Injection
+>>> It is responsible for creating and providing all the dependencies of the application. 
 
-### Presentation
+>> View Controllers
+>>> It is responsible for creating and providing the view controllers and injecting the necessary dependencies.
 
-Bla
+> Extensions
+>> Extensions used in the app
 
-### Resources
+> Coordinator `Pattern that provides an encapsulation of the navigation logic.`
+>> It is responsible for the navigation of the app.
+
+#### Data
+
+This layer will have all the code related to the external dependency and its implementation. It is responsible for providing data to the application by requesting it either to an API or to a database.
+
+> Datasource
+>> It contains both the interfaces and the implementations. It is responsible for requesting the data from both APIs and databases and decoding the entities.
+
+> Repository `Pattern that provides a data abstraction`
+>> It contains the implementation of the repositories that are responsible for transforming the entities that come from the data sources to domain models with which the application works. This means that if the data source changes, the application does not experience any changes.
+
+
+#### Domain
+
+This layer describes the operation of our application.
+
+> Model
+>> It contains the models that the app uses to manage the data.
+
+> UseCases
+>> It contains the use cases used in the app.
+
+> Repository
+>> It contains the repository interfaces.
+
+
+#### Presentation
+
+This layer has all the code related to views and the app's interaction with the outside world.
+
+> Common
+>> Bla
+
+> TabBar
+>> Bla
+
+> Home
+>> Bla
+
+> Favourites
+>> Bla
+
+Character Detail
+>> Bla
+
+
+#### Resources
 
 Bla
 
