@@ -133,7 +133,7 @@ This layer describes the operation of our application.
 
 #### Presentation
 
-This layer has all the code related to views and the app's interaction with the outside world.
+This layer has all the code related to views and the app's interaction with the outside world. For this, VIPER is used.
 
 > Common
 >> Bla
