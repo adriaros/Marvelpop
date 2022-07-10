@@ -138,27 +138,35 @@ This layer describes the operation of our application.
 
 #### Presentation
 
-This layer has all the code related to views and the app's interaction with the outside world. For this, VIPER is used.
+This layer has all the code related to views and the app's interaction with the outside world.
 
 > Common
->> Bla
+>> The common components used in the app
 
 > TabBar
->> Bla
+>> The TabBar controller with its configuration
 
 > Home
->> Bla
+>> VIPER module in charge of displaying the list of characters.
 
 > Favourites
->> Bla
+>> VIPER module in charge of displaying the list of characters.
 
 Character Detail
->> Bla
-
+>> VIPER module in charge of displaying the character details.
 
 #### Resources
 
-Bla
+It contains all the necessary resources for the app such as images, texts...
+
+> Design system
+>> It contains the design system used in the app (labels, shapes, textfields...)
+
+> Localization
+>> The localized texts
+
+> Assets
+>> The app images
 
 
 ### Why VIPER?
