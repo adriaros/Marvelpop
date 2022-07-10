@@ -46,16 +46,7 @@ Using this architecture ensures that the application will be scalable, easy to m
 
 `A module should have one, and only one, reason to change.`
 
-This means that a module should have only one responsibility, avoiding long functions and unnecessary logic.
-
-This provides benefits such as:
-
-- Easy to maintain
-- Easy to scale
-- Separate functionalities
-- Different team members can work on the same project without having major conflicts.
-- Greater testability
-- Greater clarity and readability
+This means that a module should have only one responsibility, avoiding long functions and unnecessary logic. This provides benefits such as ease of maintenance and scalability, functionalities are clearly separated, allowing different team members to work on the same project without major conflicts, and also provides greater testability, clarity, and readability.
 
 #### The Open-Closed Principle
 
