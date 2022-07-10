@@ -34,7 +34,38 @@ Also, user can select as favorite by touching the "heart" button on the navigati
 
 ## Project structure
 
-Clean architecture bla bla. Data layer + repository pattern + VIPER
+This project has been built using clean architecture.
+
+### Why?
+
+Using this architecture ensures that the application will be scalable, easy to maintain, testable and also follows the SOLID principles.
+
+### SOLID principles
+
+#### Single Responsibility Principle
+
+`A module should have one, and only one, reason to change.`
+
+This means that a module should have only one responsibility, avoiding long functions and unnecessary logic.
+
+This provides benefits such as:
+
+- Easy to maintain
+- Easy to scale
+- Separate functionalities
+- Different team members can work on the same project without having major conflicts.
+- Greater testability
+- Greater clarity and readability
+
+#### The Open-Closed Principle
+
+`A system should be open for extension but closed for modification.`
+
+This means that to add new functions we must extend the classes and not modify their main operation.
+
+Here the "Protocols" come into play, which give visibility to those variables/functions that must be visible and instead do not allow access to internal variables (making them private).
+
+Also, classes are all "Final" by default, so they can't be inherited by others. This means they can't override its methods to change its behavior; they need to use their class the way it was written.
 
 
 ### Main
