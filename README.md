@@ -58,6 +58,25 @@ Here the "Protocols" come into play, which give visibility to those variables/fu
 
 Also, classes are all "Final" by default, so they can't be inherited by others. This means they can't override its methods to change its behavior; they need to use their class the way it was written.
 
+#### The Liskov Substitution Principle
+
+`Derived classes must be substitutable for their base classes.`
+
+This means that any class that inherits from the parent class can be used anywhere the parent class is used.
+
+Also, this principle allows for easy testing, as dependency injection with Mocks that inherit from the parent class is very easy.
+
+#### The Interface Segregation Principle
+
+`Make fine grained interfaces that are client specific.`
+
+This means that clients should not have more methods than they actually use. This makes the code more maintainable, composable and has fewer dependencies (which you don't need). 
+
+#### The Dependency Inversion Principle
+
+`Depend on abstractions, not on concretions.`
+
+This means that our classes should depend on interfaces or abstract classes instead of concrete classes and functions. This means that we do not directly depend on the class itself, for example, if it is a third-party framework and it changes, the operation of our application is not affected.
 
 ### Main
 
