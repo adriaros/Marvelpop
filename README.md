@@ -81,7 +81,7 @@ This means that our classes should depend on interfaces or abstract classes inst
 
 ### Project structure
 
-The project is organized using a structure of different layers
+The project is organized using a structure of different layers.
 
 #### Main
 
@@ -257,3 +257,7 @@ Furthermore, you can test the interfaces for different devices in a few seconds.
 ### Mocks
 
 The project uses Mocks, Fakes and Spies to test anything. A library like "Sourcery" could have been used to generate those mocks but in the end, being a small project, it's not that necessary, and doing it manually was enough.
+
+## SwiftLint
+
+Its description perfectly describes why I added it to the project: "A tool to enforce Swift style and conventions"
