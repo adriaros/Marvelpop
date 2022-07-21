@@ -45,7 +45,7 @@ final class FavouritesTest: XCTestCase {
     }
     
     private func buildTestingScenario() {
-        view = FavouritesRouter.createModule(coordinator: coordinator, dataProvider: favouriteRepository, imageLoader: ImageLoading) as? FavouritesViewController
+        view = FavouritesRouter.createModule(coordinator: coordinator, dataProvider: favouriteRepository, imageLoader: ImageLoading)
         presenter = view.presenter as? FavouritesPresenter
         interactor = presenter.interactor as? FavouritesInteractor
         router = presenter.router as? FavouritesRouter

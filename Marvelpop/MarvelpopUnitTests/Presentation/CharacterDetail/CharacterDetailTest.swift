@@ -47,7 +47,7 @@ final class CharacterDetailTest: XCTestCase {
     }
     
     private func buildTestingScenario() {
-        view = CharacterDetailRouter.createModule(characterID: 1234, characters: characterRepository, favourites: favouriteRepository, imageLoader: imageLoaderUseCase) as? CharacterDetailViewController
+        view = CharacterDetailRouter.createModule(characterID: 1234, characters: characterRepository, favourites: favouriteRepository, imageLoader: imageLoaderUseCase)
         presenter = view.presenter as? CharacterDetailPresenter
         interactor = presenter.interactor as? CharacterDetailInteractor
         router = presenter.router as? CharacterDetailRouter

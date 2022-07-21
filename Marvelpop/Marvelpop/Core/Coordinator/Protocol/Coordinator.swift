@@ -12,7 +12,6 @@ protocol Coordinator: AnyObject {
     var navigationController: UINavigationController? { get set }
     func start()
     func addChild(_ child: Coordinator)
-    func removeChild(_ child: Coordinator)
     func startChild(_ child: Coordinator)
 }
 
@@ -20,10 +19,6 @@ extension Coordinator {
     
     func addChild(_ child: Coordinator) {
         childCoordinators.append(child)
-    }
-    
-    func removeChild(_ child: Coordinator) {
-        childCoordinators.removeAll(where: { $0 === child })
     }
     
     func startChild(_ child: Coordinator) {
