@@ -47,6 +47,6 @@ protocol HomeViewToPresenterProtocol: AnyObject {
 }
 
 protocol HomePresenterToRouterProtocol: AnyObject {
-    static func createModule(coordinator: HomeRouting, dataProvider: CharactersRepositoring, imageLoader: ImageLoading) -> UIViewController
+    static func createModule(coordinator: HomeRouting, dataProvider: CharactersRepositoring, imageLoader: ImageLoading) -> HomeViewController
     func pushToCharacterDetailWith(id: Int)
 }

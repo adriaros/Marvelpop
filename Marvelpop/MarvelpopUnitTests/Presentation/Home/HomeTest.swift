@@ -45,7 +45,7 @@ final class HomeTest: XCTestCase {
     }
     
     private func buildTestingScenario() {
-        view = HomeRouter.createModule(coordinator: coordinator, dataProvider: characterRepository, imageLoader: imageLoaderUseCase) as? HomeViewController
+        view = HomeRouter.createModule(coordinator: coordinator, dataProvider: characterRepository, imageLoader: imageLoaderUseCase)
         presenter = view.presenter as? HomePresenter
         interactor = presenter.interactor as? HomeInteractor
         router = presenter.router as? HomeRouter
