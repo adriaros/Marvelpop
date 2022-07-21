@@ -9,8 +9,7 @@ import UIKit
 
 struct AlertController: AlertControllerProvider {
     
-    var root: UIViewController?
-    
+    weak var root: UIViewController?
     weak var delegate: AlertControllerDelegate?
     
     func show(title: String, description: String, button: String) {
