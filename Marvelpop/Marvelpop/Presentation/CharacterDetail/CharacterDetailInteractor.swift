@@ -14,7 +14,7 @@ final class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProto
     var favourites: FavouritesRepositoring?
     var characterID: Int?
     
-    private var character: Character!
+    private var character: Character?
     
     func loadData() {
         characters?.getCharacterWith(id: characterID, completion: { [weak self] data, error in
@@ -33,6 +33,10 @@ final class CharacterDetailInteractor: CharacterDetailPresenterToInteractorProto
     }
     
     func handleFavourite() {
+        guard let character = character else {
+            return
+        }
+        
         favourites?.fetch(favourite: character) != nil ? favourites?.delete(favourite: character) : favourites?.save(favourite: character)
         presenter?.isFavourite = favourites?.fetch(favourite: character) != nil
     }
